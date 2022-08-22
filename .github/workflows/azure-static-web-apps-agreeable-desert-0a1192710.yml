@@ -18,6 +18,11 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: false
+      - uses: haskell/actions/setup@v2
+        with:
+          ghc-version: 'latest' # Resolves to the latest point release of GHC 8.8
+          cabal-version: 'latest' # Exact version of Cabal
+      - run: cabal run site build
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
