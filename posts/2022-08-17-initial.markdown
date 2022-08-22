@@ -1,5 +1,5 @@
 ---
-title: "The Very Beginning : More About Me and the Site" 
+title: "The Very Beginning" 
 author: PL Lee
 ---
 
