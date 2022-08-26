@@ -23,4 +23,5 @@ cabal.project.local~
 .ghc.environment.*
 _cache/
 _site/
+result
 site
