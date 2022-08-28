@@ -1,6 +1,8 @@
 {
   description = "Haskell Development Environment";
 
+  inputs.nixpkgs.url = github:nixos/nixpkgs;
+
   outputs = { self, nixpkgs }: 
     let
       supportedSystems = [ "x86_64-linux" "x86_64-darwin" ];
