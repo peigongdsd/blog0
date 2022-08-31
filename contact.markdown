@@ -2,4 +2,4 @@
 title: Contact
 ---
 
-email : peigong2013@outlook.com
+Email : peigong2013@outlook.com

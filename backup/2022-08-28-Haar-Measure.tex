@@ -1,4 +1,4 @@
----
+--
 title: Cheatsheet on Haar Measure
 author: PL Lee
 ---
@@ -16,7 +16,9 @@ author: PL Lee
 \newtheorem{prop}{Proposition}
 
 \begin{document}
-This is a simple cheatsheet on topological group and it's corresponding Haar measure, in case of future reference.
+This is a cheatsheet on topological group and it's corresponding Haar measure, in case of future reference.
+
+\section{Some Topological and Catogorial Stuff}
 
 \section{Topological Group}
 A topological group $G$ is a group with topological structure, that is
@@ -40,12 +42,9 @@ The topological structure of a group $G$ induces topological structures on it's 
     \item (left object)Group homomorphism $\pi$ from group $H$ to topological group $G$ induces topological structure on $H$. In this case, the derived topology on $H$ is the roughest topology such that $\pi$ is continuous.
 \end{itemize}
 In these cases, the homomorphisms $\pi$ naturally lift to morphisms between topological groups. For any group $G$, The initial morphism $0\rightarrow G$ gives the discrete topology, and the final morphism $G\rightarrow 0$ gives the trivial topology.
-\begin{rem}
-    Let a topological group $G$ together with a morphism $\pi: G\rightarrow H$ induces a topological structure with respect to the definition above, then $\pi$ is a open mapping.
-\end{rem}
-This is a pure topological stuff.
 
-Here are some tricks on topological groups.%% From now on, all the topo grups we are referring to are considered to be Hausdorff.
+
+Here are some tricks on topological groups.
 \begin{prop}
     \begin{itemize}
         \item Let $H$ be a open subgroup of topological group $G$, then $H$ must be closed.
@@ -77,7 +76,7 @@ Here are some tricks on topological groups.%% From now on, all the topo grups we
 \end{proof}
 
 \section{Haar Measure on Topological Groups}
-For a locally compact Hausdorff space $X$, Riesz's famous representation theorem gives a connection between \emph{positive linear functionals} and \emph{positive Borel measures} on $C_c{X}$, which refers to all the continue functions from $X$ to, say, complex numbers with a compact support.
+For a locally compact Hausdorff space $X$, Riesz's famous representation theorem gives a connection between \emph{positive linear functionals} and \emph{positive Borel measures} on $C_c(X)$, which refers to all the continue functions from $X$ to, say, complex numbers with a compact support.
 \begin{thm}[Riesz's Representation Theorem]
     Let $X$ be a locally compact Hausdorff space, and let $\Lambda$ be a positive linear functional on $C_c(X)$. Then there exists a \sigma-algebra $\mathfrak{M}$ on $X$ which contains all Borel sets in $X$, and there exists a unique positive measure $\mu$ on $\mathfrak{M}$ which represents $\Lambda$ in the sense that 
     \begin{itemize}

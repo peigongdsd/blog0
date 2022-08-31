@@ -1,0 +1,51 @@
+---
+title: Noetherian Space and Dimension
+author: PL Lee
+---
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\newtheorem{def}{Definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{prp}{Proposition}
+\newtheorem{rem}{Remark}
+
+\newcommand{\spec}[1]{\mathfrak{Spec}(#1)}
+
+\begin{document}
+
+\begin{def}[Noetherian Space]
+    A topological space is called Noetherian iff every desending chain of closed sets
+    \[ L_1\supseteq L_2\supseteq\cdots \]
+    will eventually stablize. That is, there is some $n$ s.t.
+    \[ L_n=L_{n+1}=\cdots \]
+\end{def}
+
+\begin{thm}
+    If a topological space $X$ is both Noetherian and Hausdorff, it must be finite and descrete.
+\end{thm}
+\begin{proof}
+    Fix $p\in X$, pick a point other than $p$, say $q_1\in X$, and let $V_1$ and $W_1$ be distinct open sets containing $p$ and $q_1$ respectively. Then we see that $p\in(X\backslash W_1)=L_1$. If $p$ is the only element of $L_1$, it must also be the only point of $V_1$. Otherwise, pick another $q_2\in L_1$, and let $V_2$ and $W_2$ likewise. Then $p\in(L_1\backslash W_2)=L_2$, and $p\in V_1\bigcap V_2\subseteq L_2$. Likewise, if this operation eventually stops at step $t$, we will know that $p$ is the only point of the open set $V_1\bigcap V_2\bigcap\cdots\bigcap V_t$. Otherwise, repeating this operation and we will get a decending chain
+    \[ L_1\supseteq L_2\supseteq\cdots \]
+    Since $X$ is Noetherian, the chain must stablize, which implies there must be some $L_n=L_{n+1}$, which is impossible due to the selection of $q_{n+1}$. Thus we know, every point of space $X$ is open, hence $X$ is descrete. Apply the property of Noetherian again it'll be revealed that $X$ is finite.
+\end{proof}
+
+\begin{def}[Spectrum of a ring]
+    For a certain ring $R$, the spectrum $\spec{R}$ is the set of prime ideals of $R$.
+\end{def}
+\par Fixe a ring $R$, there is an antitone Galois connection between the set of ideals of $R$ and the subsets of $\spec{R}$. To see this, we let
+\[ V(T) = \{p\in\spec{R}|T\subset p\} \]
+and
+\[ Z(S) = \bigcap_{p\in S}p \]
+in which $V$ maps an ideal to a subset of $\spec{R}$, and $Z$ reversely. Under these conventions, the closure operation
+\[ T\mapsto Z(V(T)) \] maps an ideal to it's radical. (proof!)
+\par The spectrum of a ring $R$ can be made into a topological space, in the sence that a subset $S\subseteq\spec{R}$ is closed if and only if there is a $T\subseteq R$ such that $S=Z(T)$. In this sence, the closure of a subset $S\subseteq\spec{R}$ is $V(Z(R))$, identical to closure in the sence of Galois connection mentioned above. This is called the Zariski topology.
+
+
+
+\end{document}
+
+
+
