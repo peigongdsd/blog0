@@ -19,6 +19,6 @@
 
       in pkgs.stdenv.mkDerivation { name = "site"; builder = "${pkgs.bash}/bin/bash"; args = [ "-c" ''  
           ${ghc}/bin/ghc -O1 -threaded -o $out ${./site.hs}
-        '' ]; buildInputs = [ pkgs.rubber pkgs.poppler_utils pkgs.texliveFull.out ]; inherit system; });
+        '' ]; inherit system; });
     };
 }
