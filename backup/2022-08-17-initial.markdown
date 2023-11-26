@@ -1,6 +1,0 @@
----
-title: "The Very Beginning" 
-author: PL Lee
----
-
-This is the first post since my blog was eventually given birth to. 

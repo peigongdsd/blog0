@@ -2,9 +2,38 @@
 {-# LANGUAGE OverloadedStrings #-}
 import           Data.Monoid (mappend)
 import           Hakyll
+import           Hakyll.Core.Compiler
 import           Text.Pandoc.Options
-
+import           Text.Pandoc.Definition
+import           Text.Pandoc.Walk (walk, walkM)
+import qualified Data.Text as T
+import           Control.Monad ((>=>))
+import           Data.ByteString.Lazy.Char8 (pack, unpack)
+import qualified Network.URI.Encode as URI (encode)
 --------------------------------------------------------------------------------
+{-|
+>>>:t bodyfield
+Variable not in scope: bodyfield
+
+|-}
+
+tikzCdFilter :: Block -> Compiler Block
+tikzCdFilter (CodeBlock (id, "tikzpicture":extraClasses, namevals) contents) =
+  (imageBlock . T.pack . ("data:image/svg+xml;utf8," ++) . URI.encode . filter (/= '\n') . itemBody <$>) $
+    makeItem contents
+     >>= loadAndApplyTemplate (fromFilePath "templates/tikz-cd.tex") (bodyField "body") . (T.unpack <$>)
+     >>= withItemBody (return . pack
+                       >=> unixFilterLBS "rubber-pipe" ["--pdf"]
+                       >=> unixFilterLBS "pdftocairo" ["-svg", "-", "-"]
+                       >=> return . unpack)
+  where imageBlock fname = Para [Image (id, "tikzpicture":extraClasses, namevals) [] (fname, "")]
+tikzCdFilter x = return x
+
+pandocCompilerWithTikzCd :: Compiler (Item String)
+pandocCompilerWithTikzCd =
+  pandocCompilerWithTransformM defaultHakyllReaderOptions (defaultHakyllWriterOptions { writerHTMLMathMethod = MathJax "" })
+    $ walkM tikzCdFilter
+
 main :: IO ()
 main = hakyll $ do
     match "images/*" $ do
@@ -23,7 +52,7 @@ main = hakyll $ do
 
     match "posts/*" $ do
         route $ setExtension "html"
-        compile $ pandocCompilerWith defaultHakyllReaderOptions (defaultHakyllWriterOptions { writerHTMLMathMethod = MathJax "" })
+        compile $ pandocCompilerWithTikzCd
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
