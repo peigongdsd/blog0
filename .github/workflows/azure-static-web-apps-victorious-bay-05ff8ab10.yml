@@ -23,6 +23,7 @@ jobs:
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
       - run: nix build
+      - run: nix install nixpkgs#rubber nixpkgs#poppler_utils nixpkgs#texliveFull.out
       - run: ./result build
       - name: Build And Deploy
         id: builddeploy
