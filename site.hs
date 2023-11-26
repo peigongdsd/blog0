@@ -6,16 +6,33 @@ import           Hakyll.Core.Compiler
 import           Text.Pandoc.Options
 import           Text.Pandoc.Definition
 import           Text.Pandoc.Walk (walk, walkM)
+import           Text.Pandoc.Extensions
 import qualified Data.Text as T
 import           Control.Monad ((>=>))
 import           Data.ByteString.Lazy.Char8 (pack, unpack)
 import qualified Network.URI.Encode as URI (encode)
+import qualified Data.Map as M
 --------------------------------------------------------------------------------
 {-|
 >>>:t bodyfield
 Variable not in scope: bodyfield
 
 |-}
+
+readerOpts :: ReaderOptions
+readerOpts = def { readerExtensions = extensions }
+    where extensions = foldr enableExtension pandocExtensions [ 
+            Ext_tex_math_dollars, 
+            Ext_tex_math_double_backslash, 
+            Ext_smart,
+            Ext_latex_macros,
+            Ext_emoji,
+            Ext_inline_code_attributes, 
+            Ext_abbreviations 
+            ]
+
+writerOpts :: WriterOptions
+writerOpts = def { writerHTMLMathMethod = MathJax "" }
 
 tikzCdFilter :: Block -> Compiler Block
 tikzCdFilter (CodeBlock (id, "tikzpicture":extraClasses, namevals) contents) =
@@ -31,8 +48,7 @@ tikzCdFilter x = return x
 
 pandocCompilerWithTikzCd :: Compiler (Item String)
 pandocCompilerWithTikzCd =
-  pandocCompilerWithTransformM defaultHakyllReaderOptions (defaultHakyllWriterOptions { writerHTMLMathMethod = MathJax "" })
-    $ walkM tikzCdFilter
+  pandocCompilerWithTransformM readerOpts writerOpts $ walkM tikzCdFilter
 
 main :: IO ()
 main = hakyll $ do
@@ -87,8 +103,9 @@ main = hakyll $ do
 
     match "templates/*" $ compile templateBodyCompiler
 
---------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
     dateField "date" "%B %e, %Y" `mappend`
     defaultContext
+
+
