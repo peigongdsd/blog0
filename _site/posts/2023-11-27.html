@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PL Lee's Personal Blog - Snippets#0 on Motivic Cohomology and Singular Homology</title>
+        <link rel="stylesheet" href="../css/default.css" />
+        
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+
+        </script>
+    
+</head>
+    <body>
+        <header>
+            <!--
+            <div class="logo">
+               <a href="/">PL LEE'S PERSONAL BLOG</a>
+            </div>-->
+            <nav>
+                <a href="../">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../archive.html">Archive</a>
+            </nav>
+        </header>
+
+        <main role="main">
+            <h1>Snippets#0 on Motivic Cohomology and Singular Homology</h1>
+            <article>
+    <section class="header">
+        Posted on November 27, 2023
+        
+            by Pl Lee
+        
+    </section>
+    <section>
+        <p>These are some random thoughts when going through <a href="https://sites.math.rutgers.edu/~weibel/MVWnotes/prova-hyperlink.pdf">Lecture
+notes on motivic cohomology</a>.</p>
+<h1 id="mathbbz1-the-tate-twist"><span class="math inline">\(\mathbb{Z}(1)\)</span> the Tate Twist</h1>
+<p>Here we reformulate the fact given in the lecture which states that
+<span class="math display">\[
+    \mathbb{Z}(1)=\mathbb{Z}_{tr}(\mathbb{G}_m)\cong\mathcal{O}^*[-1]
+\]</span> as presheaves with transfers. Étale sheafication gives that
+<span class="math display">\[
+    \mathbb{Z}/l(1)_{ét}\cong\mathcal{O}_{ét}^*[-1]\otimes\mathbb{Z}/l\cong
+H_0(\mathcal{O}_{ét}^*[-1]\otimes^L\mathbb{Z}/l)=\mu_l.
+\]</span> Note that <span class="math inline">\(\mathcal{O}_{ét}^*[-1]\otimes\mathbb{Z}/l\)</span>
+is indeed quasi-isomorphic to <span class="math inline">\(\mathcal{O}_{ét}^*[-1]\otimes^L\mathbb{Z}/l\)</span>
+when <span class="math inline">\(l\)</span> is prime to the
+characteristic of our base field <span class="math inline">\(k\)</span>.</p>
+<p>Moreover, in proposition 10.6 we see that <span class="math inline">\(\mu_n^{\otimes
+q}\rightarrow\mathbb{Z}/l(q)\)</span> is a quasi-isomorphism in <span class="math inline">\(D⁻(Sh_{ét}(Cor_k,\mathbb{Z}/l))\)</span>. To see
+this we need some lemmas from the lecture.</p>
+<h4 id="lemma-8.13-if-f-and-f-are-étale-sheaves-sheaves-of-r-modules-with-transfers-and-f-is-locally-constant-then-the-map-fotimes_étfrightarrow-fotimes_éttrf-is-an-isomorphism.">(Lemma
+8.13) If <span class="math inline">\(F\)</span> and <span class="math inline">\(F'\)</span> are étale sheaves sheaves of <span class="math inline">\(R\)</span>-modules with transfers, and <span class="math inline">\(F\)</span> is locally constant, then the map<span class="math display">\[
+    F\otimes_{ét}F'\rightarrow F\otimes_{ét}^{tr}F'
+\]</span> is an isomorphism.</h4>
+    </section>
+</article>
+
+        </main>
+
+        <footer>
+            Powered by
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            and 
+            <a href="https://haskell.org">Haskell</a>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PL Lee's Personal Blog - Noetherian Space and Dimension</title>
+        <link rel="stylesheet" href="../css/default.css" />
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="../">PL LEE'S PERSONAL BLOG</a>
+            </div>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../archive.html">Archive</a>
+            </nav>
+        </header>
+
+        <main role="main">
+            <h1>Noetherian Space and Dimension</h1>
+            <article>
+    <section class="header">
+        Posted on August 31, 2022
+        
+            by PL Lee
+        
+    </section>
+    <section>
+        <h1 id="zariaki-topology-of-rings">Zariaki Topology of Rings</h1>
+<div class="def">
+<p><strong>Definition 1</strong> (Noetherian Space).  <em>A topological space is called Noetherian iff every desending chain of closed sets
+<span class="math display">\[L_1\supseteq L_2\supseteq\cdots\]</span>
+will eventually stablize. That is, there is some <span class="math inline">\(n\)</span> s.t.
+<span class="math display">\[L_n=L_{n+1}=\cdots\]</span></em></p>
+</div>
+<div class="thm">
+<p><strong>Theorem 1</strong>.  <em>If a topological space <span class="math inline">\(X\)</span> is both Noetherian and Hausdorff, it must be finite and descrete.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Fix <span class="math inline">\(p\in X\)</span>, pick a point other than <span class="math inline">\(p\)</span>, say <span class="math inline">\(q_1\in X\)</span>, and let <span class="math inline">\(V_1\)</span> and <span class="math inline">\(W_1\)</span> be distinct open sets containing <span class="math inline">\(p\)</span> and <span class="math inline">\(q_1\)</span> respectively. Then we see that <span class="math inline">\(p\in(X\backslash W_1)=L_1\)</span>. If <span class="math inline">\(p\)</span> is the only element of <span class="math inline">\(L_1\)</span>, it must also be the only point of <span class="math inline">\(V_1\)</span>. Otherwise, pick another <span class="math inline">\(q_2\in L_1\)</span>, and let <span class="math inline">\(V_2\)</span> and <span class="math inline">\(W_2\)</span> likewise. Then <span class="math inline">\(p\in(L_1\backslash W_2)=L_2\)</span>, and <span class="math inline">\(p\in V_1\bigcap V_2\subseteq L_2\)</span>. Likewise, if this operation eventually stops at step <span class="math inline">\(t\)</span>, we will know that <span class="math inline">\(p\)</span> is the only point of the open set <span class="math inline">\(V_1\bigcap V_2\bigcap\cdots\bigcap V_t\)</span>. Otherwise, repeating this operation and we will get a decending chain
+<span class="math display">\[L_1\supseteq L_2\supseteq\cdots\]</span>
+Since <span class="math inline">\(X\)</span> is Noetherian, the chain must stablize, which implies there must be some <span class="math inline">\(L_n=L_{n+1}\)</span>, which is impossible due to the selection of <span class="math inline">\(q_{n+1}\)</span>. Thus we know, every point of space <span class="math inline">\(X\)</span> is open, hence <span class="math inline">\(X\)</span> is descrete. Apply the property of Noetherian again it’ll be revealed that <span class="math inline">\(X\)</span> is finite. ◻</p>
+</div>
+<div class="def">
+<p><strong>Definition 2</strong> (Spectrum of a ring).  <em>For a certain ring <span class="math inline">\(R\)</span>, the spectrum <span class="math inline">\(\mathfrak{Spec}(R)\)</span> is the set of prime ideals of <span class="math inline">\(R\)</span>.</em></p>
+</div>
+<p>Fixe a ring <span class="math inline">\(R\)</span>, there is an antitone Galois connection between the set of ideals of <span class="math inline">\(R\)</span> and the subsets of <span class="math inline">\(\mathfrak{Spec}(R)\)</span>. To see this, let
+<span class="math display">\[V(T) = \{p\in\mathfrak{Spec}(R)|T\subset p\}\]</span>
+and
+<span class="math display">\[Z(S) = \bigcap_{p\in S}p\]</span>
+in which <span class="math inline">\(V\)</span> maps an ideal to a subset of <span class="math inline">\(\mathfrak{Spec}(R)\)</span>, and <span class="math inline">\(Z\)</span> reversely. Under these conventions, the closure operation
+<span class="math display">\[T\mapsto Z(V(T))\]</span> maps an ideal to it’s radical.</p>
+<div class="lem">
+<p><strong>Lemma 1</strong>.  <em>For any ring <span class="math inline">\(R\)</span>, there is a minimal prime ideal <span class="math inline">\(p\in\mathfrak{Spec}(R)\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> ◻</p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> ◻</p>
+</div>
+<p>The spectrum of a ring <span class="math inline">\(R\)</span> can be made into a topological space, in the sence that a subset <span class="math inline">\(S\subseteq\mathfrak{Spec}(R)\)</span> is closed if and only if there is a <span class="math inline">\(T\subseteq R\)</span> such that <span class="math inline">\(S=Z(T)\)</span>. In this sence, the closure of a subset <span class="math inline">\(S\subseteq\mathfrak{Spec}(R)\)</span> is <span class="math inline">\(V(Z(R))\)</span>, identical to closure in the sence of Galois connection mentioned above. This is called the Zariski topology. Let
+<span class="math display">\[D(f) = \{p\in\mathfrak{Spec}(R)|f\not\in p\}\]</span>
+Since <span class="math inline">\(D(f)=\mathfrak{Spec}(R)\backslash V(\{f\})\)</span> we know that <span class="math inline">\(D\)</span> maps <span class="math inline">\(R\)</span> to open subsets of <span class="math inline">\(\mathfrak{Spec}(R)\)</span>. For any closed set <span class="math inline">\(V(T)\)</span>, in which <span class="math inline">\(T\)</span> is nonempty, let <span class="math inline">\(f\in T\)</span>, then we have <span class="math inline">\(D(f)\bigcap V(T)=\varnothing\)</span>, which implies <span class="math inline">\(\{D(f)|f\in R\}\)</span> is a base of topological space <span class="math inline">\(\mathfrak{Spec}(R)\)</span>.</p>
+<div class="def">
+<p><strong>Definition 3</strong>.  <em>Let <span class="math inline">\(X\)</span> be a topological space.</em></p>
+<ul>
+<li><p><em>We say <span class="math inline">\(X\)</span> is irreducible if and only if <span class="math inline">\(X\)</span> is nonempty, and cannot be written into <span class="math inline">\(X=T_1\bigcup T_2\)</span>, where <span class="math inline">\(T_i\)</span> are closed in <span class="math inline">\(X\)</span>.</em></p></li>
+<li><p><em>We say <span class="math inline">\(Z\subset X\)</span> is an irreducible component of <span class="math inline">\(X\)</span> if <span class="math inline">\(Z\)</span> is a maximal irreducible subset of <span class="math inline">\(X\)</span>.</em></p></li>
+</ul>
+</div>
+<h1 id="morphism-and-localization">Morphism and Localization</h1>
+<p>Let <span class="math inline">\(\varphi\)</span> be a homomorphism from ring <span class="math inline">\(R\)</span> to ring <span class="math inline">\(R'\)</span>, then there is a natural homoemorphism
+<span class="math display">\[\mathfrak{Spec}(\varphi):\mathfrak{Spec}(R')\rightarrow\mathfrak{Spec}(R)\]</span>
+Where In other words, <span class="math inline">\(\mathfrak{Spec}(\cdot)\)</span> is a contravariant functor from category of rings to category of topological spaces.</p>
+    </section>
+</article>
+
+        </main>
+
+        <footer>
+            Powered by
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+            and 
+            <a href="https://haskell.org">Haskell</a>
+        </footer>
+    </body>
+</html>
