@@ -77,7 +77,7 @@ pandocCompilerWithTikzCd =
 
 main :: IO ()
 main = hakyll $ do
-    match "images/*" $ do
+    match "assets/*" $ do
         route   idRoute
         compile copyFileCompiler
 
