@@ -9,9 +9,12 @@ import           Text.Pandoc.Walk (walk, walkM)
 import           Text.Pandoc.Extensions
 import qualified Data.Text as T
 import           Control.Monad ((>=>))
-import           Data.ByteString.Lazy.Char8 (pack, unpack)
+import           Data.ByteString.Lazy.Char8  as BL8 (pack, unpack, writeFile, ByteString, readFile)
 import qualified Network.URI.Encode as URI (encode)
 import qualified Data.Map as M
+import           System.Process
+import           System.IO
+import qualified Data.ByteString as DB8
 --------------------------------------------------------------------------------
 {-|
 >>>:t bodyfield
@@ -34,13 +37,35 @@ readerOpts = def { readerExtensions = extensions }
 writerOpts :: WriterOptions
 writerOpts = def { writerHTMLMathMethod = MathJax "" }
 
+compileLaTeX :: ByteString -> Compiler ByteString
+compileLaTeX d = unsafeCompiler $ 
+    withFile "temp-pdflatex.out" WriteMode (\hout -> 
+    withFile "temp-pdflatex.err" WriteMode (\herr -> do
+    BL8.writeFile "temp-TeX.tex" d
+    BL8.writeFile "temp-TeX.pdf" ""
+    (_, _, _, hp) <- createProcess 
+        . (\x -> x { std_out = UseHandle hout, std_err = UseHandle herr }) 
+        . proc "pdflatex" $ [ 
+        "-no-parse-first-line", 
+        "-halt-on-error", 
+        "-interaction=nonstopmode",
+        "temp-TeX.tex" 
+        ]
+    code <- waitForProcess hp
+    BL8.readFile "temp-TeX.pdf"))
+
+debugOutput :: ByteString -> Compiler ByteString
+debugOutput d = unsafeCompiler $ do
+    print . take 50 . unpack $ d
+    return d
+
 rawLaTexFilterMd :: Block -> Compiler Block
 rawLaTexFilterMd (CodeBlock (id, "rawlatex":extraClasses, namevals) contents) =
   (imageBlock . T.pack . ("data:image/svg+xml;utf8," ++) . URI.encode . filter (/= '\n') . itemBody <$>) $
     makeItem contents
      >>= loadAndApplyTemplate (fromFilePath "templates/rawLaTeX.tex") (bodyField "body") . (T.unpack <$>)
      >>= withItemBody (return . pack
-                       >=> unixFilterLBS "rubber-pipe" ["--pdf"]
+                       >=> compileLaTeX
                        >=> unixFilterLBS "pdftocairo" ["-svg", "-noshrink", "-", "-"]
                        >=> return . unpack)
   where imageBlock fname = Para [Image (id, "rawlatex":extraClasses, namevals) [] (fname, "")]
