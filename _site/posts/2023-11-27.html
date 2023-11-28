@@ -135,11 +135,41 @@ for the Zariski topology.</h4>
 maps <span class="math display">\[
     i_0^*,i_1^*:C_*F(X\times\mathbb{A}^1)\rightarrow C_*F(X)
 \]</span> are chain homotopic.</h4>
+<h4 id="statement-let-up_rightarrow-q_-be-a-morphism-of-zero-homotopy-between-complex-p-and-q.-then-the-homotopy-class-uf-defined-by-any-cycle-fin-p_i-represents-a-zero-homology-class-in-h_iq.">[Statement]
+Let <span class="math inline">\(u:P_*\rightarrow Q_*\)</span> be a
+morphism of zero homotopy between complex <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>. Then the homotopy class <span class="math inline">\([u(f)]\)</span> defined by any cycle <span class="math inline">\(f\in P_i\)</span> represents a zero homology class
+in <span class="math inline">\(H_i(Q)\)</span>.</h4>
+<p><strong>Proof</strong>  Since <span class="math inline">\(u\cong
+0\)</span> in the homotopy category <span class="math inline">\(K\)</span>, the triangle <span class="math display">\[
+    P\rightarrow Q\rightarrow P\oplus Q\rightarrow P[-1]
+\]</span> is distinguished. Hence we get a long exact sequence of
+homology groups<span class="math display">\[
+    \cdots\rightarrow H_i(P)\rightarrow H_i(Q)\rightarrow H_i(P)\oplus
+H_i(Q)\rightarrow\cdots
+\]</span> the class <span class="math inline">\([f]\in H_i(P)\)</span>
+maps to 0 in <span class="math inline">\(H_i(P)\oplus H_i(Q)\)</span>,
+hence maps to <span class="math inline">\([u(f)]=0\)</span> in <span class="math inline">\(H_i(Q)\)</span>.</p>
 <h4 id="lemma-4.6-for-sk-smooth-c_mathcalmmathbbp10inftys-is-acyclic-hence-c_mathcalmmathbbp10infty-is-acyclic-as-complex-of-sheaves.">[Lemma
 4.6] For <span class="math inline">\(S/k\)</span> smooth, <span class="math inline">\(C_*(\mathcal{M}^*(\mathbb{P}^1,\{0,\infty\}))(S)\)</span>
 is acyclic, hence <span class="math inline">\(C_*(\mathcal{M}^*(\mathbb{P}^1,\{0,\infty\}))\)</span>
 is acyclic as complex of sheaves.</h4>
-<p><strong>Proof</strong> </p>
+<p><strong>Proof</strong>  Here we work over the normalized <a href="https://stacks.math.columbia.edu/tag/017V">TSP 017V</a> <span class="math inline">\(\mathcal{M}^*(\mathbb{P}^1,\{0,\infty\})\)</span>
+chain complex <span class="math display">\[
+    C_*^{DK}(S)=C_*^{DK}(\mathcal{M}^*(\mathbb{P}^1,\{0,\infty\}))(S).
+\]</span></p>
+<p>For a cycle <span class="math inline">\(f\in C_i^{DK}(S)\)</span>,
+that is, an element vanishing in <span class="math inline">\(C_{i-1}^{DK}(S)\)</span>, we construct a path
+<span class="math inline">\(h_S(f,t)\in
+C_i^{DK}(S\times\mathbb{A}^1)\subset C_i(S\times\mathbb{A}^1)\)</span>
+such that the restriction along <span class="math inline">\(i_0\)</span>
+and <span class="math inline">\(i_1\)</span> retracts <span class="math inline">\(f\)</span> to <span class="math inline">\(0\)</span>. Since <span class="math inline">\(f\)</span> is a cycle, it represents a regular
+function on some neightborhood <span class="math inline">\(U\)</span> of
+<span class="math inline">\(Z=S\times\Delta^i\times\{0,\infty\}\)</span>
+which vanishes on every face <span class="math inline">\(S\times\Delta^{i-1}\times\{0,\infty\}\)</span> and
+<span class="math inline">\(Z\)</span>. The path we construct would be
+<span class="math inline">\(h_S(f)=1-t(1-f)\)</span>, which is obviously
+regular on the neighborhood <span class="math inline">\(\mathbb{A}^1\times U\)</span> of <span class="math inline">\(\mathbb{A}^1\times Z\)</span>. Moreover, <span class="math inline">\(h_S(f)\)</span> is a cycle in <span class="math inline">\(C_i(S\times\mathbb{A}^1)\)</span> since it equals
+to <span class="math inline">\(1\)</span> when <span class="math inline">\(f\)</span> equals to <span class="math inline">\(1\)</span>. Hence we get the result.</p>
 <h4 id="lemma-4.3-for-all-f-in-mathcalmmathbbp10infty-denote-the-weil-divisor-associated-to-f-by-df-then-df-belongs-to-the-subgroup-cor_kxmathbba1backslash-0-of-z1mathbbp1times_k-x.">[Lemma
 4.3] For all <span class="math inline">\(f\)</span> in <span class="math inline">\(\mathcal{M}^*(\mathbb{P}^1,\{0,\infty\})\)</span>,
 denote the Weil divisor associated to <span class="math inline">\(f\)</span> by <span class="math inline">\(D(f)\)</span>, then <span class="math inline">\(D(f)\)</span> belongs to the subgroup <span class="math inline">\(Cor_k(X,\mathbb{A}^1\backslash 0)\)</span> of
