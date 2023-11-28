@@ -34,21 +34,21 @@ readerOpts = def { readerExtensions = extensions }
 writerOpts :: WriterOptions
 writerOpts = def { writerHTMLMathMethod = MathJax "" }
 
-tikzCdFilter :: Block -> Compiler Block
-tikzCdFilter (CodeBlock (id, "tikzpicture":extraClasses, namevals) contents) =
+rawLaTexFilterMd :: Block -> Compiler Block
+rawLaTexFilterMd (CodeBlock (id, "rawlatex":extraClasses, namevals) contents) =
   (imageBlock . T.pack . ("data:image/svg+xml;utf8," ++) . URI.encode . filter (/= '\n') . itemBody <$>) $
     makeItem contents
-     >>= loadAndApplyTemplate (fromFilePath "templates/tikz-cd.tex") (bodyField "body") . (T.unpack <$>)
+     >>= loadAndApplyTemplate (fromFilePath "templates/rawLaTeX.tex") (bodyField "body") . (T.unpack <$>)
      >>= withItemBody (return . pack
                        >=> unixFilterLBS "rubber-pipe" ["--pdf"]
-                       >=> unixFilterLBS "pdftocairo" ["-svg", "-", "-"]
+                       >=> unixFilterLBS "pdftocairo" ["-svg", "-noshrink", "-", "-"]
                        >=> return . unpack)
-  where imageBlock fname = Para [Image (id, "tikzpicture":extraClasses, namevals) [] (fname, "")]
-tikzCdFilter x = return x
+  where imageBlock fname = Para [Image (id, "rawlatex":extraClasses, namevals) [] (fname, "")]
+rawLaTexFilterMd x = return x
 
 pandocCompilerWithTikzCd :: Compiler (Item String)
 pandocCompilerWithTikzCd =
-  pandocCompilerWithTransformM readerOpts writerOpts $ walkM tikzCdFilter
+  pandocCompilerWithTransformM readerOpts writerOpts $ walkM rawLaTexFilterMd
 
 main :: IO ()
 main = hakyll $ do

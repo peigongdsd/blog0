@@ -140,7 +140,7 @@ article .header {
   }
 }
 
-.rawlatex {
+.tikzpicture {
   height: auto;
   width: auto;
   max-width: max-content;
