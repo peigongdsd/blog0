@@ -24,6 +24,7 @@ cabal.project.local~
 *.log
 rubtmp*
 _cache/
+_site/
 temp-*
 result
 site
