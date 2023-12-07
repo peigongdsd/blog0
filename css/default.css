@@ -148,3 +148,8 @@ article .header {
   margin-right: auto;
   margin-left: auto;
 }
+
+.frontpic {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
