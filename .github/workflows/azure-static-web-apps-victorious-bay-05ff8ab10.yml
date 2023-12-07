@@ -18,12 +18,12 @@ jobs:
       - uses: actions/checkout@v2
         with:
           submodules: false
-      #- uses: cachix/install-nix-action@v15
-      #  with:
-      #    extra_nix_config: |
-      #      access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
-      #- run: nix build
-      #- run: nix develop --command ./result build
+      - uses: cachix/install-nix-action@v15
+        with:
+          extra_nix_config: |
+            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+      - run: nix build
+      - run: nix develop --command ./result build
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
