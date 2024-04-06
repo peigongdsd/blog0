@@ -20,9 +20,15 @@ $X$, $Y$ be smooth schemes. (Finite) correspondence defined as common. For $f:X\
 2. For $g:Z\rightarrow Y$ finite and equidimensional, $(f\circ g)^t=g^t\circ f^t$. 
 
 Proof. 
-
-<!-- https://q.uiver.app/#q=WzAsMyxbMCwwLCJYXFx0aW1lcyBZXFx0aW1lcyBaIl0sWzEsMCwiWFxcdGltZXMgWiJdLFswLDEsIllcXHRpbWVzIFoiXSxbMiwwLCJmXFx0aW1lcyBpZF9ZXFx0aW1lcyBpZF9aIl0sWzAsMSwicF97MTN9Il0sWzIsMSwiZlxcdGltZXMgaWRfWiIsMl1d -->
-<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMyxbMCwwLCJYXFx0aW1lcyBZXFx0aW1lcyBaIl0sWzEsMCwiWFxcdGltZXMgWiJdLFswLDEsIllcXHRpbWVzIFoiXSxbMiwwLCJmXFx0aW1lcyBpZF9ZXFx0aW1lcyBpZF9aIl0sWzAsMSwicF97MTN9Il0sWzIsMSwiZlxcdGltZXMgaWRfWiIsMl1d&embed" width="421" height="304" style="border-radius: 8px; border: none;"></iframe>
+```rawlatex
+\begin{tikzcd}
+	{X\times Y\times Z} & {X\times Z} \\
+	{Y\times Z}
+	\arrow["{f\times id_Y\times id_Z}", from=2-1, to=1-1]
+	\arrow["{p_{13}}", from=1-1, to=1-2]
+	\arrow["{f\times id_Z}"', from=2-1, to=1-2]
+\end{tikzcd}
+```
 
 So the first statement follows. The second statement is straightforward. $\blacksquare$
 
@@ -30,9 +36,16 @@ We put an end to this part with a generalized projection formula. To state this,
 
 ### 1.1.3
 (Definition) For morphisms between schemes.
-
-<!-- https://q.uiver.app/#q=WzAsNCxbMCwwLCJZJyJdLFsxLDAsIlkiXSxbMCwxLCJYJyJdLFsxLDEsIlgiXSxbMSwzLCJmIl0sWzAsMiwicCJdLFswLDEsInEiLDFdLFsyLDMsImciLDFdXQ== -->
-<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsNCxbMCwwLCJZJyJdLFsxLDAsIlkiXSxbMCwxLCJYJyJdLFsxLDEsIlgiXSxbMSwzLCJmIl0sWzAsMiwicCJdLFswLDEsInEiLDFdLFsyLDMsImciLDFdXQ==&embed" width="304" height="304" style="border-radius: 8px; border: none;"></iframe>
+```rawlatex
+\begin{tikzcd}
+	{Y'} & Y \\
+	{X'} & X
+	\arrow["f", from=1-2, to=2-2]
+	\arrow["p", from=1-1, to=2-1]
+	\arrow["q"{description}, from=1-1, to=1-2]
+	\arrow["g"{description}, from=2-1, to=2-2]
+\end{tikzcd}
+```
 
 We'll say it's quasi-cartesian if it's commutative and cartetian on the underlying topological space.
 
@@ -44,9 +57,14 @@ Consider a quasi-cartesian diagram as above where the schemes are smooth, $f$ fi
 $$ f^t\circ g=\sum_{x\in Spec(R)}lg_R(R_x)\cdot(q_x\circ p_x^t). $$
 
 Proof. We have a equalizer diagram
-
-<!-- https://q.uiver.app/#q=WzAsMyxbMCwwLCJYJ1xcdGltZXNfWFkiXSxbMSwwLCJYJ1xcdGltZXNfa1kiXSxbMiwwLCJYJ1xcdGltZXNfa1hcXHRpbWVzX2tZIl0sWzAsMV0sWzEsMiwiaWRcXHRpbWVzIGZcXHRpbWVzIGlkIiwwLHsib2Zmc2V0IjotMX1dLFsxLDIsImlkXFx0aW1lcyBnXFx0aW1lcyBpZCIsMix7Im9mZnNldCI6MX1dXQ== -->
-<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMyxbMCwwLCJYJ1xcdGltZXNfWFkiXSxbMSwwLCJYJ1xcdGltZXNfa1kiXSxbMiwwLCJYJ1xcdGltZXNfa1hcXHRpbWVzX2tZIl0sWzAsMV0sWzEsMiwiaWRcXHRpbWVzIGZcXHRpbWVzIGlkIiwwLHsib2Zmc2V0IjotMX1dLFsxLDIsImlkXFx0aW1lcyBnXFx0aW1lcyBpZCIsMix7Im9mZnNldCI6MX1dXQ==&embed" width="669" height="176" style="border-radius: 8px; border: none;"></iframe>
+```rawlatex
+\begin{tikzcd}
+	{X'\times_XY} & {X'\times_kY} & {X'\times_kX\times_kY}
+	\arrow[from=1-1, to=1-2]
+	\arrow["{id\times f\times id}", shift left, from=1-2, to=1-3]
+	\arrow["{id\times g\times id}"', shift right, from=1-2, to=1-3]
+\end{tikzcd}
+```
 
 Then we denote by $W$ the schematic intersection $\Gamma_gY\cap X'\Gamma_f$ in $X'XY$. From the diagram we see that $W$ is isomorphic to the schematic image of $X'\times_XY\rightarrow X'Y$. Furthermore, **the intersection is proper** and **the components of $W$ correspond to points of $R$ bijectively**. By hypothesis, $W_{red}=Y'$ is smooth, and it follows that for any $x\in Spec(R)$, viewed as a generic point of $W$, $(\mathcal{O}_{W,x})_{red}$ is a Cohen-Macauley local ring, or to say, with depth equal to it's dimension (cf. [Ful98], A.7.). Consequently, by applying proposition 7.1 of [Ful98], the intersection multiplcity of $x$ in $W$ is equal to the length of the Artinian ring $\mathcal{O}_{W,x}$. 
 As a result, the finite correspondence $f^t\circ g$ is the cycle on the subscheme $W$ of $X'Y$, namely
@@ -63,9 +81,13 @@ For a smooth scheme, denote by $\Delta_X:X\rightarrow X\times_kX$ the associated
 (Definition) Let $\mathcal{M}$ and $\mathcal{N}$ be objects of $DM_-^{eff}(k)$ and $\alpha:M(X)\rightarrow\mathcal{M}$, $\beta:M(X)\rightarrow\mathcal{N}$ be morphisms in $DM_-^{eff}(k)$.
 
 We set *exteroir cup-product* of $\alpha$ and $\beta$ over $X$ to be composite of morphisms
-
-<!-- https://q.uiver.app/#q=WzAsMyxbMCwwLCJNKFgpIl0sWzEsMCwiTShYKVxcb3RpbWVzIE0oWCkiXSxbMiwwLCJcXG1hdGhjYWx7TX1cXG90aW1lc1xcbWF0aGNhbHtOfSJdLFswLDEsIlxcRGVsdGFfWCJdLFsxLDIsIlxcYWxwaGFcXG90aW1lc1xcYmV0YSJdXQ== -->
-<iframe class="quiver-embed" src="https://q.uiver.app/#q=WzAsMyxbMCwwLCJNKFgpIl0sWzEsMCwiTShYKVxcb3RpbWVzIE0oWCkiXSxbMiwwLCJcXG1hdGhjYWx7TX1cXG90aW1lc1xcbWF0aGNhbHtOfSJdLFswLDEsIlxcRGVsdGFfWCJdLFsxLDIsIlxcYWxwaGFcXG90aW1lc1xcYmV0YSJdXQ==&embed" width="646" height="176" style="border-radius: 8px; border: none;"></iframe>
+```rawlatex
+\begin{tikzcd}
+	{M(X)} & {M(X)\otimes M(X)} & {\mathcal{M}\otimes\mathcal{N}}
+	\arrow["{\Delta_X}", from=1-1, to=1-2]
+	\arrow["\alpha\otimes\beta", from=1-2, to=1-3]
+\end{tikzcd}
+```
 
 We denote it by $\alpha\boxtimes_X\beta$. 
 
