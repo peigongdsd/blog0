@@ -71,8 +71,8 @@ rawLaTexFilterMd (CodeBlock (id, "rawlatex":extraClasses, namevals) contents) =
   where imageBlock fname = Para [Image (id, "rawlatex":extraClasses, namevals) [] (fname, "")]
 rawLaTexFilterMd x = return x
 
-pandocCompilerWithTikzCd :: Compiler (Item String)
-pandocCompilerWithTikzCd =
+pandocCompilerFinal :: Compiler (Item String)
+pandocCompilerFinal =
   pandocCompilerWithTransformM readerOpts writerOpts $ walkM rawLaTexFilterMd
 
 main :: IO ()
@@ -93,12 +93,34 @@ main = hakyll $ do
 
     match "posts/*" $ do
         route $ setExtension "html"
-        compile $ pandocCompilerWithTikzCd
+        compile $ pandocCompilerFinal
+            >>= loadAndApplyTemplate "templates/post.html"    postCtx
+            >>= loadAndApplyTemplate "templates/default.html" postCtx
+            >>= relativizeUrls
+ 
+    match "notes/*" $ do
+        route $ setExtension "html"
+        compile $ pandocCompilerFinal
             >>= loadAndApplyTemplate "templates/post.html"    postCtx
             >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
-    create ["archive.html"] $ do
+
+    create [ "notes.html" ] $ do
+        route $ setExtension "html"
+        compile $ do
+            posts <- loadAll "notes/*"
+            let archiveCtx =
+                    listField "posts" postCtx (return posts) `mappend`
+                    constField "title" "Notes"               `mappend`
+                    defaultContext
+
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/notes.html" archiveCtx
+                >>= loadAndApplyTemplate "templates/default.html" archiveCtx
+                >>= relativizeUrls
+
+    create [ "archive.html" ] $ do
         route idRoute
         compile $ do
             posts <- recentFirst =<< loadAll "posts/*"
