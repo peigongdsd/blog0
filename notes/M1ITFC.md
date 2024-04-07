@@ -17,10 +17,27 @@ If $X/k$ is nonsingular and connected, [0B0Q](https://stacks.math.columbia.edu/t
 
 For two cycles $\mathcal{V}=\sum m_iV_i$ and $\mathcal{W}=\sum n_jW_j$, where $V_i$s and $W_j$s intersect properly pairwisely, the intersection product $\mathcal{V}\cdot\mathcal{W}$ will be defined as $\sum m_in_j(V_i\cdot W_j)$.
 
+We know that 
+
+$$ \mathcal{M}\otimes_X^L\mathcal{N}\otimes_X\mathcal{O}_{X,x}\rightarrow \mathcal{M}_x\otimes_{\mathcal{O}_{X,x}}^L\mathcal{N}_x $$
+
+is an isomorphism (let $\mathcal{N}$ be flat). As a result, if a point $x$ is not coaintained in the support of $Tor_0^{\mathcal{O}_X}(\mathcal{M},\mathcal{N})$, the length of $\mathcal{M}\otimes^L\mathcal{N}$ at $x$ must be $0$.
+
 ### 17A.2 
 (Associative law) On a smooth variety $X/k$, $\mathcal{V}_1\cdot (\mathcal{V}_2\cdot\mathcal{V}_3)$ is equal to $(\mathcal{V}_1\cdot\mathcal{V}_2)\cdot\mathcal{V}_3$.
 
+Maybe I'll add a proof here. Later.
+
 ### 17A.3
-(Definition) (Pullback along a morphism) For $f:X\rightarrow Y$ with $X$ and $Y$ regular, and $\mathcal{Y}$ is a cycle on $Y$ of codimension $i$. We say that $f^*(\mathcal{Y})$ is defined if each component of $f^{-1}(Supp(\mathcal(Y)))$. In this case, we define $f^*(\mathcal{Y})$ to be $\Gamma_f\cdot(X\times\mathcal{Y})$, identifying $\Gamma_f$ with $X$.
+(Definition) (Pullback along a morphism) For $f:X\rightarrow Y$ with $X$ and $Y$ regular, and $\mathcal{Y}$ is a cycle on $Y$ of codimension $i$. We say that $f^*(\mathcal{Y})$ is *defined* if each component of $f^{-1}(Supp(\mathcal(Y)))$. In this case, we define $f^*(\mathcal{Y})$ to be $\Gamma_f\cdot(X\times\mathcal{Y})$, identifying $\Gamma_f$ with $X$. 
+
+### 17A.4
+(Example) 
+
+
+
+- If $f:X\rightarrow Y$ is flat, $f^*(\mathcal{y})$ is the cycle associated to $f^{-1}(V)$.
+
+This is not so straightforward. Since $X\rightarrow Y$ is flat, $\mu:=id_x\times f:X\times X\rightarrow X\times Y$ is flat. Note that $L\mu^*=\mu^*$ commutes with taking derived tensor product and $\Delta_X\cdot(X\times f^{-1}(\mathcal{y}))$ is just
 
 ### Vanishing theorem on wrong codimensions
