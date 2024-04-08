@@ -31,7 +31,7 @@ Maybe I'll add a proof here. Later.
 ### 17A.3
 (Definition) (Pullback along a morphism) For $f:X\rightarrow Y$ with $X$ and $Y$ regular, and $\mathcal{Y}$ is a cycle on $Y$ of codimension $i$. We say that $f^*(\mathcal{Y})$ is *defined* if each component of $f^{-1}(Supp(\mathcal(Y)))$. In this case, we define $f^*(\mathcal{Y})$ to be $\Gamma_f\cdot(X\times\mathcal{Y})$, identifying $\Gamma_f$ with $X$. 
 
-### Projection formula in derived category of qcoh sheaves
+## Projection formula in derived category of qcoh sheaves
 See [01E6](https://stacks.math.columbia.edu/tag/01E6). For a morphism $f:X\rightarrow Y$, the *projection formula* we refer to is a morphism in $D(Y)$, namely
 
 $$ Rf_*E\otimes_Y^L F\rightarrow Rf_*(E\otimes_X^L Lf^*F) $$
@@ -48,16 +48,21 @@ $$ (Rf_*E)\otimes_Y\mathcal{V}\rightarrow Rf_*(E\otimes_X f^*\mathcal{V}) $$
 
 is obviously an isomorphism! Also, if $f$ is a qcqs-morphism between schemes, the projection formula for $f$ also holds, ref. [08EU](https://stacks.math.columbia.edu/tag/08EU).
 
-### Reduction to diagonal
-Let $X$ be nonsingular variety. Denote by $\Delta:X\rightarrow X\times X$ the diagonal immersion. If $K$ and $M$ are objects in $D(QCoh(X))$, there are canonical isomorphisms
+## Reduction to diagonal
+Let $X$ be nonsingular variety. Denote by $\Delta:X\rightarrow X\times X$ the diagonal immersion. If $K$ and $M$ are objects in $D(QCoh(X))$, there are canonical morphisms
 
-$$ L\Delta^*(Lpr_1^*(K)\otimes_{X\times X}^L Lpr_2^*(M))=K\otimes_X^L M $$ and 
+$$ L\Delta^*(Lpr_1^*(K)\otimes_{X\times X}^L Lpr_2^*(M))\rightarrow K\otimes_X^L M $$ and 
 
-$$ \mathcal{O}_\Delta\otimes_{X\times X}^L Lpr_1^*(K)\otimes_{X\times X}^L Lpr_2^*(M)=\Delta_*(K\otimes_X^L M) $$
+$$ \mathcal{O}_\Delta\otimes_{X\times X}^L Lpr_1^*(K)\otimes_{X\times X}^L Lpr_2^*(M)\rightarrow\Delta_*(K\otimes_X^L M) $$
 
-in $D(X)$ and $D(X\times X)$ respectively.
+in $D(X)$ and $D(X\times X)$ respectively. Note that pushforward along closed immersion is exact, and the second morphism follows from the projection formula of $\Delta_X$, taking $E$ and $F$ as $\mathcal{O}_X$ and $Lpr_1^*(K)\otimes_{X\times X}^L Lpr_2^*(M)$ respectively. The smoothness of $X\times X$ gives the projective formula holds in this case. By applying $\Delta_X^{-1}$ to both sides we see that the first one is also an isomorphism.
 
+### [0B0U](https://stacks.math.columbia.edu/tag/0B0U)
+Let $X/k$ be a nonsingular variety and $\alpha$ and $\beta$ be cycles. Then
 
+- $\alpha\times\beta$ and $[\Delta]$ intersects properly.
+- $\Delta_*(\alpha\cdot\beta)=[\Delta]\cdot(\alpha\times\beta)$ as cycles on $X\times X$.
+- If $X$ is proper, $p_{1*}([\Delta]\cdot(\alpha\times\beta))$ is the same as $\alpha\cdot\beta$.
 
 
 ### 17A.4
