@@ -60,10 +60,13 @@ in $D(X)$ and $D(X\times X)$ respectively. Note that pushforward along closed im
 ### [0B0U](https://stacks.math.columbia.edu/tag/0B0U)
 Let $X/k$ be a nonsingular variety and $\alpha$ and $\beta$ be cycles. Then
 
-- $\alpha\times\beta$ and $[\Delta]$ intersects properly.
-- $\Delta_*(\alpha\cdot\beta)=[\Delta]\cdot(\alpha\times\beta)$ as cycles on $X\times X$.
-- If $X$ is proper, $p_{1*}([\Delta]\cdot(\alpha\times\beta))$ is the same as $\alpha\cdot\beta$.
+1. $\alpha\times\beta$ and $[\Delta]$ intersects properly. 
+2. $\Delta_*(\alpha\cdot\beta)=[\Delta]\cdot(\alpha\times\beta)$ as cycles on $X\times X$.
+3. If $X$ is proper, $p_{1*}([\Delta]\cdot(\alpha\times\beta))$ is the same as $\alpha\cdot\beta$.
 
+Say $\alpha$ and $\beta$ are prime and generate by integral subschemes $V$ and $W$ respectively. Then $codim(V\times W)+codim(X)=codim(\Delta(V\times W))=codim(\Delta\cap (V\times W))$ suggests that statement 1 holds.
+
+## Now back to the lecture
 
 ### 17A.4
 (Example) 
