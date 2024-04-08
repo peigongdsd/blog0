@@ -31,13 +31,48 @@ Maybe I'll add a proof here. Later.
 ### 17A.3
 (Definition) (Pullback along a morphism) For $f:X\rightarrow Y$ with $X$ and $Y$ regular, and $\mathcal{Y}$ is a cycle on $Y$ of codimension $i$. We say that $f^*(\mathcal{Y})$ is *defined* if each component of $f^{-1}(Supp(\mathcal(Y)))$. In this case, we define $f^*(\mathcal{Y})$ to be $\Gamma_f\cdot(X\times\mathcal{Y})$, identifying $\Gamma_f$ with $X$. 
 
+### Projection formula in derived category of qcoh sheaves
+See [01E6](https://stacks.math.columbia.edu/tag/01E6). For a morphism $f:X\rightarrow Y$, the *projection formula* we refer to is a morphism in $D(Y)$, namely
+
+$$ Rf_*E\otimes_Y^L F\rightarrow Rf_*(E\otimes_X^L Lf^*F) $$
+
+which is defiend to be the ajoint of the canonical morphism
+
+$$ Lf^*(Rf_*E\otimes_Y^L F)=Lf^*Rf_*E\otimes_X^L Lf^*F\rightarrow E\otimes_X^L Lf^*F. $$
+
+Refer to [08FK](https://stacks.math.columbia.edu/tag/08FK) for *strictly perfect* objects and [08G4](https://stacks.math.columbia.edu/tag/08G4) for *perfect* objects.
+
+There is a bunch of cases when the projection formula is an isomorphism (we may say the projection formula **holds** for $f$). For example, if $X$ and $Y$ are ringed spaces, it holds when $F$ is perfect (this is [0B54](https://stacks.math.columbia.edu/tag/0B54)), and hence when $Y$ is a nonsingular variety and $F$ is coherent, since in this case $F^i$ has a resolution of locally free sheaves (of finite rank, see Fulton, Intersection theory, Appendix B.8.3), which is stricly perfect. In fact, when $F$ is equal to a locally free sheaf, namely $\mathcal{V}$, the morphism 
+
+$$ (Rf_*E)\otimes_Y\mathcal{V}\rightarrow Rf_*(E\otimes_X f^*\mathcal{V}) $$
+
+is obviously an isomorphism! Also, if $f$ is a qcqs-morphism between schemes, the projection formula for $f$ also holds, ref. [08EU](https://stacks.math.columbia.edu/tag/08EU).
+
+### Reduction to diagonal
+Let $X$ be nonsingular variety. Denote by $\Delta:X\rightarrow X\times X$ the diagonal immersion. If $K$ and $M$ are objects in $D(QCoh(X))$, there are canonical isomorphisms
+
+$$ L\Delta^*(Lpr_1^*(K)\otimes_{X\times X}^L Lpr_2^*(M))=K\otimes_X^L M $$ and 
+
+$$ \mathcal{O}_\Delta\otimes_{X\times X}^L Lpr_1^*(K)\otimes_{X\times X}^L Lpr_2^*(M)=\Delta_*(K\otimes_X^L M) $$
+
+in $D(X)$ and $D(X\times X)$ respectively.
+
+
+
+
 ### 17A.4
 (Example) 
-
-
 
 - If $f:X\rightarrow Y$ is flat, $f^*(\mathcal{y})$ is the cycle associated to $f^{-1}(V)$.
 
 This is not so straightforward. Since $X\rightarrow Y$ is flat, $\mu:=id_x\times f:X\times X\rightarrow X\times Y$ is flat. Note that $L\mu^*=\mu^*$ commutes with taking derived tensor product and $\Delta_X\cdot(X\times f^{-1}(\mathcal{y}))$ is just
+
+```rawlatex
+\begin{tikzcd}
+	X & {X\times X} & {X\times Y}
+	\arrow["{\Delta_X}", from=1-1, to=1-2]
+	\arrow["{id_X\times f}", from=1-2, to=1-3]
+\end{tikzcd}
+```
 
 ### Vanishing theorem on wrong codimensions
