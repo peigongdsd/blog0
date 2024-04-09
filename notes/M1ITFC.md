@@ -113,9 +113,16 @@ Given elementart correspondences $V\in Cors(X,Y)$ and $W\in Cors(Y,Z)$, we form 
 
 $$ [T]=(V\times Z)\cdot (X\times W) $$
 
-of the correspondending cycle in $X\times Y\times Z$. Then the composition of these two correspondences is defined to be the pushforward $(p_{XYZ}{XZ})_*[T]$, which is then denoted by $W\circ V$. Then we'll have two things to prove, namely
+of the correspondending cycle in $X\times Y\times Z$. Then the composition of these two correspondences is defined to be the pushforward $(p_{XYZ}^{XZ})_*[T]$, which is then denoted by $W\circ V$. Then we'll have two things to prove, namely
 
 - $V$ and $W$ meets properly,
-- and every component of $[T]$ is finite and surjective over a component of $X$.
+- and every component of $[T]$ is finite and surjective over a component of $X$. 
+
+### EGA IV.14.4.4 (Chevalley’s criterion)
+ref.
+
+### 1.6
+
+
 
 

@@ -95,3 +95,6 @@ We denote it by $\alpha\boxtimes_X\beta$.
 (Example) Consider $\alpha\in Cors(X,Y)$ and $\beta\in Cors(X,Z)$. Elementary calculation shows that 
 
 $$ M(\alpha)\boxtimes M(\beta)=M(p_{XYZ}^{XY*}(\alpha)\cdot p_{XYZ}^{XZ*}(\beta)). $$
+
+Well, this is not so easy. We have to consider a composition
+
