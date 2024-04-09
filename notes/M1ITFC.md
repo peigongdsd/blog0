@@ -64,7 +64,7 @@ Let $X/k$ be a nonsingular variety and $\alpha$ and $\beta$ be cycles. Then
 2. $\Delta_*(\alpha\cdot\beta)=[\Delta]\cdot(\alpha\times\beta)$ as cycles on $X\times X$.
 3. If $X$ is proper, $p_{1*}([\Delta]\cdot(\alpha\times\beta))$ is the same as $\alpha\cdot\beta$.
 
-Say $\alpha$ and $\beta$ are prime and generate by integral subschemes $V$ and $W$ respectively. Then $codim(V\times W)+codim(X)=codim(\Delta(V\times W))=codim(\Delta\cap (V\times W))$ suggests that statement 1 holds.
+Say $\alpha$ and $\beta$ are prime and generate by integral subschemes $V$ and $W$ respectively. Then $codim(V\times W)+codim(X)=codim(\Delta(V\times W))=codim(\Delta\cap (V\times W))$ suggests that statement 1 holds. Statement $2$ follows directly from the subsequent equation ($Lp^*\otimes_{X\times X}^LLq^*$). Statement 3 is easy from 2.
 
 ## Now back to the lecture
 
@@ -73,8 +73,6 @@ Say $\alpha$ and $\beta$ are prime and generate by integral subschemes $V$ and $
 
 - If $f:X\rightarrow Y$ is flat, $f^*(\mathcal{y})$ is the cycle associated to $f^{-1}(V)$.
 
-This is not so straightforward. Since $X\rightarrow Y$ is flat, $\mu:=id_x\times f:X\times X\rightarrow X\times Y$ is flat. Note that $L\mu^*=\mu^*$ commutes with taking derived tensor product and $\Delta_X\cdot(X\times f^{-1}(\mathcal{y}))$ is just
-
 ```rawlatex
 \begin{tikzcd}
 	X & {X\times X} & {X\times Y}
@@ -82,5 +80,7 @@ This is not so straightforward. Since $X\rightarrow Y$ is flat, $\mu:=id_x\times
 	\arrow["{id_X\times f}", from=1-2, to=1-3]
 \end{tikzcd}
 ```
+
+Since $id_X\times f$ is flat, we can identify $(id_X\times f)^*(X\times\mathcal{Y}\cdot\Gamma_f)|_{\Gamma{f}}$ on $X\times Y$ with $(X\times f^*(\mathcal{Y}))\cdot\Delta_X|_{\Delta_X}$ on $X\times X$, which is equal to $f^*{\mathcal{Y}}$ on $X$ by reduction to diagonal.
 
 ### Vanishing theorem on wrong codimensions
