@@ -71,7 +71,7 @@ Say $\alpha$ and $\beta$ are prime and generate by integral subschemes $V$ and $
 ### 17A.4
 (Example) 
 
-- If $f:X\rightarrow Y$ is flat, $f^*(\mathcal{y})$ is the cycle associated to $f^{-1}(V)$.
+- If $f:X\rightarrow Y$ is flat and $\mathcal{Y}=[V]$, $f^*(\mathcal{Y})$ is the cycle associated to the subcheme $f^{-1}(V)$.
 
 ```rawlatex
 \begin{tikzcd}
@@ -83,4 +83,39 @@ Say $\alpha$ and $\beta$ are prime and generate by integral subschemes $V$ and $
 
 Since $id_X\times f$ is flat, we can identify $(id_X\times f)^*(X\times\mathcal{Y}\cdot\Gamma_f)|_{\Gamma{f}}$ on $X\times Y$ with $(X\times f^*(\mathcal{Y}))\cdot\Delta_X|_{\Delta_X}$ on $X\times X$, which is equal to $f^*{\mathcal{Y}}$ on $X$ by reduction to diagonal.
 
+- If $X$ is a subvariety of $Y$, then the cycle $f^*(\mathcal{Y})$ on $X$ is the same as the cycle $X\cdot\mathcal{Y}$ viewed as a cyle on $X$.
+
+- regular...
+
+### 17A.6
+Let $f:Y'\rightarrow Y$ be a morphism of smooth varieties and $\mathcal{W}$ a cycle on $Y'$. We saya cycle $\mathcal{Y}$ on $Y$ is in good position for ${W}$ relative to $f$ if the cycle $f^*{\mathcal{Y}}$ is defined (has correct codimension) and intersects $\mathcal{W}$ properly on $Y'$. 
+
+### Irrelevant of the base for doing intersection product
+
 ### Vanishing theorem on wrong codimensions
+
+
+# Finite Correspondence
+
+The construction of *finite correspondence* is the foundation for Voevodsky's theory of mixed motives over a field (even over an arbitary noetherian base $S$). All schemes considered here are smooth separated over a base field $k$. Namely, we denote by $Sm/k$ the full subcategory of smooth spearated schemes over $k$. We will embedded this category into $Cor_k$, which is constructed below.
+
+### 1.1 
+(Definition) $X/k$ and $Y/k$ be in $Sm/k$. When $X$ is integral(connected), we define an *elementary correspondence* from $X$ to $Y$ to be an irreducible closed subset $W$ of $X\times Y$ where the composition $W\rightarrow X\times Y\rightarrow X$ is finite and surjective. The free abelian group genereted by such is named $Cors_k(X,Y)$. Then, we define $Cors(\coprod_iX_i, Y)=\oplus_iCors(X_i,Y)$. 
+
+### 1.2
+(Example) Since schemes we considered are separated, all the diagrams are closed. So there is a embedding $Mor_k(X,Y)\subset Cors_k(X,Y)$ sending $f$ to $\Gamma_f$. Especially, $id_X$ is then mapped to $\Delta_X$. 
+
+### 1.3
+We associate a finite correspondence from $X$ to $Y$ to a subscheme $Z$ of $X\times Y$ by taking the associated cycle $[Z]$, like what we've done in ordinary intersection theory.
+
+### Composition 
+Given elementart correspondences $V\in Cors(X,Y)$ and $W\in Cors(Y,Z)$, we form the intersection product 
+
+$$ [T]=(V\times Z)\cdot (X\times W) $$
+
+of the correspondending cycle in $X\times Y\times Z$. Then the composition of these two correspondences is defined to be the pushforward $(p_{XYZ}{XZ})_*[T]$, which is then denoted by $W\circ V$. Then we'll have two things to prove, namely
+
+- $V$ and $W$ meets properly,
+- and every component of $[T]$ is finite and surjective over a component of $X$.
+
+
