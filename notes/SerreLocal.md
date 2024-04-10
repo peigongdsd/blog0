@@ -14,7 +14,7 @@ where the morphism $d:\wedge^1 R^r=R^r\rightarrow R=\wedge^0 R^r$ is defined to 
 
 $$ d(e_1\wedge\cdots\wedge e_n)=\sum(-1)^{i-1}f_k e_1\wedge\cdots\hat{e_k}\cdots\wedge e_n. $$
 
-A sequence is said
+A sequence is said to be *Koszul-regular* if the Koszul complex attached to which is exact, and to be $H_1$-regular if the Koszul complex attached to which is exact at $\wedge^2\rightarrow\wedge^1\rightarrow\wedge^0$.
 
 
 
@@ -26,6 +26,6 @@ $f:X\rightarrow Y$ be a morphism, with $Y$ non-singular, and  $x$ and $y$ be cyc
 
 $$ dim|x|\cap f^{-1}(|y|)\geq dim|x| - codim|y|. $$
 
-This is because morphisms between smooth varieties are 
+This is [0AZN](https://stacks.math.columbia.edu/tag/0AZN)
 
 ### Exercises 1) functorial property of pull-backs

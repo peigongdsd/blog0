@@ -16,11 +16,6 @@ import           System.Process
 import           System.IO
 import qualified Data.ByteString as DB8
 --------------------------------------------------------------------------------
-{-|
->>>:t bodyfield
-Variable not in scope: bodyfield
-
-|-}
 
 readerOpts :: ReaderOptions
 readerOpts = def { readerExtensions = extensions }

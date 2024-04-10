@@ -145,7 +145,9 @@ Let $V\subset X\times Y$ and $W\subset X\times Z$ be irreducible closed subsets 
 \end{tikzcd}
 ```
 
-Let $\tilde{V}$ (resp. $\tilde{W}$) be the underlying integral scheme of $V$ (resp. $W$) .We may assume that $X$ and $Y$ are connected. It's already seen in last lemma that each component of $\tilde{V}\times_Y\tilde{W}$ is f.s. over $\tilde{V}$ and hence $X$.
+Let $\tilde{V}$ (resp. $\tilde{W}$) be the underlying integral scheme of $V$ (resp. $W$) .We may assume that $X$ and $Y$ are connected. It's already seen in last lemma that each component of $\tilde{V}\times_Y\tilde{W}$, namely $T_i$, is f.s. over $\tilde{V}$ and hence $X$. Therefore $dim T_i=dim X$ for all $i$, i.e. $\tilde{V}\times Z$ meets $X\times\tilde{W}$ properly.
+
+
 
 
 
