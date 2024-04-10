@@ -122,7 +122,30 @@ of the correspondending cycle in $X\times Y\times Z$. Then the composition of th
 ref.
 
 ### 1.6
+Let $Z$ be an *intergal* scheme, finte and surjective over a *normal* (so geometric unibranch) scheme $S$. Then for every morphism $T\rightarrow S$ with $T$ connected, every component of $T\times_SZ$ is finite and surjective over $T$.
 
+Since $f$ is equidimensional over $S$ of dimension $1$, $f$ is universally open, hence the lifting along $T\rightarrow S$ is universally open and surjective, hence universally closed. Clearly every generic point of $T\times_SZ$ is over the generic point of $T$.
+
+### 1.7
+(Lemma) Composition of finite correspondences make sense.
+
+Let $V\subset X\times Y$ and $W\subset X\times Z$ be irreducible closed subsets which are f.s. over $X$ and $Y$ resp. Then $V\times Z$ and $X\times W$ intersect properly, and each component of the push-forwad of the cycle $[T]$ where $T=(V\times Z)\cap(X\times W)$ is finite and surjective over $X$.
+
+```rawlatex
+\begin{tikzcd}
+	{\tilde{V}\times_Y\tilde{W}} & {\tilde{W}} & Z \\
+	{\tilde{V}} & Y \\
+	X
+	\arrow[from=2-1, to=2-2]
+	\arrow["{f.s.}"', from=2-1, to=3-1]
+	\arrow["{f.s.}"', from=1-2, to=2-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+\end{tikzcd}
+```
+
+Let $\tilde{V}$ (resp. $\tilde{W}$) be the underlying integral scheme of $V$ (resp. $W$) .We may assume that $X$ and $Y$ are connected. It's already seen in last lemma that each component of $\tilde{V}\times_Y\tilde{W}$ is f.s. over $\tilde{V}$ and hence $X$.
 
 
 
