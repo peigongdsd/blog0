@@ -22,10 +22,20 @@ A sequence is said to be *Koszul-regular* if the Koszul complex attached to whic
 
 ### Definition
 
-$f:X\rightarrow Y$ be a morphism, with $Y$ non-singular, and  $x$ and $y$ be cycles on $X$ and $Y$ resp. Set $|x|=Supp(x)$, then 
+$f:X\rightarrow Y$ be a morphism between varieties, with $Y$ non-singular, and  $x$ and $y$ be cycles on $X$ and $Y$ resp. Set $|x|=Supp(x)$, then 
 
 $$ dim|x|\cap f^{-1}(|y|)\geq dim|x| - codim|y|. $$
 
-This is [0AZN](https://stacks.math.columbia.edu/tag/0AZN)
+This is [0AZN](https://stacks.math.columbia.edu/tag/0AZN). If the equality holds, then one defines $x\cdot_fy$ with support contained in $|x|\cap f^{-1}(|y|)$ by either one of the following methods:
+
+- Reduction to a standard intersection: Assume $X$ being affine (locally, and at least separable), then embed $X$ in an affine space $V$. The graph morphism embeds $X$ into $V\times Y$, and sends a cycle $x$ on $X$ to $\gamma(x)$ on $V\times Y$. Then one defines $x\cdot_fy$ as the unique cycle on $X$ s.t.
+
+$$ \gamma(x\cdot_fy)=\gamma(x)\cdot (V\times y). $$
+
+The intersection product being calculated on the non-singular scheme $V\times Y$. 
+
+*INDEPENDENT ON THE CHOSEN EMBEDDING* check later!
+
+- Homological computation: Choose coherent sheaves $\mathcal{M}$ and $\mathcal{N}$ over $X$ and $Y$, representing $x$ and $y$ respectively. Then define $x$
 
 ### Exercises 1) functorial property of pull-backs
