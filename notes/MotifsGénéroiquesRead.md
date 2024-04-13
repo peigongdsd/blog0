@@ -1,4 +1,4 @@
-Cache on Reading *Motifs Généroiques* by Frédéric Déglise
+Translate Cache on Reading *Motifs Généroiques* by Frédéric Déglise
 ===
 
 # Abstract
@@ -111,7 +111,70 @@ $$\begin{aligned}
 &=\Gamma^*(X\times\alpha\times\beta)
 \end{aligned}$$
 
-$\Theta$
 
+# Gysin Triangle
 
+## 2.1 Relative Motive
 
+### 2.1.1
+(Definition) Let $X$ be a smooth scheme and $Y$ a smooth subscheme of $X$. We denote $L[X/Y]$ the cokernel of the inclusion morphism $L[Y]\rightarrow L[X]$ in $\mathcal{N}_k^{tr}$. We also denote $M(X/Y)=C^*L[X/Y]$ the corresponding motivic complex ($A^1$-localization).
+
+*Closed pair* we are referring to is any pair $(X,Z)$ for a smooth scheme $X$ and a closed subscheme $Z$ of $X$. We will simply say $(X,Z)$ is *smooth* if $Z$ is smooth and *of codimension $n$* if $Z$ is of pure codimension $n$ in $X$.
+
+For $(X,Z)$ a closed pair, we denote the corresponding motive $M(X/X-Z)$ by $M_Z(X)$ (following Voevodsky) of simply $M(X,Z)$. We call it the relative motive associated to closed pair $(X,Z)$. The motive fits into the following distinguished triangle 
+
+$$ M(X-Z)\rightarrow M(X)\rightarrow M_Z(X)\rightarrow +1. $$
+
+A morphism of closed pairs $(f,g):(Y,T)\rightarrow (X,Z)$ is a commutative diagram of morphisms
+
+```rawlatex
+\begin{tikzcd}
+	T & Y \\
+	Z & X
+	\arrow["g"', from=1-1, to=2-1]
+	\arrow["f", from=1-2, to=2-2]
+	\arrow[hook, from=1-1, to=1-2]
+	\arrow[hook, from=2-1, to=2-2]
+\end{tikzcd}
+```
+
+which is quasi-cartesian (which means cartesian on underlying topological spaces). We say that this morphism is *cartesian* if the diagram is cartesian. If $\mathcal{P}$ is a property of morphism of schemes, we say $(f,g)$ satisfies $\mathcal{P}$ if $f$ satisfies $P$. Such a morphism induces a morphism $(f,g)_*:M_T(Y)\rightarrow M_Z(X)$ in $DM_-^{eff}(k)$.
+
+### 2.1.2
+
+Say $(f,g):(Y,T)\rightarrow (X,Z)$ a morphism of closed pair which is *finite equidimensional*. By definition, the following square 
+
+```rawlatex
+\begin{tikzcd}
+	{Y-T} & Y \\
+	{X-Z} & X
+	\arrow["h"', from=1-1, to=2-1]
+	\arrow["f", from=1-2, to=2-2]
+	\arrow[hook, from=1-1, to=1-2]
+	\arrow[hook, from=2-1, to=2-2]
+\end{tikzcd}
+```
+
+is cartesian. So, according to proposition 1.1.4, this entails a unique induced morphism $\alpha$, depicted as a dashed line in the following diagram in the category of sheaves with transfers
+
+```rawlatex
+\begin{tikzcd}
+	0 & {L[X-Z]} & {L[X]} & {L[X/Z]} & 0 \\
+	0 & {L[Y-T]} & {L[Y]} & {L[Y/T]} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+	\arrow["\alpha", dashed, from=1-4, to=2-4]
+	\arrow["{L[f^t]}", from=1-3, to=2-3]
+	\arrow["{L[h^t]}", from=1-2, to=2-2]
+\end{tikzcd}
+```
+
+### 2.1.3
+
+(Definition) Using the preceding notations, $(f,g)^*=C^*(\alpha)$ defines a morphism $M_Z(X)\rightarrow M_T(Y)$.
