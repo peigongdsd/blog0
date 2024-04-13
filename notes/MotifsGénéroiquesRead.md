@@ -178,3 +178,47 @@ is cartesian. So, according to proposition 1.1.4, this entails a unique induced 
 ### 2.1.3
 
 (Definition) Using the preceding notations, $(f,g)^*=C^*(\alpha)$ defines a morphism $M_Z(X)\rightarrow M_T(Y)$.
+
+By definition, the morphism fits into a morphism of distinguished triangle
+
+```rawlatex
+\begin{tikzcd}
+	{M(X-Z)} & {M(X)} & {M(X/Z)} & {+1} \\
+	{M(Y-T)} & {M(Y)} & {M(Y/T)} & {+1}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow["{(f,g)^*}", dashed, from=1-3, to=2-3]
+	\arrow["{f^*}", from=1-2, to=2-2]
+	\arrow["{h^*}", from=1-1, to=2-1]
+\end{tikzcd}
+```
+
+It's easily deduced from proposition 1.1.4 that
+
+### 2.1.4
+(Proposition) Consider the commutative diagram
+
+```rawlatex
+\begin{tikzcd}
+	{(Y',T')} & {(Y,T)} \\
+	{(X',Z')} & {(X,Z)}
+	\arrow["{(p,q)}", from=2-1, to=2-2]
+	\arrow["{(p',q')}", from=1-1, to=1-2]
+	\arrow["{(f,g)}"{description}, from=1-2, to=2-2]
+	\arrow["{(f',g')}"{description}, from=1-1, to=2-1]
+\end{tikzcd}
+```
+
+of closed pairs where $(f,g)$ is finite equidimensional and $(p, q)$ is dominant. Further we suppose $X$, $X'$ and $Y$ are connected, and the induced diagram on which is quasi-cartesian.
+
+Say $R=\kappa(X')\otimes_{\kappa(X)}\kappa(Y)$. For any $x\in Spec(R)$, we denote $(f_x',g_x')$ and $(p_x',q_x')$ be restrictions of $(f',g')$ and $(p',q')$ resp. to the connected component of $Y'$ at $x$. Then we have
+
+$$ (f,g)^*(p,q)_*=\sum_{x\in Spec(R)} lg_R(R_x)(p_x',q_x')_*(f_x',g_x')^*. $$
+
+## 2.2 Purity Theorem
+
+Suppose $(X,Z)$ is a smooth closed pair. We consider the space
