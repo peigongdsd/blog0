@@ -17,7 +17,9 @@ Following the notation, we have
 - $IR[\frac{I}{a}]=aR[\frac{I}{a}]$.
 - $R$ and $R[\frac{I}{a}]$ are isomorphic on local $D(a)$.
 
-Proof. 
+Proof. If $a\cdot(x/a^n)=0$ for some $x\in I^n$, we have $ax/(a^{n+1})=0$. Furthermore, $a^n\cdot(x/a^n)=x$ so $a$ generates $I$ in $R[\frac{I}{a}]$.
+
+
 
 ## Blow-up algebra as local structure of blowups
 
