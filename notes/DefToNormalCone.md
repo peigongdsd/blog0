@@ -88,7 +88,7 @@ For a subscheme $X$ of $Y$, define $M_XY$ of simply $M$ to be the blowup of $Y\t
 
 The immersion $i$ is not that straightforward. To construct it, identify $X$ as the point at infinity of $X\times\mathbb{P}^1$, which is then embedded into $Y\times\mathbb{P}^1$. The blowup of $X\times\mathbb{P}^1$ at infininty is indentical to itself, hence the strict transformation gives the closed embedding $i$. Since $pr:Y\times\mathbb{P}^1\rightarrow\mathbb{P}^1$ is flat, the blowup $M_XY$ is flat over $\mathbb{P}^1$ with the associated morphism denoted by $\rho$. Since $M\rightarrow Y\times\mathbb{P}^1$ is an isomorphism if we cut out $Y\times\infty$, we see that
 
-- $i$ is the trivial embedding away from $\infty$, namely $X\times\mathbb{A}^1\rightarrow Y\times\mathbb{P}^1$.
+- $i$ is the trivial embedding away from $\infty$, namely $X\times\mathbb{A}^1\rightarrow Y\times\mathbb{A}^1$.
 
 Now we investigate the structure over $\infty$. If we denote by $C$ the normal cone $C_XY$, the normal cone of $X\times\infty$ in $Y\times\mathbb{P}^1$ is $C\oplus 1$, therefore the exceptionh divisor of $M_XY$ is $P(C\oplus 1)$. Also view $Y'$, the blowup of $Y$ at $X$, as a closed subscheme of $M_XY$ via the embedding
 
