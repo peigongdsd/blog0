@@ -221,4 +221,40 @@ $$ (f,g)^*(p,q)_*=\sum_{x\in Spec(R)} lg_R(R_x)(p_x',q_x')_*(f_x',g_x')^*. $$
 
 ## 2.2 Purity Theorem
 
-Suppose $(X,Z)$ is a smooth closed pair. We consider the space
+Suppose $(X,Z)$ is a smooth closed pair. We consider the space of deformation to the normal cone 
+
+$$ D_Z(X)=B_Z(\mathbb{A}_X^1)-B_ZX $$
+
+where $B_Z(\mathbb{A}_X^1)$ (resp. $B_Z(X)$) refers to the blowing up of $\mathbb{A}_X^1$ at $0\times Z$ (resp. $X$ at $Z$), with $B_ZX$ viewed as a closed subscheme of $B_Z(\mathbb{A}_X^1)$ in the evident way. So $D_ZX$ is flat over $\mathbb{A}^1$ with fibre at $1$ isomorphic to $X$ and fibre at $0$ isomorphic to the normal bundle $N_ZX$ of $Z$ in $X$. Finally, note that $D_ZZ=\mathbb{A}_Z^1$ is a closed subscheme of $D_ZX$. One then deduce the morphisms between closed paires
+
+```rawlatex
+\begin{tikzcd}
+	{(X,Z)} & {(D_ZX,\mathbb{A}_Z^1)} & {(N_ZX,Z)}
+	\arrow["d", from=1-1, to=1-2]
+	\arrow["{d'}"', from=1-3, to=1-2]
+\end{tikzcd}
+```
+
+Following results in [Deg04, prop.2.4] such morphisms induces morphisms between relative motives
+
+```rawlatex
+\begin{tikzcd}
+	{M_Z(X)} & {M(D_ZX,\mathbb{A}_Z^1)} & {M_Z(N_ZX)}
+	\arrow["{d_*}", from=1-1, to=1-2]
+	\arrow["{d'_*}"', from=1-3, to=1-2]
+\end{tikzcd}
+```
+
+are in fact **isomorphisms**.  Note that the morphisms $d$ and $d'$ are natural with respect to the Cartesian morphisms of closed pairs. 
+
+### 2.2.1 Thom motive
+(Definition) For $X$ a smooth scheme, and $E/X$ a vector bundle. We consider the closed pair $(E,X)$ where $X$ viewed as the zero section of $E$. Define $MTh(E/X)=M(E,X)$ to be the relative motive, which is called the Thom motive of $E/X$.
+
+By abuse of notations this is also denoted by $MTh(E)$. As a relative motive, Thom motive is functorial respect to morphisms of closed pairs $(f,g):(F,Y)\rightarrow (E,X)$ arise from morphisms between vector bundles, namely $F/Y$ and $E/X$. It should be stressed that $f$ may *not* be a morphism between vector bundles, but if it is indeed, we denote simply by $MTh(f)$ the assotiated morphism on Thom spaces.
+
+Note also that the Thom motif is contravariant with respect to finite equidimensional morphisms of closed pairs (cf. 2.1.2).
+
+### 2.2.2
+Say $E/X$ (resp. $F/X$) a vector bundle with sections dual to $\mathcal{E}$ (resp. $\mathcal{F}$). We denote by $E\boxplus F$ the vector bundle, which is then called the *exterior direct sum* of $E$ and $F$, to be the vector bundle over $X\times_kY$ which is defined by $(p_{XY}^X)^*\mathcal{E}\oplus (p_{XY}^Y)^*\mathcal{F}$. Then, 
+
+$$ MTh(E\boxplus F)\simeq MTh(E)\otimes MTh(F). $$
