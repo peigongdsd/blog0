@@ -97,10 +97,11 @@ We denote it by $\alpha\boxtimes_X\beta$.
 $$ M(\alpha)\boxtimes M(\beta)=M(p_{XYZ}^{XY*}(\alpha)\cdot p_{XYZ}^{XZ*}(\beta)). $$
 
 Well, this is not so easy. We have to consider a composition
+
 ```rawlatex
 \begin{tikzcd}
 	XYZ & XXXYZ & XYZ
-	\arrow["{p_{13}}", from=1-2, to=1-3]
+	\arrow["{p_{XXXYZ}^{XYZ}}", from=1-2, to=1-3]
 	\arrow["{\Gamma_\Delta\times id_{YZ}}", from=1-1, to=1-2]
 \end{tikzcd}
 ```
