@@ -90,6 +90,7 @@ The immersion $i$ is not that straightforward. To construct it, identify $X$ as 
 
 - $i$ is the trivial embedding away from $\infty$, namely $X\times\mathbb{A}^1\rightarrow Y\times\mathbb{A}^1$.
 
+<!--
 Now we investigate the structure over $\infty$. If we denote by $C$ the normal cone $C_XY$, the normal cone of $X\times\infty$ in $Y\times\mathbb{P}^1$ is $C\oplus 1$, therefore the exceptionh divisor of $M_XY$ is $P(C\oplus 1)$. Also view $Y'$, the blowup of $Y$ at $X$, as a closed subscheme of $M_XY$ via the embedding
 
 ```rawlatex
@@ -105,3 +106,42 @@ then the statement
 - Over $\infty$, the divisor $M_\infty=\rho^{-1}(\infty)$ is the sum of two effective Cartier divisors $P(C\oplus 1)+Y'$
 
 *should* holds. To see this we may check locally, 
+-->
+
+In the theory of $A^1$-homotopy, we hope to do such a deformation on section $0$ and $1$ over an affine line (dispite that, it's very stupid to do calculation over a projective base!). So here we cut off the $0$ point of $\mathbb{P}^1$ and identify it as $\mathbb{A}^1$ with $\infty$ as $0$. We denote by $M_XY'$ be $M_XY$ localized over $\mathbb{A}^1$.
+
+If we denote by $\mathcal{I}\subset\mathcal{O}_Y$ the ideal cutting out $X$ inside $Y$, then the ideal cutting out $X\times 0$ in $Y\times\mathbb{A}^1$ is just $(\mathcal{I}[T]+(T))\subset\mathcal{O}_Y[T]$, so the morphism $M_XY\rightarrow Y\times\mathbb{A}^1$ is $Proj_{Y\times\mathbb{A}^1}(\oplus_{n\geq 0}(\mathcal{I}[T]+(T))^n)$. Then what's the exceptional divisor? We may illustrate this using some small tricks...
+
+|   |   |   |   |   |
+|---|---|---|---|---|
+| x | x | x | x | x |
+| x | x | x | x | x |
+| x | x | x | x | x |
+| o | x | x | x | x |
+
+Going in vertical $\uparrow$ stands for $\mathcal{I}$ filtration and horizental $\rightarrow$ stands for $(T)$ filtration. Now this table depicts the ideal $\mathcal{J}:=\mathcal{I}[T]+(T)$. Then $\mathcal{J}^n$ is just the diagram with a size $n$ triangle at lower left corner, and the quotient $\mathcal{J}^n/\mathcal{J}^{n+1}$ is 
+
+|   |   |   |   |   |
+|---|---|---|---|---|
+| o | o | o | o | o |
+| x | o | o | o | o |
+| o | x | o | o | o |
+| o | o | x | o | o |
+
+(for the case $n=2$). Namely this is $\oplus_{0\leq m\leq n}(\mathcal{I}^m/\mathcal{I}^{m+1})(T^{n-m})$, so the exceptional divisor of $M_XY'$ localized over $\mathbb{A}^1$ is just $P(C\oplus 1)$ where $C$ is the normal cone $C_XY$.
+
+Now the only trouble is the fibre of $M_XY'$ over $0$ (or $\infty$ in our previous language). Namely this is the projective cone of $\oplus\mathcal{J}^n/T\mathcal{J}^n$ over $Y$, so using the depiction above we know that the slices of this graded algebra looks like
+
+
+|   |   |   |   |   |
+|---|---|---|---|---|
+| x | o | o | o | o |
+| x | o | o | o | o |
+| x | o | o | o | o |
+| x | o | o | o | o |
+| o | x | o | o | o |
+| o | o | x | o | o |
+
+($n=2$ e.g.). Namely the slice at degree $n$ is $(\mathcal{I}^n\oplus\mathcal{I}^{n-1}/\mathcal{I}^n\oplus\cdots\oplus\mathcal{O}_Y/\mathcal{I})$.
+
+
