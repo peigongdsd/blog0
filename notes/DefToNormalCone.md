@@ -142,6 +142,5 @@ Now the only trouble is the fibre of $M_XY'$ over $0$ (or $\infty$ in our previo
 | o | x | o | o | o |
 | o | o | x | o | o |
 
-($n=2$ e.g.). Namely the slice at degree $n$ is $(\mathcal{I}^n\oplus\mathcal{I}^{n-1}/\mathcal{I}^n\oplus\cdots\oplus\mathcal{O}_Y/\mathcal{I})$.
-
+($n=2$ e.g.). Namely the slice at degree $n$ is $(\mathcal{I}^n\oplus\mathcal{I}^{n-1}/\mathcal{I}^n\oplus\cdots\oplus\mathcal{O}_Y/\mathcal{I})$. This projective cone has two obvious subschemes: the one associated to the left column, namely the blowup of $Y$ at $X$, and the tilt slice, namely $P(C\oplus 1)$ as what we has illustrated above. These two subschemes meet at the projective cone $P(C)$ which relates to the first non-empty block on the first column. Furthermore, these two closed subschemes are both cartier divisors if we view the fibre as a closed subscheme of $M_XY'$. This is obvious for the exceptional divisor, and it's straightforward that the embedded blowup is $(T)$ where $T$ viewed as a section of $\mathcal{O}(1)$.
 
