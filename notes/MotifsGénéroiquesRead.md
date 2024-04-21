@@ -251,6 +251,10 @@ are in fact **isomorphisms**.  Note that the morphisms $d$ and $d'$ are natural 
 ### 2.2.1 Thom motive
 (Definition) For $X$ a smooth scheme, and $E/X$ a vector bundle. We consider the closed pair $(E,X)$ where $X$ viewed as the zero section of $E$. Define $MTh(E/X)=M(E,X)$ to be the relative motive, which is called the Thom motive of $E/X$.
 
+<span style="color:red">
+*The symbol $MTh(E/X)$ doesn't mean that this is the cone of the zero section!*
+</span>
+
 By abuse of notations this is also denoted by $MTh(E)$. As a relative motive, Thom motive is functorial respect to morphisms of closed pairs $(f,g):(F,Y)\rightarrow (E,X)$ arise from morphisms between vector bundles, namely $F/Y$ and $E/X$. It should be stressed that $f$ may *not* be a morphism between vector bundles, but if it is indeed, we denote simply by $MTh(f)$ the assotiated morphism on Thom spaces.
 
 Note also that the Thom motif is contravariant with respect to finite equidimensional morphisms of closed pairs (cf. 2.1.2).
