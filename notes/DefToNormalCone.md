@@ -119,7 +119,7 @@ If we denote by $\mathcal{I}\subset\mathcal{O}_Y$ the ideal cutting out $X$ insi
 | x | x | x | x | x |
 | o | x | x | x | x |
 
-Going in vertical $\uparrow$ stands for $\mathcal{I}$ filtration and horizental $\rightarrow$ stands for $(T)$ filtration. Now this table depicts the ideal $\mathcal{J}:=\mathcal{I}[T]+(T)$. Then $\mathcal{J}^n$ is just the diagram with a size $n$ triangle at lower left corner, and the quotient $\mathcal{J}^n/\mathcal{J}^{n+1}$ is 
+Going in (upper) vertical direction stands for $\mathcal{I}$ filtration and (right) horizental direction stands for $(T)$ filtration. Now this table depicts the ideal $\mathcal{J}:=\mathcal{I}[T]+(T)$. Then $\mathcal{J}^n$ is just the diagram with a size $n$ triangle at lower left corner, and the quotient $\mathcal{J}^n/\mathcal{J}^{n+1}$ is 
 
 |   |   |   |   |   |
 |---|---|---|---|---|
@@ -142,5 +142,6 @@ Now the only trouble is the fibre of $M_XY'$ over $0$ (or $\infty$ in our previo
 | o | x | o | o | o |
 | o | o | x | o | o |
 
-($n=2$ e.g.). Namely the slice at degree $n$ is $(\mathcal{I}^n\oplus\mathcal{I}^{n-1}/\mathcal{I}^n\oplus\cdots\oplus\mathcal{O}_Y/\mathcal{I})$. This projective cone has two obvious subschemes: the one associated to the left column, namely the blowup of $Y$ at $X$, and the tilt slice, namely $P(C\oplus 1)$ as what we has illustrated above. These two subschemes meet at the projective cone $P(C)$ which relates to the first non-empty block on the first column. Furthermore, these two closed subschemes are both cartier divisors if we view the fibre as a closed subscheme of $M_XY'$. This is obvious for the exceptional divisor, and it's straightforward that the embedded blowup is $(T)$ where $T$ viewed as a section of $\mathcal{O}(1)$.
+($n=2$ e.g.). Namely the slice at degree $n$ is $(\mathcal{I}^n\oplus(\mathcal{I}^{n-1}/\mathcal{I}^n)T\oplus\cdots\oplus(\mathcal{O}_Y/\mathcal{I})T^n)$. This projective cone has two obvious subschemes: the one associated to the left column, namely the blowup of $Y$ at $X$, and the tilt slice, namely $P(C\oplus 1)$ as what we has illustrated above. These two subschemes meet at the projective cone $P(C)$ which relates to the first non-empty block on the first column. Furthermore, these two closed subschemes are both cartier divisors if we view the fibre as a closed subscheme of $M_XY'$. This is obvious for the exceptional divisor, and it's straightforward that the embedded blowup is $(T)$ where $T$ viewed as a section of $\mathcal{O}(1)$. 
 
+The next step is to drop the blowup part $Bl_XY$ inside $M_XY'$.
