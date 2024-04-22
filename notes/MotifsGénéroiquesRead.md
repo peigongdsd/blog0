@@ -276,7 +276,17 @@ $$ 0\rightarrow\tilde{L}[X]\rightarrow L[X]\rightarrow\mathbb{Z}\rightarrow 0. $
 
 If $X$ has a rational point $x$, the above triangle (complex) splits, and we obtain a canonical isomorphism $\tilde{M}(X)\simeq M(X/\{x\})$ using the notations of relative motives.
 
-Following Voevodsky, we denote by $\mathbb{Z}(1)=\tilde{M}(\mathbb{P}_k^1[-2])$. Such is called the Tate motive. In what follows, we take up the calculation of the Tate motif due to Suslin and Voevodsky in order to determine the action of the transpose of a finite equidimensional morphism on its cohomology.
+Following Voevodsky, we denote by $\mathbb{Z}(1)=\tilde{M}(\mathbb{P}_k^1)[-2]$.
+
+<span style="color:red">
+Lecture 15 of the motivic cohomology lecture tells us that
+$$ Cone(M(\mathbb{P}_k^{n-1})\rightarrow M(\mathbb{P_k^n}))\simeq \wedge^nM(\mathbb{G}_m)[n]=\mathbb{Z}(n)[2n] $$
+and due to the conventions above, we know that
+$$ \tilde{M}(\mathbb{P}^1)\simeq M(\mathbb{P}^1/\mathbb{P}^0). $$
+</span>
+
+
+Such is called the Tate motive. In what follows, we take up the calculation of the Tate motif due to Suslin and Voevodsky in order to determine the action of the transpose of a finite equidimensional morphism on its cohomology.
 
 ### 2.2.4
 (Proposition) The motivic complex $\mathbb{Z}(1)$ is concentrated at degree $1$ and $H^1(\mathbb{Z}(1))\simeq\mathbb{G}_m$, as a sheaf on $\mathcal{L}_k$. Denote by $\epsilon_X:H^1(X,\mathbb{Z}(1))\rightarrow \mathcal{O}_X^*(X)$ the natural morphism for a smooth scheme $X$.
@@ -300,4 +310,13 @@ proof. One deduce easily from motivic Mayer-Vetoris sequence that $\mathbb{Z}(1)
 
 Denote by $h^i(C^*)$ the $i$th cohomology *presheaf* of motivic complex $C^*$. If $U$ is an open subscheme of $\mathbb{A}^1$ and $X$ is a smooth scheme, recall by definition $\Gamma(X,h^i(M(U)))=H_i^{sing}(X\times U/X)$. More about $\mathbb{Z}(1)$ is already introduced in *the* lecture.
 
-Moreover, using the canonial morphism $\mathbb{Z}(1)\simeq M(\mathbb{A}_k^1/\mathbb{G}_m)$
+Moreover, using the canonial morphism $\mathbb{Z}(1)\simeq M(\mathbb{A}_k^1/\mathbb{G}_m)$ 
+
+<span style="color:red">
+Here it means to identify $\mathbb{Z}(1)[1]$ as a direct summand of $\mathbb{G}_m$ as
+$$ \mathbb{Z}(1)[1]\rightarrow\mathbb{G}_m\rightarrow M(k)\rightarrow +1 $$
+then identify $M(k)$ as $M(\mathbb{A}^1)$, namely
+$$ \mathbb{Z}(1)[1]\rightarrow\mathbb{G}_m\rightarrow M(k)\rightarrow +1. $$
+</span>
+
+one obtain a short split exact sequence. 
