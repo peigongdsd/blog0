@@ -263,3 +263,41 @@ Note also that the Thom motif is contravariant with respect to finite equidimens
 Say $E/X$ (resp. $F/X$) a vector bundle with sections dual to $\mathcal{E}$ (resp. $\mathcal{F}$). We denote by $E\boxplus F$ the vector bundle, which is then called the *exterior direct sum* of $E$ and $F$, to be the vector bundle over $X\times_kY$ which is defined by $(p_{XY}^X)^*\mathcal{E}\oplus (p_{XY}^Y)^*\mathcal{F}$. Then, 
 
 $$ MTh(E\boxplus F)\simeq MTh(E)\otimes MTh(F). $$
+
+<span style="color:red">
+To be Continued
+</span>
+
+## 2.2.2 Tate motive and transfers
+
+Suppose $X$ is a smooth scheme, and $p:X\rightarrow Spec(k)$ the structural morphism of $X$. We denote by $\tilde{L}[X]$ the complex of sheaf with transfers $Cone(p_*)[-1]$. To be precise, this is the kernel
+
+$$ 0\rightarrow\tilde{L}[X]\rightarrow L[X]\rightarrow\mathbb{Z}\rightarrow 0. $$
+
+If $X$ has a rational point $x$, the above triangle (complex) splits, and we obtain a canonical isomorphism $\tilde{M}(X)\simeq M(X/\{x\})$ using the notations of relative motives.
+
+Following Voevodsky, we denote by $\mathbb{Z}(1)=\tilde{M}(\mathbb{P}_k^1[-2])$. Such is called the Tate motive. In what follows, we take up the calculation of the Tate motif due to Suslin and Voevodsky in order to determine the action of the transpose of a finite equidimensional morphism on its cohomology.
+
+### 2.2.4
+(Proposition) The motivic complex $\mathbb{Z}(1)$ is concentrated at degree $1$ and $H^1(\mathbb{Z}(1))\simeq\mathbb{G}_m$, as a sheaf on $\mathcal{L}_k$. Denote by $\epsilon_X:H^1(X,\mathbb{Z}(1))\rightarrow \mathcal{O}_X^*(X)$ the natural morphism for a smooth scheme $X$.
+
+For $X$ and $Y$ smooth connected schemes with function fields denoted by $E$ and $L$ respectively and $f:Y\rightarrow X$ a finite surjective morphism. Denote by $N_{L/E}$ the norm map for $L/E$. Then there is a commutative diagram
+
+```rawlatex
+\begin{tikzcd}
+	{H^1(Y,\mathbb{Z}(1))} & {\mathcal{O}_Y(Y)} & {L^*} \\
+	{H^1(X,\mathbb{Z}(1))} & {\mathcal{O}_X(X)} & {E^*}
+	\arrow["{\epsilon(Y)}", from=1-1, to=1-2]
+	\arrow["{(f^t)^*}"', from=1-1, to=2-1]
+	\arrow[hook, from=1-2, to=1-3]
+	\arrow["{N_{L/E}}", from=1-3, to=2-3]
+	\arrow["{\epsilon(X)}", from=2-1, to=2-2]
+	\arrow[hook, from=2-2, to=2-3]
+\end{tikzcd}
+```
+
+proof. One deduce easily from motivic Mayer-Vetoris sequence that $\mathbb{Z}(1)\simeq M(\mathbb{G}_m/\{1\})[-1]$, or to say that $\mathbb{Z}(1)[1]$ is is a direct factor of $M(\mathbb{G}_m)$.
+
+Denote by $h^i(C^*)$ the $i$th cohomology *presheaf* of motivic complex $C^*$. If $U$ is an open subscheme of $\mathbb{A}^1$ and $X$ is a smooth scheme, recall by definition $\Gamma(X,h^i(M(U)))=H_i^{sing}(X\times U/X)$. More about $\mathbb{Z}(1)$ is already introduced in *the* lecture.
+
+Moreover, using the canonial morphism $\mathbb{Z}(1)\simeq M(\mathbb{A}_k^1/\mathbb{G}_m)$
