@@ -289,7 +289,11 @@ $$ \tilde{M}(\mathbb{P}^1)\simeq M(\mathbb{P}^1/\mathbb{P}^0). $$
 Such is called the Tate motive. In what follows, we take up the calculation of the Tate motif due to Suslin and Voevodsky in order to determine the action of the transpose of a finite equidimensional morphism on its cohomology.
 
 ### 2.2.4
-(Proposition) The motivic complex $\mathbb{Z}(1)$ is concentrated at degree $1$ and $H^1(\mathbb{Z}(1))\simeq\mathbb{G}_m$, as a sheaf on $\mathcal{L}_k$. Denote by $\epsilon_X:H^1(X,\mathbb{Z}(1))\rightarrow \mathcal{O}_X^*(X)$ the natural morphism for a smooth scheme $X$.
+(Proposition) The motivic complex $\mathbb{Z}(1)$ is concentrated at degree $1$ and $H^1(\mathbb{Z}(1))\simeq(\mathbb{G}_m,\bullet)$, as a sheaf on $\mathcal{L}_k$. Denote by $\epsilon_X:H^1(X,\mathbb{Z}(1))\rightarrow \mathcal{O}_X^*(X)$ the natural morphism for a smooth scheme $X$.
+
+<span style="color:red">
+Different from that lecture, $\mathbb{G}_m$ seems to stand for $\mathbb{A}^1/0$ here, instead of the punctured scheme.
+</span>
 
 For $X$ and $Y$ smooth connected schemes with function fields denoted by $E$ and $L$ respectively and $f:Y\rightarrow X$ a finite surjective morphism. Denote by $N_{L/E}$ the norm map for $L/E$. Then there is a commutative diagram
 
@@ -310,13 +314,32 @@ proof. One deduce easily from motivic Mayer-Vetoris sequence that $\mathbb{Z}(1)
 
 Denote by $h^i(C^*)$ the $i$th cohomology *presheaf* of motivic complex $C^*$. If $U$ is an open subscheme of $\mathbb{A}^1$ and $X$ is a smooth scheme, recall by definition $\Gamma(X,h^i(M(U)))=H_i^{sing}(X\times U/X)$. More about $\mathbb{Z}(1)$ is already introduced in *the* lecture.
 
-Moreover, using the canonial morphism $\mathbb{Z}(1)\simeq M(\mathbb{A}_k^1/\mathbb{G}_m)$ 
+Moreover, using the canonial morphism $\mathbb{Z}(1)[2]\simeq M(\mathbb{A}_k^1/\mathbb{G}_m)$,
 
 <span style="color:red">
-Here it means to identify $\mathbb{Z}(1)[1]$ as a direct summand of $\mathbb{G}_m$ as
-$$ \mathbb{Z}(1)[1]\rightarrow\mathbb{G}_m\rightarrow M(k)\rightarrow +1 $$
-then identify $M(k)$ as $M(\mathbb{A}^1)$, namely
-$$ \mathbb{Z}(1)[1]\rightarrow\mathbb{G}_m\rightarrow M(k)\rightarrow +1. $$
+Motivic Mayer-Vetoris sequence tells us that
+$$ M(\mathbb{G}_m)\rightarrow M(\mathbb{A}^1\coprod\mathbb{A}^1)\rightarrow M(\mathbb{P}^1)\rightarrow +1 $$
+is exact. Retract one of the $\mathbb{A}^1$ on the middle term and split out with the right term we get
+$$ M(\mathbb{G}_m)\rightarrow M(\mathbb{A}^1)\rightarrow\tilde{M}(\mathbb{P}^1)\rightarrow +1. $$
+On the other hand, $\tilde{M}(\mathbb{P}^1)$ is equal to $\mathbb{Z}(1)[2]$, so we have $M(\mathbb{A}^1/\mathbb{G}_m)\simeq\mathbb{Z}(1)[2]$. Here I think the author just made a mistake.
 </span>
 
-one obtain a short split exact sequence. 
+one obtain a short split exact sequence, namely
+
+```rawlatex
+\begin{tikzcd}
+	0 & {\Gamma(X,h^1(\mathbb{Z}(1)))} & {H_0^{sing}(X\times\mathbb{G}_m/X)} & {H_0^{sing}(X\times\mathbb{A}^1/X)} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow["{(1)}"', from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+\end{tikzcd}
+```
+
+<span style="color:red">
+Well this is kind of non-obvious...Note that $h^i$ is $i$th cohomology *presheaf* so taking global section is exact. The real problem is we're taking cohomology presheaves on triangles in motives. Does that make any sense? Maybe we should treat the isomorphisms in the category of complexes of presheaves...
+</span>
+
+
+
+
