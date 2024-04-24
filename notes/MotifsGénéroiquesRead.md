@@ -292,7 +292,7 @@ Such is called the Tate motive. In what follows, we take up the calculation of t
 (Proposition) The motivic complex $\mathbb{Z}(1)$ is concentrated at degree $1$ and $H^1(\mathbb{Z}(1))\simeq(\mathbb{G}_m,\bullet)$, as a sheaf on $\mathcal{L}_k$. Denote by $\epsilon_X:H^1(X,\mathbb{Z}(1))\rightarrow \mathcal{O}_X^*(X)$ the natural morphism for a smooth scheme $X$.
 
 <span style="color:red">
-Different from that lecture, $\mathbb{G}_m$ seems to stand for $\mathbb{A}^1/0$ here, instead of the punctured scheme.
+Different from that lecture, $\mathbb{G}_m$ seems to stand for $\mathbb{A}^1\backslash 0$ here, instead of the punctured scheme.
 </span>
 
 For $X$ and $Y$ smooth connected schemes with function fields denoted by $E$ and $L$ respectively and $f:Y\rightarrow X$ a finite surjective morphism. Denote by $N_{L/E}$ the norm map for $L/E$. Then there is a commutative diagram
@@ -342,6 +342,36 @@ Well this is kind of non-obvious...Note that $h^i$ is $i$th cohomology *presheaf
 
 Moreover, according to the aformentioned citiation, for any open subscheme $U\subset\mathbb{A}^1$, there's an isomorphism $\epsilon_{X,U}:H_0^{sing}(X\times U/X)\rightarrow Pic(X\times\mathbb{P}_k^1, X\times (\mathbb{P}_k^1-U))$. Such an isomorphism is constructed in the following process: let $\alpha$ be a cycle of $X\times U$ that is finite equidimensional over $X$, it 
 further defines a cycle of $X\times\mathbb{P}^1$, which happenes to be an invertible sheaf on $X\times\mathbb{P}^1$ 
+(citiation needs here). Since it's supported on $X\times U$, it's canonically trivalized over $X\times(\mathbb{P}^1-U)$ and therefore defines a class in the relative picard group.
+
+The morphism (1) is induced from the obvious open immersion. There is then a corresponding morphism
+
+$$ (1)':Pic(\mathbb{P}_X^1,X_1\coprod X_\infty)\rightarrow Pic(\mathbb{P}_X^1,X_\infty) $$ 
+
+sending an invertible sheaf with a trivalization on $X_1\coprod X_\infty$ to which is then trivalized on $X_\infty$.
+
+Then, according to the long exact sequence of relative picard groups, the kernel of the preceding morphism is isomorphic to $\mathbb{G}_m(X_\infty)$. The isomorphism is constructed in the following: 
+
+<span style="color:red">
+$$ 0\rightarrow $$
+...
+</span>
+
+
+
+We then deduce an isomorphism $\tau_X:\Gamma(X,h^1(\mathbb{Z}(1)))\rightarrow\mathbb{G}_m(X)$. This shows that $h^1(\mathbb{Z}(1))$ is the first cohomological *sheaf* of $\mathbb{Z}(1)$. According to the description, the morphism $\epsilon_{X,U}$ is compatible with pullback over $X$, which is then concluded natural in $X$. 
+
+Suppose $f:Y\rightarrow X$ is finite equidimensional, the morphism induced from the transpose of $X$, quotient by the group $c(X,U)$, corredpond to the direct image morphism as stated in 1.1.2. It follows from the definition of $\epsilon_{X,U}$ that this morphism corresponds to the direct image morphism on the relative Picard group. 
+
+...
+
+### 2.2.5
+(Remark) As what was demonstrated, we have thus obtained the canonical isomorphism $MTh(\mathbb{A}_k^1)=M(\mathbb{A}^1/\mathbb{G}_m)=\mathbb{Z}(1)[2]$. According to the preceding proposition, The endomorphism of Tate motive is 
+
+$$ End_{DM_-^{eff}(k)}(\mathbb{Z}(1))=End_{DM_-^{eff}(k)}(MTh(\mathbb{A}_k^1))=\mathbb{Z}. $$
+
+The isomorphism can be described simply: for a morphism between closed paires $(f,g):(\mathbb{A}^1,\{0\})\rightarrow (\mathbb{A}^1,\{0\})$, the endomorphism $MTh(f,g)$ is then 
+
 
 
 
