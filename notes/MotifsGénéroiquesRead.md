@@ -340,6 +340,9 @@ one obtain a short split exact sequence, namely
 Well this is kind of non-obvious...Note that $h^i$ is $i$th cohomology *presheaf* so taking global section is exact. The real problem is we're taking cohomology presheaves on triangles in motives. Does that make any sense? Maybe we should treat the isomorphisms in the category of complexes of presheaves...
 </span>
 
+Moreover, according to the aformentioned citiation, for any open subscheme $U\subset\mathbb{A}^1$, there's an isomorphism $\epsilon_{X,U}:H_0^{sing}(X\times U/X)\rightarrow Pic(X\times\mathbb{P}_k^1, X\times (\mathbb{P}_k^1-U))$. Such an isomorphism is constructed in the following process: let $\alpha$ be a cycle of $X\times U$ that is finite equidimensional over $X$, it 
+further defines a cycle of $X\times\mathbb{P}^1$, which happenes to be an invertible sheaf on $X\times\mathbb{P}^1$ 
+
 
 
 
