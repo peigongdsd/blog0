@@ -370,7 +370,99 @@ Suppose $f:Y\rightarrow X$ is finite equidimensional, the morphism induced from 
 
 $$ End_{DM_-^{eff}(k)}(\mathbb{Z}(1))=End_{DM_-^{eff}(k)}(MTh(\mathbb{A}_k^1))=\mathbb{Z}. $$
 
-The isomorphism can be described simply: for a morphism between closed paires $(f,g):(\mathbb{A}^1,\{0\})\rightarrow (\mathbb{A}^1,\{0\})$, the endomorphism $MTh(f,g)$ is then 
+The isomorphism can be described simply: for a morphism between closed paires $(f,g):(\mathbb{A}^1,\{0\})\rightarrow (\mathbb{A}^1,\{0\})$, the endomorphism $MTh(f,g)$ is then decided by the degree of $f$.
+
+We will always view $\mathbb{G}_m$ as a sheaf with transfers with the structure arising from the preceding proposition. Note that we obtain therefore $\mathbb{Z}(1)=\mathbb{G}_m[-1]$. Following [MV99], the sheaf $\mathbb{G}_m$ with transfers is then named *Tate sphere*.
+
+### 2.2.6
+For every smooth scheme $X$, there's a canonical isomorphism
+$$ \tau_X:Hom_{DM_-^{eff}(k)}(M(X),\mathbb{Z}(1)[2])\rightarrow Pic(X), $$
+which is natural with respect to scheme $X$. If $f:Y\rightarrow X$ is a finite equidimensional morphism, the following diagram commutes, namely
+
+```rawlatex
+\begin{tikzcd}
+	{Hom_{DM_-^{eff}}(Y,\mathbb{Z}(1)[2])} & {Pic(Y)} \\
+	{Hom_{DM_-^{eff}}(X,\mathbb{Z}(1)[2])} & {Pic(X)}
+	\arrow["{\tau_Y}", from=1-1, to=1-2]
+	\arrow["{(f^t)^*}"', from=1-1, to=2-1]
+	\arrow["{f_*}"', from=1-2, to=2-2]
+	\arrow["{\tau_X}", from=2-1, to=2-2]
+\end{tikzcd}
+```
+
+where $f_*$ is the norm for line bundle.
+
+<span style="color:red">
+Norm map of picard group? In smooth case this is just proper pushforward of chow group of codimension $1$. On the other hand, see [0BCX](https://stacks.math.columbia.edu/tag/0BCX). [0BD3](https://stacks.math.columbia.edu/tag/0BD3) regards that we always have a norm map here.
+</span>
+
+proof. As in [Voe00b,3.2.3] we obtain a canonical isomorphism
+
+$$ Hom_{DM_-^{eff}}(X,\mathbb{Z}(1)[2])\simeq Ext_{\mathscr{N}_k^{tr}}^1(L[X],\mathbb{G}_m) $$
+
+<span style="color:red">
+Why omit $A^1$-localization? This in in Lecture Lemma 9.19. Well, take the Nisnevich edition.
+</span>
+
+that is nautral with respect to $X$ and finite correspondances. According to [Deg07,2.9] and the fact that the Zariski and Nisnevich cohomology of the sheaf $\mathbb{G}_m$ coincide,
+
+<span style="color:red">
+Really? I'll just believe this. Well this should be interpreted that on a smooth scheme $X$ Nisnevich cohomology coincides with Zariski cohomology. I'll find a reference later.
+</span>
+
+we obtain an isomorphism
+
+$$ Ext_{\mathscr{N}_k^{tr}}^1(L[X],\mathbb{G}_m)\simeq H_{Zar}^1(X,\mathbb{G}_m).  $$
+
+These two isomorphisms give the statement of isomorphism $\tau_X$.
+
+To verify the second statement, we introduce the following contruction: For $X$ a smooth scheme and $\mathcal{U}=(U_i)_{i\in I}$ a finite family of open cover of $X$, we denote by $L[\mathcal{U}]$ the complex of sheaf with transfers following Cech resolution:
+
+$$ L[\mathcal{U}]^n=\oplus_{\alpha\in I^{n+1}}L[U_{\alpha_0}\cap\cdots\cap U_{\alpha_n}], $$
+
+with differentials given by the usual alternating sum. For any $i\in\mathbb{N}$, we define 
+
+SKIP THIS PART AND GO BACK LATER
+
+
+We conclude this paragraph with the definition of the motivic Chern class which follows from the previous calculation.
+
+### 2.2.7
+(Definition) We denote by
+
+$$ \mathfrak{c}_1:Pic(\cdot)\rightarrow Hom_{DM_-^{eff}(k)}(M(\cdot),\mathbb{Z}(1)[2]) $$
+
+the natural isomorphism of presheaves over $\mathscr{L}_k$ which is defined in the preceding corollary. If $X$ is a smooth schme, and $\lambda\in Pic(X)$ the class of an invertible fibre over $X$, we denote by
+
+$$ \mathfrak{c}_1(\lambda):M(X)\rightarrow\mathbb{Z}(1)[2] $$
+
+the image of that natural transformation when substituting $X$ and $\lambda$, and it's called the motivic Chern class of $\lambda$.
+
+As a result of the preceding study we have the following relations. For $X$ and $Y$ smooth and $\lambda$ a class of invertible sheaves on $X$, 
+
+### 2.2.8
+For any morphism (not necessarily flat!) $f:Y\rightarrow X$ we have $\mathfrak{c}_1(f^*\lambda)=\mathfrak{c}_1(\lambda)\circ f_*$.
+
+### 2.2.9
+For $f:X\rightarrow Y$ finite equidimensional we have $\mathfrak{c}_1(f_*\lambda)=\mathfrak{c}_1(\lambda)\circ f^*$.
+
+## 2.2.3 Motive of a projective bundle
+
+Following V.Voevodsky, we associate the following morphism to every projective bundle:
+
+### 2.2.10
+(Definition) Consider $X$ a smooth scheme, and $E/X$ a vector bundle over $X$ of rank $n$. Denote by $\mathbb{P}(E)$ the induced projective space by $E$, $\lambda_E$ the canonical bundle of $\mathbb{P}(E)$ and $p:\mathbb{P}(E)\rightarrow X$ the canonical projection.
+
+<span style="color:red">
+What is this $\mathbb{P}(E)$? The Fulton-style one or the modern-style one?
+</span>
+
+For any natural integer $r$, we define the following morphism
+
+$\mathfrak{l}_r(E)=\mathfrak{c}_1(\lambda_E)^r\boxtimes_{\mathbb{P}(E)}p_*:M(\mathbb{P}(E))\rightarrow M(X)(r)[2r]$
+
+
+
 
 
 
