@@ -564,4 +564,21 @@ We deduce from the isomorphisms a canonical triangle
 
 $$ M(\mathbb{P}(E))\xrightarrow{i_*}M(\mathbb{P}(\hat{E}))\xrightarrow{\pi_E} MTh(E)\rightarrow +1 $$
 
-where the morphism $i$ is the closed immersion corresponding to the hyperplane at infinity.
+where the morphism $i$ is the closed immersion corresponding to the hyperplane at infinity. 
+
+However, using the second point in lemma 2.2.11, the morphism $i_*$ corresponds through the isomorphisms $\mathfrak{l}(E)$ and $\mathfrak{l}(\hat{E})$ to the canonical injection of the first $n$ factors of $\oplus_{r=0}^nM(X)(r)[2r]$. This results in the above triangle being split, and the following morphism
+
+$$ M(X)(r)[2n]\hookrightarrow\bigoplus_{r=0}^nM(X)(r)[2r]\xrightarrow{\mathfrak{l}(\hat{E})^{-1}}M(\mathbb{P}(\hat{E}))\xrightarrow{\pi_E}MTh(E) $$
+
+is an isomorphism.
+
+### 2.2.14
+(Definition) With the notations and assumptions mentioned above, we call it the Thom isomorphism and denote by $\theta(E)$ the inverse of the above isomorphism.
+
+The detailed study of the preceding Tate motif and the motivic Chern class of order $1$ is justified in so far as we prove the following functoriality of the Thom isomorphism:
+
+### 2.2.15
+(Lemma) Let $X$ be a smooth scheme and $E/X$ a vector bundle of rank $n$.
+
+1. Let $F/X$ be another vector bundle over $X$ and $\sigma:E\rightarrow F$ an isomorphism of fibres over $X$. Then, $\theta(E)\circ$
+
