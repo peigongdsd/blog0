@@ -112,6 +112,30 @@ $$\begin{aligned}
 &=\Gamma^*(X\times\alpha\times\beta)
 \end{aligned}$$
 
+### 1.2.3
+We will particularly consider this cup product in the case where, for a pair of natural integers $n$ and $m$, $\mathcal{M}=\mathbb{Z}(m)[2m]$ and $\mathcal{N}=\mathbb{Z}(n)[2n]$.
+
+$\mathbb{Z}(\cdot)[2\cdot]$ is equipped with a canonical ring structure for the tensor product of $DM_-^{eff}(k)$. As a result, for any natural integers $n$ and $m$, we have a canonical isomorphism 
+
+$$ \epsilon:\mathbb{Z}(m)[2m]\otimes\mathbb{Z}(n)[2n]\rightarrow\mathbb{Z}(n+m)[2(n+m)]. $$
+
+For two morphisms $\alpha:M(X)\rightarrow\mathbb{Z}(m)[2m]$ and $\beta:M(X)\rightarrow\mathbb{Z}(n)[2n]$, we define the internal cup product associated to $\epsilon$ from $\alpha$ and $\beta$ as the morphism
+
+$$ \alpha\smile\beta=\epsilon\circ(\alpha\boxtimes\beta). $$
+
+This morphism corresponds to a motivic cohomology class which is none other than the cup product of $\alpha$ and $\beta$.
+
+The following formulas result easily from the classical theory of cycle intersection, and we leave their demonstration to the reader.
+
+### 1.2.4
+(Proposition) For $f:Y\rightarrow X$ a morphism between smooth schemes. Consider $\alpha:M(X)\rightarrow\mathcal{M}$, $\beta:M(X)\rightarrow\mathcal{N}$, $\gamma:M(X)\rightarrow\mathcal{P}$ be morphisms in $DM_-^{eff}(k)$, Then the following relationships holds:
+
+1. $(\alpha\boxtimes\beta)\boxtimes\gamma=\alpha\boxtimes(\beta\boxtimes\gamma)$.
+2. $(\alpha\boxtimes_X\beta)\circ f_*=(\alpha\circ f_*)\boxtimes_Y(\beta\circ f_*)$.
+
+Furthermore if $f$ is finite equidimensional,
+
+
 
 # Gysin Triangle
 
@@ -401,7 +425,7 @@ proof. As in [Voe00b,3.2.3] we obtain a canonical isomorphism
 $$ Hom_{DM_-^{eff}}(X,\mathbb{Z}(1)[2])\simeq Ext_{\mathscr{N}_k^{tr}}^1(L[X],\mathbb{G}_m) $$
 
 <span style="color:red">
-Why omit $A^1$-localization? This in in Lecture Lemma 9.19. Well, take the Nisnevich edition.
+Why omit $A^1$-localization? This in in Lecture proposition 14.16. Well, take the Nisnevich edition.
 </span>
 
 that is nautral with respect to $X$ and finite correspondances. According to [Deg07,2.9] and the fact that the Zariski and Nisnevich cohomology of the sheaf $\mathbb{G}_m$ coincide,
@@ -454,14 +478,19 @@ Following V.Voevodsky, we associate the following morphism to every projective b
 (Definition) Consider $X$ a smooth scheme, and $E/X$ a vector bundle over $X$ of rank $n$. Denote by $\mathbb{P}(E)$ the induced projective space by $E$, $\lambda_E$ the canonical bundle of $\mathbb{P}(E)$ and $p:\mathbb{P}(E)\rightarrow X$ the canonical projection.
 
 <span style="color:red">
-What is this $\mathbb{P}(E)$? The Fulton-style one or the modern-style one?
+What is this $\mathbb{P}(E)$? The Fulton-style one or the modern one?
 </span>
 
 For any natural integer $r$, we define the following morphism
 
 $\mathfrak{l}_r(E)=\mathfrak{c}_1(\lambda_E)^r\boxtimes_{\mathbb{P}(E)}p_*:M(\mathbb{P}(E))\rightarrow M(X)(r)[2r]$
 
+where $\mathcal{c}_1(\lambda_E)^r$ is the $r$-fold cup product of $\mathcal{c}_1(\lambda_E)$ defined in 1.2.3.
 
+We will also set $\mathcal{l}(E)=\sum_{r=0}^{n-1}\mathcal{l}_r(E):M(\mathbb{P}(e))\rightarrow\oplus M(X)(r)[2r]$.
+
+### 2.2.11
+(Lemma) 
 
 
 
