@@ -490,10 +490,78 @@ where $\mathcal{c}_1(\lambda_E)^r$ is the $r$-fold cup product of $\mathcal{c}_1
 We will also set $\mathcal{l}(E)=\sum_{r=0}^{n-1}\mathcal{l}_r(E):M(\mathbb{P}(e))\rightarrow\oplus M(X)(r)[2r]$.
 
 ### 2.2.11
-(Lemma) 
+(Lemma) Suppose $X$ is a smooth scheme and $E/X$ a vector bundle.
 
+1. Suppose $F/X$ a vector bundle an $\sigma:E\rightarrow F$ an isomorphism of bundles over $X$. Furthermore, denote by $\bar{\sigma}:\mathbb{P}(E)\rightarrow\mathbb{P}(F)$ the induced isomorphism by $\sigma$, then $\mathfrak{l}\circ\bar{\sigma}_*=\mathfrak{l}(F)$.
 
+<span style="color:red">
+This suggests that $\mathbb{P}(\cdot)$ is following Fulton's notation with sections locally denoting supspaces of that bundle. Then the canonical bundle $\lambda_E$ is $\mathcal{O}(1)$.
+</span>
 
+2. Suppose $Y$ is a smooth scheme and $f:Y\rightarrow X$ a morphism between schemes. Let $E_Y=E\times_XY$ and denote by $g:\mathbb{P}(E_Y)\rightarrow\mathbb{P}(E)$ the morphism induced by $f$. Then for any $r\in\mathbb{N}$, $\mathfrak{l}_r(E)\circ g_*=f_*(r)[2r]\circ\mathfrak{l}_r(E_Y)$.
 
+3. Consider the hypothesis from the preceding statements and further require that $f$ is finite equidimensional. Then $\mathfrak{l}_r(E_Y)\circ g^*=f^*(r)[2r]\circ\mathfrak{l}_r(E)$.
 
+Proof. For the first two statements, we just need to apply formula 2.2.8 for the compatibility of Chern classes under pullback, and the second point of 1.2.4 for the cup product.
 
+For the last assertion, we denote by $\lambda$ (resp. $\lambda_Y$) the canonical line bundle on $\mathbb{P}(E)$ (resp. $\mathbb{P}(E_Y)$), and $\Delta$ (resp. $\Delta'$) the diagonal morphism of $\mathbb{P}(E)$ (resp. $\mathbb{P}(E_Y)$).
+
+We have the following diagram commutes,
+
+```rawlatex
+\begin{tikzcd}
+	{M(\mathbb{P}(E))} && {M(\mathbb{P}(E_Y))} \\
+	{M(\mathbb{P}(E))\otimes M(\mathbb{P}(E))} && {M(\mathbb{P}(E_Y))\otimes M(\mathbb{P}(E_Y))} \\
+	& {M(\mathbb{P}(E))\otimes M(\mathbb{P}(E_Y))} \\
+	{M(X)(r)[2r]} && {M(Y)(r)[2r]} \\
+	& {M(Y)(r)[2r]}
+	\arrow["{g^*}", from=1-1, to=1-3]
+	\arrow["{\Delta_*}"', from=1-1, to=2-1]
+	\arrow["{\Delta_*'}", from=1-3, to=2-3]
+	\arrow["{1\otimes g_*}", from=2-1, to=3-2]
+	\arrow["{\mathfrak{c}(\lambda)_1^r\otimes p_*}", from=2-1, to=4-1]
+	\arrow["{g_*\otimes 1}"', from=2-3, to=3-2]
+	\arrow["{\mathfrak{c}(\lambda_Y)_1^r\otimes p_{Y*}}", from=2-3, to=4-3]
+	\arrow["{\mathfrak{c}(\lambda)_1^r\otimes p_{Y*}}"{description}, from=3-2, to=5-2]
+	\arrow["{1\otimes f^*}"{description}, from=4-1, to=5-2]
+	\arrow[shift left, no head, from=4-3, to=5-2]
+	\arrow[shift right, no head, from=4-3, to=5-2]
+\end{tikzcd}
+```
+
+The upper polygen commutes following from 1.2.3, the lower left commuts from 1.1.4 and the lower right from 2.2.8.
+
+The motivation for introducing the preceding definition is the following proposition.
+
+### 2.2.12 
+[Voevodsky] Suppose $X$ is a smooth algebraic scheme and $E/X$ a vector bundle with rank $n>0$. Then the morphism $\mathfrak{l}(E):M(\mathbb{P}(E))\rightarrow\oplus_{r=0}^{n-1}M(X)(r)[2r]$ following definition 2.2.10 is an isomorphism.
+
+### 2.2.13
+(Remark) Following the classcal methods of cohomology, we can deduce motivic Chern classes - which extend the classes of the form $\mathfrak{c}_1$ defined in 2.2.7. From lemma 2.2.11, we deduce the standard functoriality of these Chern classes. However, we will not use them.
+
+## 2.2.4 Thom isomorphism
+
+Let $X$ be a smooth scheme and $E/X$ a vector bundle of rank $n$. In the following, we explain the Thom motive of $E/X$.
+
+Let $\hat{E}=E\times_X\mathbb{A}_X^1$ equipped with the structure of vector bundle over $X$. 
+
+<span style="color:red">
+Well this is just $E\oplus\mathbb{1}$.
+</span>
+
+Then, we have the isomorphisms:
+
+$$ 
+\begin{aligned}
+  MTh(E)&=M(E,X)\simeq M(\mathbb{P}(\hat{E}),X) \\
+  &= M(\mathbb{P}(\hat{E})/\mathbb{P}(\hat{E})-X)\simeq M(\mathbb{P}(\hat{E})/\mathbb{P}(E)).
+\end{aligned}
+$$
+
+The first isomorphism is induced by the open immersion $E\rightarrow\mathbb{P}(\hat{E})$ according to the excision property of the Nisnevich topology (cf. [DeÂg04, 2.3]) and the latter one is because $\mathbb{P}(\hat{E})-X$ is a vector bundle over $\mathbb{P}(E)$.
+
+We deduce from the isomorphisms a canonical triangle
+
+$$ M(\mathbb{P}(E))\xrightarrow{i_*}M(\mathbb{P}(\hat{E}))\xrightarrow{\pi_E} MTh(E)\rightarrow +1 $$
+
+where the morphism $i$ is the closed immersion corresponding to the hyperplane at infinity.
