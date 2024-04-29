@@ -568,7 +568,7 @@ where the morphism $i$ is the closed immersion corresponding to the hyperplane a
 
 However, using the second point in lemma 2.2.11, the morphism $i_*$ corresponds through the isomorphisms $\mathfrak{l}(E)$ and $\mathfrak{l}(\hat{E})$ to the canonical injection of the first $n$ factors of $\oplus_{r=0}^nM(X)(r)[2r]$. This results in the above triangle being split, and the following morphism
 
-$$ M(X)(r)[2n]\hookrightarrow\bigoplus_{r=0}^nM(X)(r)[2r]\xrightarrow{\mathfrak{l}(\hat{E})^{-1}}M(\mathbb{P}(\hat{E}))\xrightarrow{\pi_E}MTh(E) $$
+$$ M(X)(n)[2n]\hookrightarrow\bigoplus_{r=0}^nM(X)(r)[2r]\xrightarrow{\mathfrak{l}(\hat{E})^{-1}}M(\mathbb{P}(\hat{E}))\xrightarrow{\pi_E}MTh(E) $$
 
 is an isomorphism.
 
