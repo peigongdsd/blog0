@@ -36,3 +36,14 @@ We say that $f$ is equidimensional (or that $X$ is equidimensional over $Y$) if 
 1. Suppose $f$ is equidimensional at a point $x\in X$ ([13.3.2](#IV.13.3.2)) and if $y=f(x)$ is point thats is geomterically unibranch in $Y$, then $f$ is universaly open at point $x$.
 
 2. If $Y$ is geometrically unibarnch, then $f$ is universaly open at all points of $X$ where $f$ is equidimensional, and the set of all those points is open in $X$. In particular, if $X$ is equidimensional, it is universally open.
+
+## IV.8.13.1
+(Proposition) Let $S$ be a prescheme, $(X_\lambda, \nu_{\lambda\mu})$ a filtered projective system of $S$-preschemes. Suppose that there is an $\alpha$ such that $\nu_{\alpha\lambda}$ is an affine morphism for all $\lambda\geq\alpha$ (this implies (II.1.6.2) that $\nu_{\lambda\mu}$ is affine for $\alpha\leq\lambda\leq\mu$), so that the projective limit $X=\lim X_\lambda$ exists in the category of $S$-preschemes (8.2.3). Let $Y$ be a $S$-prescheme, and, for any $\lambda\geq\alpha$, let $e_\lambda:Hom_S(X_\lambda,Y)\rightarrow Hom_S(X,Y)$ the morphism which, for any $S$-morphism $f_\lambda:X_\lambda\rightarrow Y$, correspond to $f=f_\lambda\circ\nu_\lambda$, where $\nu_\lambda:X\rightarrow X_\lambda$ is the canonical morphism. The family $(e_\lambda)$ is a inductive system of morphisms, which defines a canonical map
+
+$$ colim\ Hom_S(X_\lambda,Y)\rightarrow Hom_S(X,Y). $$
+
+Suppose $X_\alpha$ is quasi-compact (resp. qcqs), and the structure morphism $Y\rightarrow S$ is locally of finite type (resp. locally of finite presentation). The the above morphismis injective (resp. bijective).
+
+<span style="color:red">
+The notation $(X_\lambda,\nu_{\lambda\mu})$ here should be parsed that $X_\mu\xrightarrow{\nu_{\mu\lambda}}X_\lambda\xrightarrow{\nu_{\lambda\alpha}}X_\alpha$. Then the limit size is on the left.
+</span>
