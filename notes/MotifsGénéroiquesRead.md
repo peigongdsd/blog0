@@ -1,4 +1,4 @@
-Translate Cache on Reading *Motifs Généroiques* by Frédéric Déglise
+Translation Cache on Reading *Motifs Généroiques* by Frédéric Déglise
 ===
 
 # Abstract
