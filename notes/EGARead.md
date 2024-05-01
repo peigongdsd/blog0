@@ -45,5 +45,7 @@ $$ colim\ Hom_S(X_\lambda,Y)\rightarrow Hom_S(X,Y). $$
 Suppose $X_\alpha$ is quasi-compact (resp. qcqs), and the structure morphism $Y\rightarrow S$ is locally of finite type (resp. locally of finite presentation). The the above morphismis injective (resp. bijective).
 
 <span style="color:red">
-The notation $(X_\lambda,\nu_{\lambda\mu})$ here should be parsed that $X_\mu\xrightarrow{\nu_{\mu\lambda}}X_\lambda\xrightarrow{\nu_{\lambda\alpha}}X_\alpha$. Then the limit size is on the left.
+The notation $(X_\lambda,\nu_{\lambda\mu})$ here should be parsed that $X_\mu\xrightarrow{\nu_{\lambda\mu}}X_\lambda\xrightarrow{\nu_{\alpha\lambda}}X_\alpha$ for $\mu\geq\lambda\geq\alpha$. Then the limit size is on the left.
 </span>
+
+Let us indeed define, for $\lambda\geq\alpha$, $Z_\lambda=Y\times_SX_\lambda$, so that we have $Z_\lambda=Z_\alpha\times_{X_\alpha}X_\lambda$. Then define $Z=Y\times_SX=Z_\alpha\times_{X_\alpha}X$; 
