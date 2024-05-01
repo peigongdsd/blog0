@@ -582,3 +582,86 @@ The detailed study of the preceding Tate motif and the motivic Chern class of or
 
 1. Let $F/X$ be another vector bundle over $X$ and $\sigma:E\rightarrow F$ an isomorphism of fibres over $X$. Then, $\theta(E)\circ$
 
+
+# 3. Definition
+
+## 3.1 Pro-objects
+
+For $\mathscr{T}$ a category, recall that a pro-object of $\mathscr{T}$ is a functor $\mathcal{I}\rightarrow\mathscr{T}$, $X\mapsto X_i$ for $\mathcal{I}$ an essentially small and cofiltered category.
+
+We will use the suggestive notation
+
+$$ X_\bullet=\lim_{i\in\mathcal{I}}^\sim X_i $$
+
+for such pro-objects. This notation is justified since $X$ is the projective limit in the category of pro-objects of the $X_i$ seen as constant pro-objects. The tilde is used to differentiate this formal projective limit from the projective limit computed in $T$. 
+
+A morphism of pro-objects $\lim_{i\in\mathcal{I}}^\sim X_i\rightarrow\lim_{j\in\mathcal{J}}^\sim Y_j$ is given by a functor $F:\mathcal{J}\rightarrow\mathcal{I}$ and a natural transformation $X_{F(\bullet)}\rightarrow Y_\bullet$. The morphisms are subject to an equivalance relation which means that
+
+$$ Hom_{pro-\mathscr{T}}(X_\bullet,Y_\bullet)=\lim_{j\in\mathcal{J}} colim_{i\in\mathcal{I}^{op}}Hom_\mathscr{T}(X_i,Y_j). $$
+
+We say pro-$\mathscr{T}$ is the category of pro-objects of $\mathscr{T}$.
+
+If $\mathscr{T}$ is abelian then pro-$\mathscr{T}$ is naturally an abelian category.
+
+If $\mathscr{T}$ is trangulated, pro-$\mathscr{T}$ generally does not posses a trangulated structure unless $\mathscr{T}$ is semi-simple. The category pro-$\mathscr{T}$ in this case is only additive, equipped with an endofunctor induced from the suspension functor of $\mathscr{T}$. If $X_\bullet\rightarrow Y_\bullet\rightarrow Z_\bullet\rightarrow X_\bullet[1]$ is a sequence of morphisms in pro-$\mathscr{T}$, we say it's a pro-distinguished triangle if it is isomorphic to the formal projective limit of a filtering system of distinguished triangles in $\mathscr{T}$.
+
+Finally note that if $\mathscr{T}$ is a symmetric monoidal category, there is a unique structure of symmetric monoidal of pro-$\mathscr{T}$ since tensor product commutes with formal (cofiltered) projective limits.
+
+## 3.2 Models and essentially smooth algebras
+
+Recall the classical definitions:
+
+### 3.2.1
+(Definition) For $\mathcal{O}$ a $k$-algebra. We will say that $\mathcal{O}$ is essentially of finite type (resp. essentially smooth) if there is a $k$-algebra $A$ being of finite type (resp. smooth), a prime ideal of $A$  and an isomorphism $\mathcal{O}\simeq A_x$.
+
+### 3.2.2
+(remark) Suppose $k$ being perfect, a $k$-algebra is essentially smooth if and only if it's regular and essentially of finite type. 
+
+<span style="color:red">
+This is not so trivial. We have to prove that such an algebra is a local for some regular scheme of finite type over $k$. 
+</span>
+
+### 3.2.3
+(Example) An essnetially smooth $k$-algebra of dimension $0$ is a function field. An essentially smooth $k$-algebra of dimension $1$ is a DVR being *essentially of finite type* over $k$. If $E$ is a function field and $\nu$ a valuation on $E$, we say $\nu$ is *geometric* is it is of rank $1$ and its valuation ring is essentially of finite type over $k$. This implies that v is a discrete valuation.
+
+More generally, essentially smooth rings correspond to the local rings of smooth schemes. In this spirit, we adopt the following definition:
+
+### 3.2.4
+(Definition) If $\mathcal{O}$ is an essentially smooth $k$-algebra. A model of $\mathcal{O}$ is a couple $(X,x)$ consisting of a smooth scheme $X/k$ and a morphism $x:Spec{O}\rightarrow X$ such that, if we identify $x$ with the image of the closed point of $Spec(\mathcal{O})$ in $X$, the induced morphism $x^\sharp:\mathcal{O}_{X,x}\rightarrow\mathcal{O}$ is an isomorphism.
+
+We denote by $\mathcal{M}^{lis}(\mathcal{O}/k)$ the ordered set of inclusion of $k$-sub algebras $A\subset\mathcal{O}$ such that $spec(A)$, with the evident $\mathcal{O}$-point, is a model of $\mathcal{O}$. 
+
+Suppose $k$ is perfect, the set $\mathcal{M}^{lis}(\mathcal{O}/k)$ is *non-empty* and *filtered* for the order induced by inclusion.
+
+<span style="color:red">
+What is being perfect doing here?
+</span>
+
+### 3.2.5
+(Definition) We condifer the pro-objects of smooth schemes as follows:
+
+1. Let $\mathcal{O}$ be an essentially smooth $k$-algebra. We associate to which a pro-scheme
+
+$$ (\mathcal{O})=\lim_{A\in\mathcal{M}^{lis}(\mathcal{O}/k)}^\sim spec(A). $$
+
+2. For $X$ a smooth scheme and a point $x$ on $X$, and $x$ a point on $X$, we define the local of $X$ at $x$ as the pro-scheme 
+
+$$ X_x=\lim_{U\subset X,x\in U}^\sim U $$
+
+where $U$ traverses the cofiltered ordered set of open neighborhoods of $x$ in $X$.
+
+If $F$ is a presheaf over $\mathscr{L}_k$, and $\mathcal{X}=(X_i)_{i\in\mathcal{I}}$ a pro-object of smooth schemes, we define
+
+$$ \hat{F}(\mathcal{X})=\lim_{i\in\mathcal{I}^{op}}F(X_i). $$
+
+This is the common extension of presheaves to pro-objects.
+
+### 3.2.6
+The pro-objects of type $(\mathcal{A})$ (resp. $X_x$) for an essentially smooth $k$-algebra $\mathcal{A}$ (resp. a pointed smooth scheme $(X,x)$) are *essentially affine* over $k$ in the sense of [EGA4.8.13.4]. Furthermore $spec(\mathcal{A})$ (resp. $spec(\mathcal{O}_{X,z})$) is a projective limit of $(\mathcal{A})$ (resp. $X_x$). We deduce from [EGA4.8.13.2] the following assertions
+
+1. Suppose $\mathcal{A}$ and $\mathcal{B}$ are essentially smooth $k$-algebras. Then there exist a canonical isomorphism $Hom_{pro-\mathscr{L}_k}((\mathcal{B}),(\mathcal{A}))\simeq Hom_k(\mathcal{A},\mathcal{B})$.
+
+2. 
+
+
+
