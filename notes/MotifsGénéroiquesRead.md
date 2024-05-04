@@ -612,13 +612,13 @@ Finally note that if $\mathscr{T}$ is a symmetric monoidal category, there is a 
 Recall the classical definitions:
 
 ### 3.2.1
-(Definition) For $\mathcal{O}$ a $k$-algebra. We will say that $\mathcal{O}$ is essentially of finite type (resp. essentially smooth) if there is a $k$-algebra $A$ being of finite type (resp. smooth), a prime ideal of $A$  and an isomorphism $\mathcal{O}\simeq A_x$.
+(Definition) For $\mathcal{O}$ a (local) $k$-algebra. We will say that $\mathcal{O}$ is essentially of finite type (resp. essentially smooth) if there is a $k$-algebra $A$ being of finite type (resp. smooth), a prime ideal of $A$  and an isomorphism $\mathcal{O}\simeq A_x$.
 
 ### 3.2.2
 (remark) Suppose $k$ being perfect, a $k$-algebra is essentially smooth if and only if it's regular and essentially of finite type. 
 
 <span style="color:red">
-This is not so trivial. We have to prove that such an algebra is a local for some regular scheme of finite type over $k$. 
+This is not so trivial. We have to prove that such an algebra is a local for some regular scheme of finite type over $k$.  In fact, over perfect field being regular is equivalance to being smooth, so we just need to find a regular open neighborhood of our specified point $x$ viewed as a prime on a $k$-algebra of finite type. Using the language introduced in [07P6](https://stacks.math.columbia.edu/tag/07P6) we know that every scheme of finite type over a perfect field is of type J-1 since such field is J-2, see especially [07PB](https://stacks.math.columbia.edu/tag/07PB) (4). Then the situation is clear.
 </span>
 
 ### 3.2.3
@@ -634,7 +634,7 @@ We denote by $\mathcal{M}^{lis}(\mathcal{O}/k)$ the ordered set of inclusion of 
 Suppose $k$ is perfect, the set $\mathcal{M}^{lis}(\mathcal{O}/k)$ is *non-empty* and *filtered* for the order induced by inclusion.
 
 <span style="color:red">
-What is being perfect doing here?
+What is being perfect doing here? It's obviously non-empty, but being filtered is not straightforward. 
 </span>
 
 ### 3.2.5
@@ -661,7 +661,50 @@ The pro-objects of type $(\mathcal{A})$ (resp. $X_x$) for an essentially smooth 
 
 1. Suppose $\mathcal{A}$ and $\mathcal{B}$ are essentially smooth $k$-algebras. Then there exist a canonical isomorphism $Hom_{pro-\mathscr{L}_k}((\mathcal{B}),(\mathcal{A}))\simeq Hom_k(\mathcal{A},\mathcal{B})$.
 
-2. 
+2. Suppose $\mathcal{O}$ an essentially smooth $k$-algebra and $(X,x)$ a model of $\mathcal{O}$. Then the morphism $x$ induces a canonical isomorphism $(\mathcal{O})\rightarrow X_x$.
 
+### 3.2.7 
+(Remark) If $\mathcal{O}$ is an essentially smooth $k$ algebra, according to the common terminology that the functor $F\mapsto\hat{F}(\mathcal{O})$ is said to be *pro-represented* by $(\mathcal{O})$ - seen as a pro-object of representable sheaves. According to the second property above, it is a fiber functor for the Zariski topology on $\mathscr{L}_k$. Furthermore, since for evert smooth scheme $X$, the family formed by the fiber functors associated with essentially smooth $k$-algebras is conservative for the Zariski topology. Following [SGA4], we call by *specialisation morphism* any natural transformation between two fiber functors; this amounts to considering morphisms of the pro-objects that pro-represent them.
 
+## 3.3 Definitions and fundemental properties
 
+### 3.3.1
+(Definition) Suppose $E$ is a function field and $n\in\mathbb{Z}$ is an integer.
+
+We define the *generic potives* of $E$ of rank $n$, noted by $M_{gm}(E)\{n\}$, to be the pro-object in $DM_{gm}(k)$
+
+$$ M_{gm}(E)\{n\}=\lim_{A\in\mathcal{M}^{lis}(E/k)}^\sim M_{gm}(Spec(A))\{n\}. $$
+
+If $n\geq 0$, we say that the generic motive is *effective*.
+
+We denote by $DM_{gm}^{(0)}(k)$ (resp. DM_{gm}^{eff,(0)}(k)) the subcategory of pro-$DM_{gm}(k)$ (resp. eff) formed by objects like $M_{gm}(E)\{n\}$ with $E$ a function field, and $n$ an integer (resp. natural integer). We then say this is the category of (effective) relative motives.
+
+According to Voevodsky's simplification theorem [Voe02.4.10], the canonical functor
+
+$$ DM_{gm}^{eff,(0)}(k)\rightarrow DM_{gm}^{(0)}(k) $$
+
+is fully faithful.
+
+## 3.4 Links with the motivic t-structure
+
+This subsuction aims to clarify the interpretation of generic motives as points for homotopy sheaves.
+
+If $\mathcal{M}$ is a motivic complex, we denote by $\underline{H}^p(\mathcal{M})$ the $p$th cohomology group calculated in the category of sheaves with transfers. Recall that by definition such sheaf is homotopical invariant. The category $DM_-^{eff}(k)$ carries a t-structure, called *homotopical*, such that the functor
+
+$$ \underline{H}^0:DM_-^{eff}(k)\rightarrow H\mathscr{N}_k^{tr} $$
+
+is the associated cohomology functor. The category $H\mathscr{N}_k^{tr}$ is the heart of the homotopical t-structure of $DM_-^{eff}(k)$.
+
+### 3.4.1
+(Proposition) The functor
+
+$$
+\begin{aligned}
+  H\mathscr{N}_k^{tr}&\rightarrow Ab^{\mathscr{E}_k} \\
+  F&\mapsto (E/k\mapsto\hat{F}(E))
+\end{aligned}
+$$
+
+is exact, conservative (reflects isomorphisms) and commutes with inductive limits.
+
+proof. Let $E$ be a function field. Since $E$ is a henselian local ring, the pro-object $(E)$ pro-represents a fibre functor in Nisnevich topology. 
