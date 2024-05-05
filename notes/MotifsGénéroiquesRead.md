@@ -707,4 +707,33 @@ $$
 
 is exact, conservative (reflects isomorphisms) and commutes with inductive limits.
 
-proof. Let $E$ be a function field. Since $E$ is a henselian local ring, the pro-object $(E)$ pro-represents a fibre functor in Nisnevich topology. 
+proof. Let $E$ be a function field. Since $E$ is a henselian local ring, the pro-object $(E)$ pro-represents a fibre functor in Nisnevich topology. The assertion of exactness and commuting with colimits follows from (Well all from Deg07, pass and read it later)
+
+Following Vowvodsky, we introduct the following construction
+
+### 3.4.2
+(Definition) Let $F$ be a homotopy sheaf (?) and $X$ a smooth scheme. We define an abelian group F_{-1}(X) suitting in exact sequence
+
+$$ 0\rightarrow F(\mathbb{A}^1\times X)\xrightarrow{F(j)}F(\mathbb{G}_m\times X)\rightarrow F_{-1}(X)\rightarrow 0 $$
+
+where $j$ follows from the obvious canonical open immersion.
+
+Thus we have associated to $F$ a sheaf $F_{-1}$ for the Nisnevich topology on $\mathscr{L}_k$ since the short exact sequence involved in the definition above is split. Of course, it is homotopy invariant and equipped with transfers. We then obtain an endofunctor of $H\mathscr{N}_k^{tr}$ which possessed the remarkable property
+
+### 3.4.3
+(Proposition) The endofunctor $F\mapsto F_{-1}$ of $H\mathscr{N}_k^{tr}$ is exact.
+
+proof. We fix a exact sequence $0\rightarrow F\rightarrow G\rightarrow H\rightarrow 0$ of homotopy (????) sheaves. Using 3.4.1, to prove the sequence $\cdots_{-1}$ is exact just fix a dunction field $E$ and see that 
+
+$$ 0\rightarrow F_{-1}(E)\rightarrow G_{-1}(E)\rightarrow H_{-1}(E)\rightarrow 0 $$
+
+is finite (WTF, should be exact). This is likely a variant of H90 and see [Deg07.4.4.10].
+
+We recall the fully faiyhful functor $\iota:DM_{gm}^{eff}(k)\rightarrow DM_-^{eff}(k)$. 
+
+### 3.4.4
+(Proposition) Let $E$ be a function field, and $\mathcal{M}$ a motivic complex. Then, for any integer $n\geq 0$, there is a canonical isomorphism 
+
+$$ Hom_{pro-DM_-^{eff}(k)}(M_{gm}(E)\{n\},\mathcal{M})\simeq\underline{H}^0(\mathcal{M})_{-n}(E). $$ 
+
+Proof. 
