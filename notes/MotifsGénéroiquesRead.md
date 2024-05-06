@@ -709,6 +709,10 @@ is exact, conservative (reflects isomorphisms) and commutes with inductive limit
 
 proof. Let $E$ be a function field. Since $E$ is a henselian local ring, the pro-object $(E)$ pro-represents a fibre functor in Nisnevich topology. The assertion of exactness and commuting with colimits follows from (Well all from Deg07, pass and read it later)
 
+<span style="color:red">
+Fibre functor? In this context, fibre functor refers to a functor representing a "stalk", like the normal one does in etale site or some other topos.
+</span>
+
 Following Vowvodsky, we introduct the following construction
 
 ### 3.4.2
@@ -736,4 +740,46 @@ We recall the fully faiyhful functor $\iota:DM_{gm}^{eff}(k)\rightarrow DM_-^{ef
 
 $$ Hom_{pro-DM_-^{eff}(k)}(M_{gm}(E)\{n\},\mathcal{M})\simeq\underline{H}^0(\mathcal{M})_{-n}(E). $$ 
 
-Proof. 
+Proof. The case $n=0$ follows from the fact that $Hom(\cdot,\mathcal{M})$ commutes with colimits and the theory of $A^1$ local objects/resolutions. For $n>0$, we have (by tensor-hom adjunction)
+
+$$ Hom(\mathcal{M}_{gm}(E),\mathcal{M})=\underline{H}^0(\underline{Hom}(\mathbb{Z}\{p\},\mathcal{M}))(E). $$
+
+### 3.4.5
+(Lemma) If $F$ is a homotopy sheaf. Then there is a canonical isomorphism $\underline{Hom}(\mathbb{Z}\{1\},F)\simeq F_{-1}$.
+
+Proof. Just believe this, go on
+
+Since $\mathbb{Z}\{1\}$ is concentrated at degree $0$, the functor $\underline{Hom}(\mathbb{Z}\{1\},\cdot)$ us e-exact on the left for the homotopical t-structure. Since, according to the previous lemma, *it induces a functor exact on the homotopy core of $DM_{eff}(k)$, we deduce that it is even t-exact*, which allows us to conclude.
+
+### 3.4.6
+For $E$ is a function field and $n\in\mathbb{N}$ a natural integer, the functor
+
+$$ H\mathscr{N}_k^{tr}\rightarrow Ab,F\mapsto Hom_{pro-DM_{gm}^{eff}(k)}(M_{gm}(E)\{n\},F)=\hat{F}_{-n}(E) $$
+
+is then exact. Furthermore, it commutes with arbitrary direct sums and therefore defines a "fiber functor" in $H\mathscr{N}_k^{tr}$ by extending the terminology of [SGA4] outside the framework of topoi.
+
+Furthermore, it will be noted that the family formed by these points is conservative, according to Proposition 3.4.1.
+
+### 3.4.7
+(Corollary) The functor
+
+
+# 4.A recall of cycle modules
+
+## 4.2 Cycle modules
+
+In order to construct, using a pre-cycle module, a complex of the *Gersten complex type*, we define the differentials of this complex according to Rost. Rost's theory requires considering $k$-schemes that are not necessarily of finite type. Therefore, until the end of these reminders, we change the convention of the article: all considered schemes are assumed to be equipped with a structure of a $k$-scheme essentially of finite type. 
+
+### 4.2.1
+(Definition) Let $M$ be a pre cycle module, and $X$ a scheme. 
+
+1. For every point $x$ on $X$ we set $M(x)=M(\kappa(x))$.
+2. Suppose $X$ is normal, $\eta$ the generic point and $z$ a point at codim $1$. Then $z$ correspond to a discrete valuation $\nu_z$ on the function field $\kappa(\eta)$ of $X$. Follwoing axiom $D4$, we define
+
+$$ \partial_z^X=\partial_{\nu_z}:M(\eta)\rightarrow M(z). $$
+
+3. Let $x$ and $y$ be points of $X$. We denote by $Z$ the reduced closure at $x$ in $X$, and $\tilde{Z}$ the normalization on $Z$; the canonical morphism $f:\tilde{Z}\rightarrow Z$ is finite.
+
+Suppose that $y\in Z^{(1)}$ and let $\tilde{Z}_y$ denote the fibre of $f$ at $y$. Then let point $z\in\tilde{Z}_y$ be a point at codimension $1$. For such a point $z$, we denote by $\phi_z:\kappa(y)\rightarrow\kappa(z)$ the morphism induced by $f$ on the residue fields, which is a finite morphism.
+
+
