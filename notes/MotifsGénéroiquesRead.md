@@ -778,8 +778,77 @@ In order to construct, using a pre-cycle module, a complex of the *Gersten compl
 
 $$ \partial_z^X=\partial_{\nu_z}:M(\eta)\rightarrow M(z). $$
 
-3. Let $x$ and $y$ be points of $X$. We denote by $Z$ the reduced closure at $x$ in $X$, and $\tilde{Z}$ the normalization on $Z$; the canonical morphism $f:\tilde{Z}\rightarrow Z$ is finite.
+3. Let $x$ and $y$ be points of $X$. We denote by $Z$ the reduced closure at $x$ in $X$, and $\tilde{Z}$ the normalization on $Z$; the canonical morphism $f:\tilde{Z}\rightarrow Z$ is *finite*.
 
-Suppose that $y\in Z^{(1)}$ and let $\tilde{Z}_y$ denote the fibre of $f$ at $y$. Then let point $z\in\tilde{Z}_y$ be a point at codimension $1$. For such a point $z$, we denote by $\phi_z:\kappa(y)\rightarrow\kappa(z)$ the morphism induced by $f$ on the residue fields, which is a finite morphism.
+<span style="color:red">
+See [035R](https://stacks.math.columbia.edu/tag/035R) and [035S](https://stacks.math.columbia.edu/tag/035S). 
+</span>
+
+Suppose that $y\in Z^{(1)}$ and let $\tilde{Z}_y$ denote the fibre of $f$ at $y$. Then let point $z\in\tilde{Z}_y$ be a point at codimension $1$ (should be $0$!). For such a point $z$, we denote by $\phi_z:\kappa(y)\rightarrow\kappa(z)$ the morphism induced by $f$ on the residue fields, which is a finite morphism. 
+
+Then we set
+
+$$
+\begin{aligned}
+  \partial_y^x &=\sum_{z\in\tilde{Z}_y}\phi_z^*\circ\partial_z^{\tilde{Z}}\ for\ y\in Z^{(1)} \\
+  &= 0\ otherwise
+\end{aligned}
+$$
+
+a map from $M(x)$ to $M(y)$.
+
+<span style="color:red">
+I NEED EAGERLY SOME EXAMPLES HERE!!!
+</span>
+
+Using these notations, we can introduce the following two axioms on pre-cycle modules.
+
+### 4.2.2
+(Definition) For $M$ a cycle premodule. We say $M$ is a cycle module if
+
+1. (FD) For every normal scheme $X$ with generic point $\eta$, and for any $\rho\in M(\eta)$, the set $\{x\in X^{(1)}|\partial_x^\eta(\rho)\not=0\}$ is finite.
+
+2. (C) For any local integeral scheme $X$ of dimension $2$ with generic point $\eta$ and a closed point $x_0$, we have
+
+$$ \sum_{x\in X^{(1)}}\partial_{x_0}^x\circ\partial_x^\eta=0. $$
+
+As announced, we finally obtain the (co)cycle complex with coefficients in $M$.
+
+### 4.2.3
+(Definition) Let $M$ be a cycle module, and $X$ is a scheme. For any integer $p\in\mathbb{N}$, we set
+
+$$ C^p(X;M)=\bigoplus_{x\in X^{(p)}}M(x) $$
+
+and a morphism
+
+$$ d_{X,M}^p=\sum_{(x,y)\in X^{(p)}\times X^{(p+1)}}\partial_y^x. $$
+
+According to the axioms of cycle modules, $C^*(X;M)$ with such morphisms is a complex. We name the $p$th cohomological grouop of which as the *Chow groups with coefficients $M$*, denoted by $A^p(X;M)$.
+
+Note that for any cycle premodule $M$ and any integral scheme $X$ with generic point $\eta$, the group $A^0(X;M)=\cap_{x\in X^{(1)}}ker(\partial_x^\eta)$ is well defined. We will need the following characterization, due to M. Rost (cf. loc. cit. 2.3), of cycle modules over a perfect field.
+
+### 4.2.4
+(Theorem)[Rost] Let $M$ be a cycle premodule. Then $M$ is a cycle module iff the following conditions are satisfied
+
+1. (FDL) For any function field $L$ and for any $\rho\in L(t)$, the set {$\nu$ a geometric valuation on $L(t)/L$|$\partial_\nu(\rho)\not=0$} is finite.
+
+2. (WR) For any function field $L$, denote by $\partial_\infty$ the residue associated to the inifnite valuation of $L(t)$,
+
+$$ \partial_\infty(A^0(\mathbb{A}_l^1);M)=0. $$
+
+Reference on [Ros96,(2.3)].
+
+### 4.2.5 
+To verify the axioms of a cycle module, we will not directly use the previous theorem, but we will rely on the following property:
+
+Let $M$ be a cycle premodule which satisfies (FDL). We inreoduce the following property:
+
+# 5 Morphisms and relations
+
+## 5.1 The canonical functor $M^{(0)}$
+
+Strikingly, it appears that the category $\tilde{\mathscr{E}}_k$ allows us to describe morphisms of generic motives by generators and relations, as shown by the following theorem:
+
+
 
 
