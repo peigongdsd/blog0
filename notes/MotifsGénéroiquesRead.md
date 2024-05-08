@@ -766,6 +766,29 @@ Furthermore, it will be noted that the family formed by these points is conserva
 
 # 4.A recall of cycle modules
 
+## 4.1 Cycle premodules
+
+We can describe cycle modules as functors valued in abelian groups over a category (see also [Deg06, 1.1]) that we describe now.
+
+Notation: $\tilde{\mathscr{E}}_k$ for the category of objects like $(E,n)$ such that $E$ is a function field and $n\in\mathbb{Z}$ an integer. The morphism of $\tilde{\mathscr{E}}_k$ are defined throught the following generators and relations - below, we call a valued field any function field equipped with a geometric valuation (see the notations at the beginning of the article).
+
+### Generators
+
+- (D1) $\phi_*:(E,n)\rightarrow (L,n)$ for $\phi:E\rightarrow L$, $n\in\mathbb{Z}$.
+- (D2) $\phi^*$ the inverse direction with $\phi$ finite.
+- (D3) $\gamma_x:(E,n)\rightarrow (E,n+r)$ for $x\in K_r^M(E)$.
+- (D4) $\partial_\nu:(E,n)\rightarrow (\kappa(\nu),n-1)$ for $(E,\nu)$ a valuation field.
+
+### Relations
+
+- (R_0) $\gamma_x\circ\gamma_y=\gamma_{x\cdot y}$.
+- (R1a&R1b) $\bullet^*$ and $\bullet_*$ are functorial.
+- (R1c) Let $\phi:K\rightarrow E$ and $\psi:K\rightarrow L$ be finite. For $z\in spec(E\otimes_KL)$ 
+
+<span style="color:red">
+Okay I'll just take this 😅.
+</span>
+
 ## 4.2 Cycle modules
 
 In order to construct, using a pre-cycle module, a complex of the *Gersten complex type*, we define the differentials of this complex according to Rost. Rost's theory requires considering $k$-schemes that are not necessarily of finite type. Therefore, until the end of these reminders, we change the convention of the article: all considered schemes are assumed to be equipped with a structure of a $k$-scheme essentially of finite type. 
@@ -834,14 +857,24 @@ Note that for any cycle premodule $M$ and any integral scheme $X$ with generic p
 
 2. (WR) For any function field $L$, denote by $\partial_\infty$ the residue associated to the inifnite valuation of $L(t)$,
 
-$$ \partial_\infty(A^0(\mathbb{A}_l^1);M)=0. $$
+$$ \partial_\infty(A^0(\mathbb{A}_L^1);M)=0. $$
 
 Reference on [Ros96,(2.3)].
 
 ### 4.2.5 
 To verify the axioms of a cycle module, we will not directly use the previous theorem, but we will rely on the following property:
 
-Let $M$ be a cycle premodule which satisfies (FDL). We inreoduce the following property:
+Let $M$ be a cycle premodule which satisfies (FDL). We inreoduce the following property: 
+
+- (H) For any function field $L$, denote by $\phi:L\rightarrow L(t)$ the canonical inclusion, the sequence
+
+$$ 0\rightarrow M(L)\xrightarrow{\phi_*} M(L(t))\xrightarrow{d_{\mathbb{A}_L^1,M}^0}\bigoplus_{x\in\mathbb{A}_L^{1,(1)}}M(\kappa(x))\rightarrow 0 $$
+
+is exact. 
+
+Note that property (FDL) exactly means that the morphism $d_{\mathbb{A}_L^1,M)}^0$ is well-defined. Furthermore, (WR) is immediately a consequence of (H) according to formula R3c. Therefore, a pre-cycle module satisfying (FDL) and (H) is a cycle module.
+
+
 
 # 5 Morphisms and relations
 
@@ -849,6 +882,10 @@ Let $M$ be a cycle premodule which satisfies (FDL). We inreoduce the following p
 
 Strikingly, it appears that the category $\tilde{\mathscr{E}}_k$ allows us to describe morphisms of generic motives by generators and relations, as shown by the following theorem:
 
+### 5.1.1
+(Theorem) There is a canonical functor
+
+$$ M^{(0)} $$
 
 
 
