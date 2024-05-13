@@ -885,7 +885,15 @@ Strikingly, it appears that the category $\tilde{\mathscr{E}}_k$ allows us to de
 ### 5.1.1
 (Theorem) There is a canonical functor
 
-$$ M^{(0)} $$
+$$ M^{(0)}:(\tilde{\mathscr{E}}_k)^{op}\rightarrow DM_{gm}^{(0)}(k) $$
+
+sending an object $(E,n)$ in $\tilde{\mathscr{E}}_k$ to the associated generic motive $M_{gm}(E)\{-n\}$.
+
+<span style="color:red">
+THIS iS STUNNING!!
+</span>
+
+Proof: It's a matter of correctly translating (D1) to (D4). 
 
 
 
