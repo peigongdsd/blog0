@@ -893,7 +893,8 @@ sending an object $(E,n)$ in $\tilde{\mathscr{E}}_k$ to the associated generic m
 THIS iS STUNNING!!
 </span>
 
-Proof: It's a matter of correctly translating (D1) to (D4). 
+Proof: It's a matter of correctly translating (D1) to (D4) and verification of the properties. Note that $\mathbb{Z}\{1\}$ is invertible for the tensor product of $DM_{gm}(k)$, it suffices to define the morphism and D* for a given twist on the source, then do proper products with Tate motive.
 
+- (D1) For $\phi:E\rightarrow L$ a morphism between function fields, it then correspondence according to proposition 3.2.6 to a unique morphism $(\phi):(L)\rightarrow (E)$ which incudes the morphism $\phi^\sharp$
 
 
