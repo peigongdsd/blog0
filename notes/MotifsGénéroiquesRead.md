@@ -895,6 +895,19 @@ THIS iS STUNNING!!
 
 Proof: It's a matter of correctly translating (D1) to (D4) and verification of the properties. Note that $\mathbb{Z}\{1\}$ is invertible for the tensor product of $DM_{gm}(k)$, it suffices to define the morphism and D* for a given twist on the source, then do proper products with Tate motive.
 
-- (D1) For $\phi:E\rightarrow L$ a morphism between function fields, it then correspondence according to proposition 3.2.6 to a unique morphism $(\phi):(L)\rightarrow (E)$ which incudes the morphism $\phi^\sharp$
+- (D1) For $\phi:E\rightarrow L$ a morphism between function fields, it then correspondence according to proposition 3.2.6 to a unique morphism $(\phi):(L)\rightarrow (E)$ which incudes the morphism $\phi^\sharp:M_{gm}(L)\rightarrow M_{gm}(E)$. The relation R1a is immediate.
 
+Note that the same isomorphism obtained by 3.2.6 shows the existence of respective models $(X,x)$ and $(Y,y)$ of $E/k$ and $L/k$ and the dominant morphism $f:Y\rightarrow X$ such that the diagram () commutes. In this situation we say that $f:(Y,y)\rightarrow (X,x)$ is a model of $\phi$.
+
+The general method to construct the morphisms of the data D2, D3, D4 is to build them on models of the considered function fields, to verify that this construction localizes at generic points, and to demonstrate the independence of the definition from the chosen model. The complete proof extends over the rest of this subsection. The table of contents specifies where each data and each relation is proved.
+
+### 5.1.2
+(Remark) Let's not forget that the functor to be constructed in the preceding proposition is contravariant. It is to clarify the situation that we have chosen to denote by a symbol ] as superscript or subscript, the morphisms corresponding to the data D1 and D2.
+
+## 5.2 Tranfers (D2,R1b,R1c)
+
+### 5.2.1 Generic situation
+(Lemma) For $f:X\rightarrow Y$ an equidimensional morphism. Then for any open dense $U\subset X$, the open $f^{-1}(Y-f(X-U))$ is dense and included in $U$.
+
+Proof. The set $Z=X\U$ is a closed subscheme of codimension greater than $1$ in $X$, provided $U$ being dense. 
 
