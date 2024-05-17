@@ -902,12 +902,71 @@ Note that the same isomorphism obtained by 3.2.6 shows the existence of respecti
 The general method to construct the morphisms of the data D2, D3, D4 is to build them on models of the considered function fields, to verify that this construction localizes at generic points, and to demonstrate the independence of the definition from the chosen model. The complete proof extends over the rest of this subsection. The table of contents specifies where each data and each relation is proved.
 
 ### 5.1.2
-(Remark) Let's not forget that the functor to be constructed in the preceding proposition is contravariant. It is to clarify the situation that we have chosen to denote by a symbol ] as superscript or subscript, the morphisms corresponding to the data D1 and D2.
+(Remark) Let's not forget that the functor to be constructed in the preceding proposition is contravariant. It is to clarify the situation that we have chosen to denote by a symbol \# as superscript or subscript, the morphisms corresponding to the data D1 and D2.
 
 ## 5.2 Tranfers (D2,R1b,R1c)
 
 ### 5.2.1 Generic situation
 (Lemma) For $f:X\rightarrow Y$ an equidimensional morphism. Then for any open dense $U\subset X$, the open $f^{-1}(Y-f(X-U))$ is dense and included in $U$.
 
-Proof. The set $Z=X\U$ is a closed subscheme of codimension greater than $1$ in $X$, provided $U$ being dense. 
+### 5.2.2
+(Corollary) Let $f:X\rightarrow Y$ be a finite equidimensional dominant morphism between irreducible schemes. For $x$ (resp. $y$) the generic point of $X$ (resp. $y$). Then the canonical morphism of pro-objects $X_x\rightarrow X\times_Y Y_y$ is an isomorphism. 
 
+proof. In fact, the preceding lemma induces that the set of opens $X\times_Y V$ of $X$, where $V$ be taken in the non empty opens of $Y$ is cofinal in $\mathcal{V}_x(X)$.
+
+<span style="color:red">
+In the following contexts $X_x$ will always be the pro-object in $Sm/k$.
+</span>
+
+### 5.2.3
+
+For $f:X\rightarrow Y$ a finite dominant morphism between irreducible smooth morphisms. Let $x$ and $y$ be the generic points respectively. Consider $V$ and $V'$ being opens of $Y$ s.t. $V'\subset V$. Using 1.1.4, we obtain a commutative diagram
+
+```rawlatex
+\begin{tikzcd}
+	{M_{gm}(V')} & {M_{gm}(X\times_YV')} \\
+	{M_{gm}(V)} & {M_{gm}(X\times_YV)}
+	\arrow["{f_{V'}^*}"{description}, from=1-1, to=1-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow["{f_V^*}"{description}, from=2-1, to=2-2]
+\end{tikzcd}
+```
+
+where the vertical morphisms defined from open immersions and horizental the evident morphism. We then define the following morphism of pro-$DM_gm(k)$
+
+$$ (\bar(f)^t=\lim_{V\in\mathcal{V}_y(Y)}^\tilde(V\xrightarrow{f_V^*}X\times_YV)):M_{gm}(Y_y)\rightarrow M_{gm}(X)\times_Y Y_y. $$
+
+### 5.2.4
+(Definition) Let $f:X\rightarrow Y$ be a finit dominant morphism, where $X$ and $Y$ are smooth connected schemes. Denote by $x$ and $y$ be the generic points respectively, then $\bar{f}:X_x\rightarrow Y_y$ the morphism induced by $f$.
+
+We define a morphism $M_{gm}(Y_y)\xrightarrow{\bar{f}^*}M_{gm}(X_x)$ in pro-$DM_{gm}(k)$, namely the composition of transpose of $\bar{f}$ with
+
+$$ M_{gm(Y_y)}\xrightarrow{\bar{f}^t}M_{gm}(X\times_Y Y_y)\xrightarrow{(1)}M_{gm}(X_x) $$
+
+here (1) is the inverse morphism of the isomorphism deduced from 5.2.2.
+
+### 5.2.5
+(Lemma) Let $f:X\rightarrow Y$ and $g:Y\rightarrow Z$ be finite equidimensional morphisms and $X$, $Y$, $Z$ be smooth connected schemes, with generic points denoted respectively by $x$,$y$,$z$. Assume further that $h=g\circ f$. Then $\bar{h}^*=\bar{f}^*\circ\bar{g}^*$.
+
+
+## 5.2.2 Models of definition
+
+### 5.2.7
+(Definition) Let $E$ and $L$ be function fields and $\phi:E\rightarrow L$ a finite morphism. We define a model of $L/E$ to be a morphism $f:(X,x)\rightarrow (Y,y)$ between pointed schemes such that $(Y,y)$ is a model of $E$, $(X,x)$ a model of $F$, and $f$ a finite dominant morphism such that the diagram
+
+```rawlatex
+\begin{tikzcd}
+	L && E \\
+	X && Y
+	\arrow["\phi", from=1-1, to=1-3]
+	\arrow["x"{description}, from=1-1, to=2-1]
+	\arrow["y"{description}, from=1-3, to=2-3]
+	\arrow["f", from=2-1, to=2-3]
+\end{tikzcd}
+```
+
+### 5.2.8
+(Lemma) A finite extension $$L/E of function fields always has a model.
+
+proof. 
