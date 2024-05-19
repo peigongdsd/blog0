@@ -57,4 +57,61 @@ We know that being flat over a DVR (even an arbitary valuation ring) is equivale
 ```
 
 ### 3.1.2
+(Lemma) Let $S$ be Noetherian and $X/S$, with $Z$ being a closed subscheme in $X$. Further let $R$ be a DVR and $f:R\rightarrow S$ be a morphism. Thenre there is a unique closed subscheme $\phi_f(Z)$ in $Z\times_S R$ s.t.
+
+- $\phi_f(Z)\rightarrow Z\times_S R$ is an isomorphism over the generic point of $R$,
+- $\phi_f(Z)$ is flat over $R$.
+
+```rawlatex
+\begin{tikzcd}
+	{\phi_f(Z)} & {Z_R} & {X_R} & R \\
+	& Z & X & S
+	\arrow[hook, from=1-1, to=1-2]
+	\arrow[hook, from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-3, to=1-4]
+	\arrow["f"', from=1-4, to=2-4]
+	\arrow[hook, from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+\end{tikzcd}
+```
+
+Just mod out the torsion subgroup will do the trick.
+
+Let $X/S$ be a scheme of finite type over a Noetherian base, and $Z$ a closed subscheme of $X$. For any fat point $(x_0,x_1)$ over a $k$-point $x$ of $S$ we denote by $(x_0,x_1)^*(Z/S)$ the cycle on $X\times_kS$ associated with the closed subscheme $\phi_{x_1}(Z)\times_R k$.
+
+Basically this is a process of specialization.
+
+### 3.1.3
+(Definition) Let $S$ be a Noetherian scheme and $X/S$ be of finite type. A *relative cycle* on $X/S$ is a cycle $\mathcal{Z}=\sim m_iz_i$ on $X$ satisfying
+
+- the points $z_i$ lie over the generic points of $S$,
+- and for any $k$-point $x$ of $S$, the pullback along a fat point lies over $x$ should not rely on the selection of that fat point.
+
+We say such a cycle is *a relative cycle of dimension $r$* if each point $z_i$ has dimension $r$ in it's fibre over $S$. The corresponding abelian group is denoted by $Cycl(X/S,r)$.
+
+We say such a cycle is *an equidimensional relative cycle on dimension $r$* if $supp(\mathcal{Z})$ is equidimensional of dimension $r$ over $S$. The corresponding abelian group is denoted by $Cycl_{equi}(X/S,r)$.
+
+We say such a cycle is *a proper relative cycle* is $supp(\mathcal{Z})$ is proper over $S$. $PropCycl(X/S,r)$ and $PropCycl_{equi}(X/S,r)$.
+
+For the related abelian monoid we will still use the notation $\bullet^{eff}$.
+
+### 3.1.4
+(Lemma) We can construct enough fat points. To be precise, Let $S$ be Noetherian with a generic point denoted by $\eta$ and a point $s$ generalize to $\eta$. Let further $L$ be an extension of finite type of $\kappa(\eta)$. Then there is a DVR $R$ and a morphism $f:R\rightarrow S$ such that
+
+- $f$ maps the generic point of $R$ to $\eta$ and $K(R)$ is isomorphisc to $L$,
+- $f$ maps the closed point of $R$ to $s$.
+
+Proof. EGA2, 7.1.7.
+
+\[Something Omitted... Turning back later\]
+
+
+Now we turn to the so called flat cycles. Again use over generic situation $p:X/S$, and denote by $Hilb(X/S,r)$ (resp. $PropHilb(X/S,r)$) the set of closed subschemes $Z$ of $X$ which are flat (resp. flat and proper) and *equidimensional of dimension $r$* over $S$. The corresponding freely generated abelian monoids (resp. groups) are denoted by $N(\bullet)$ (resp. $Z(\bullet)$).
+
+
+
+
+
+
 
