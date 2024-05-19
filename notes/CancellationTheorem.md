@@ -107,11 +107,35 @@ Proof. EGA2, 7.1.7.
 \[Something Omitted... Turning back later\]
 
 
-Now we turn to the so called flat cycles. Again use over generic situation $p:X/S$, and denote by $Hilb(X/S,r)$ (resp. $PropHilb(X/S,r)$) the set of closed subschemes $Z$ of $X$ which are flat (resp. flat and proper) and *equidimensional of dimension $r$* over $S$. The corresponding freely generated abelian monoids (resp. groups) are denoted by $N(\bullet)$ (resp. $Z(\bullet)$).
+Now we turn to the so called flat cycles. Again use over generic situation $p:X/S$, and denote by $Hilb(X/S,r)$ (resp. $PropHilb(X/S,r)$) the set of closed subschemes $Z$ of $X$ which are flat (resp. flat and proper) and *equidimensional of dimension $r$* over $S$. The corresponding freely generated abelian monoids (resp. groups) are denoted by $N(\bullet)$ (resp. $Z(\bullet)$). 
 
+A good property is that those flat cycles have well-defined pullbacks. The assignment $S'/S\rightarrow N(Hilb(X\times S'/S',r))$ defines a presheaf of abelian monoids on the category of Noetherian schemes over $S$. The same way works for the $Z(\bullet)$ version. 
 
+### 3.2.2
+(Proposition) Let $X/S$ be as our generic settings and $S'/S$ a Noetherian scheme over $S$. Let further $\mathcal{Z}=\sum n_iZ_i$ be an element of $Z(Hilb(X/S,r))$. Then $cycl_{X\times S'}(\mathcal{Z}\times S')=0$ provided that $cycl_X(\mathcal{Z})=0$.
 
+In fact, there is a morphism $Z(Hilb(X/S,r))\rightarrow Cycl(X)$ with which image lies in $Cycl_{equi}(X/S,r)$.
 
+Now we head into the theory of Chow presheaves. This is exciting!
 
+### 3.3.1
+(Theorem) Let $X/S$ be as our generic settings and $f:T\rightarrow S$ be a Noetherian base change. For a $\mathcal{Z}\in Cycl(X/S,r)$ there is a unique element $\mathcal{Z}_T$ in $Cycl(X\times T/T,r)\otimes\mathbb{Q}$ such that for any commutative diagram
+
+```rawlatex
+\begin{tikzcd}
+	& A && T \\
+	k \\
+	& R && S
+	\arrow["{y_1}", from=1-2, to=1-4]
+	\arrow["f", from=1-4, to=3-4]
+	\arrow["{y_0}", from=2-1, to=1-2]
+	\arrow["{x_0}"', from=2-1, to=3-2]
+	\arrow["{x_1}"', from=3-2, to=3-4]
+\end{tikzcd}
+```
+
+of fat points we have
+
+$$ (y_0,y_1)^*(\mathcal{Z}_T)=(x_0,x_1)^*(\mathcal{Z}). $$
 
 
