@@ -139,3 +139,5 @@ of fat points we have
 $$ (y_0,y_1)^*(\mathcal{Z}_T)=(x_0,x_1)^*(\mathcal{Z}). $$
 
 
+
+
