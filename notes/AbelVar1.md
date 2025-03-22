@@ -48,4 +48,13 @@ Let's build the (iso-)morphism from a complex torus $A$ to it's Albanese variety
 
 - There is a isomorphism $u:\Lambda\rightarrow\mathrm{H}_1(A)$ defined as follows: for every point $p\in\Lambda$ choose a path from the origin $0\in\mathbb{C}^g$ to $p$, which then correspondes to a cycle in $A$ since $0$ and $p$ send to the same point of the torus $A$.
 
-- A path in $\mathbb{C}$ correspondes immediately to an object in $(\mathrm{Hom}^0(A,\Omega_{A/\mathbb{C}}^1))^*$ $v:\mathbb{C}^g\rightarrow(\mathrm{Hom}^0(A,\Omega_{A/\mathbb{C}}^1))^*$ is defined as
+- A path in $\mathbb{C}$ correspondes immediately to an object in $(\mathrm{H}^0(A,\Omega_{A/\mathbb{C}}^1))^*$, hence $v:\mathbb{C}^g\rightarrow(\mathrm{H}^0(A,\Omega_{A/\mathbb{C}}^1))^*$ sends a point $p$ to the object corresponding to a path linking $0$ and $p$.
+
+- It is clear that $v(p)$ does not depend ot the choice of the path linking $0$ and $p$ since $\mathrm{H}^0(A,\Omega_{A/\mathbb{C}}^1)$ consists only globally defined *holomorphic* forms. Since $\mathbb{C}^g$ is a covering space (todo)
+
+- $u$ and $v$ are isomorphisms (todo)
+
+
+## Isogeny and Duality
+
+Isogeny defines an equivalance relation.
