@@ -19,10 +19,33 @@ which is clearly rotationally symmetric.
 A lattice $\Lambda\in V=\mathbb{C}^g$ is said to be *full* if $\Lambda\otimes_\mathbb{Z}\mathbb{R}\rightarrow V$ is a surjection, which implies that $\Lambda$ is free of rank $2g$ if viewed as an abelian subgroup of $V$. A *Riemann form* on a complex vector space $V$ is the following data
 
 - A full lattice $\Lambda\subset V$,
-- and a skew-symmetric form $e:\Lambda\times\Lambda\rightarrow\mathbb{Z}$ such that the base change $e\otimes\mathbb{R}$ is a rotationally symmetric form with the corresponding Hermitian form being positive-definite.
-
+- and a skew-symmetric form $e:\Lambda\times\Lambda\rightarrow\mathbb{Z}$ such that the base change $e\otimes\mathbb{R}$ is a rotationally symmetric form on $V$ with the corresponding Hermitian form being positive-definite.
 
 
 
 ## Complex Torus, Albanese variety
-Given $g\in\mathbb{N}_+$ and a full lattice $\Lambda\in\mathbb{C}^g$ (of rank $2g$, that is, )
+Given $g\in\mathbb{N}_+$ and a full lattice $\Lambda\in\mathbb{C}^g$, the quotient space $\mathbb{C}^g/\Lambda$ is called a *complex torus*.
+
+
+Let's build the (iso-)morphism from a complex torus $A$ to it's Albanese variety.
+```rawlatex
+\begin{tikzcd}
+	0 & \Lambda & {\mathbb{C}^g} & A & 0 \\
+	0 & {\mathrm{H}_1(A)} & {(\mathrm{Hom}^0(A,\Omega_{A/\mathbb{C}}^1))^*} & {\mathrm{Alb}(A)} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow["u", from=1-2, to=2-2]
+	\arrow[from=1-3, to=1-4]
+	\arrow["v", from=1-3, to=2-3]
+	\arrow[from=1-4, to=1-5]
+	\arrow[from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}
+```
+
+- There is a isomorphism $u:\Lambda\rightarrow\mathrm{H}_1(A)$ defined as follows: for every point $p\in\Lambda$ choose a path from the origin $0\in\mathbb{C}^g$ to $p$, which then correspondes to a cycle in $A$ since $0$ and $p$ send to the same point of the torus $A$.
+
+- A path in $\mathbb{C}$ correspondes immediately to an object in $(\mathrm{Hom}^0(A,\Omega_{A/\mathbb{C}}^1))^*$ $v:\mathbb{C}^g\rightarrow(\mathrm{Hom}^0(A,\Omega_{A/\mathbb{C}}^1))^*$ is defined as
