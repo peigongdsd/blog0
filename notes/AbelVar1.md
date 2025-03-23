@@ -54,7 +54,29 @@ Let's build the (iso-)morphism from a complex torus $A$ to it's Albanese variety
 
 - $u$ and $v$ are isomorphisms (todo)
 
+## Theorem of the Cube, Translation Invariance of a Line Bundle
+
+[The theorem of the cube I](https://amathew.wordpress.com/2012/04/11/line-bundles-on-abelian-varieties/#more-3224)
+
+Given a variety $X$ and an abelian variety $A$. Let $f,g,h:X\rightarrow A$ be three morphisms
+, then for any $\mathcal{L}\in\mathrm{Pic}(A)$ we have
+$$\begin{aligned}
+(f+g+h)^*\mathcal{L}&=(f+g)^*\mathcal{L}\otimes (g+h)^*\mathcal{L}\otimes (h+f)^*\mathcal{L}\\
+&\otimes f^*\mathcal{L}^{-1}\otimes g^*\mathcal{L}^{-1}\otimes h^*\mathcal{L}^{-1}.
+\end{aligned}$$
+
+[The theorem of the cube II](https://amathew.wordpress.com/2012/04/12/line-bundles-on-abelian-varieties-ii/)
+
+Specifically, if $X=A$ and $x,y\in A$ are two points, then for any $\mathcal{L}\in\mathrm{Pic}(A)$ we have
+
+$$ t_{x+y}^*\mathcal{L}\otimes\mathcal{L}=t_x^*\mathcal{L}\otimes t_y^*\mathcal{L} $$
+
+where $t_a$ is the translation map $(+a)$ on $A$. This is proved by setting $f$, $g$ and $h$ to $\mathrm{Id}_A$ and constant maps sending $A$ to $x$ and $y$ respectively.
+
+(todo: Translation invariance <=> Algebraically trivial)
 
 ## Isogeny and Duality
 
 Isogeny defines an equivalance relation.
+
+To a complex torus $V/\Lambda$,
