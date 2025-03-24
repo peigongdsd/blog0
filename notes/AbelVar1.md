@@ -80,3 +80,30 @@ where $t_a$ is the translation map $(+a)$ on $A$. This is proved by setting $f$,
 Isogeny defines an equivalance relation.
 
 To a complex torus $V/\Lambda$,
+
+## Theorem (Riemann–Poincaré)
+
+Let $C$ be a compact Riemann surface (smooth projective curve) of genus $g$, and let $J(C)$ denote its Jacobian. Consider the Abel–Jacobi map:
+$$
+\kappa^{(k)} : C^{(k)} \to J(C)
+$$
+from the $k$th symmetric product $C^{(k)} := C^k/S_k$ into the Jacobian.
+
+Let $\theta \subset J(C)$ denote the theta divisor, and also write $\theta$ for its cohomology class.
+
+Then:
+
+1. **(Poincaré’s Formula)**
+   For $k \le g$, the image $\kappa^{(k)}(C^{(k)})$ represents the homology class
+   $$
+   [\kappa^{(k)}(C^{(k)})] = \frac{1}{(g-k)!} \theta^{g-k} \in H_{2k}(J(C), \mathbb{Z}).
+   $$
+
+2. **(Riemann’s Theorem)**
+   For $k = g-1$, the image $\kappa^{(g-1)}(C^{(g-1)})$ is a translate of the theta divisor:
+   $$
+   \kappa^{(g-1)}(C^{(g-1)}) = \theta + (\text{constant}).
+   $$
+   Hence, the divisor $\theta$ determines the canonical class of the curve via the Abel–Jacobi map.
+
+These classical results together are known as the **Riemann–Poincaré theorem**, describing the geometry and homology of the images of symmetric products of $C$ inside its Jacobian $J(C)$.
