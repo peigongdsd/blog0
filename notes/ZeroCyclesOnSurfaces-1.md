@@ -12,6 +12,8 @@
 
 Investigating $T(X)$ in different settings.
 
+$A_0(X)$ and $T(X)$ are divisible.
+
 
 ## First Example: Hyperelliptic
 
@@ -73,3 +75,14 @@ $$
 where $\omega$ is a primitive $5$-th root of unity. This action is fixed point free, so the quotient $X=Y/(\mathbb{Z}/5\mathbb{Z})$ is smooth.
 
 **Claim** $A_0(X)=\{0\}$.
+
+Let $\pi:Y\rightarrow X$ be the projection. Since $A_0(X)$ is divisible, it suffices to show $5A_0(X)=0$, or $\pi_*\pi^*A_0(X)=0$. Since $\pi_*$ is surjective, it suffices to show $\pi^*\pi_*:A_0(Y)\rightarrow A_0(Y)$ is the zero map.
+
+Define an action of $(\mathbb{Z}/5\mathbb{Z})^{\oplus 3}$ on $Y$ by $$
+e_i^*T_j=\omega^{\delta_{ij}}T_j.
+$$
+
+This gives a representation $\mathbb{Z}[\mathbb{Z}/5\mathbb{Z}^{\oplus 3}]\rightarrow\mathrm{End}(A_0(Y))$ sending $x$ to $\bar{x}$, which image is denoted by $R\subset\mathrm{End}(A_0(Y))$. It follows immediately That
+$$
+\pi^*\pi_*=1+\bar{e}_1\bar{e}_2^2\bar{e}_3^3+(\bar{e}_1\bar{e}_2^2\bar{e}_3^3)^2+\cdots+(\bar{e}_1\bar{e}_2^2\bar{e}_3 ^3)^4.
+$$
