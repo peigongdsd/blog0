@@ -20,4 +20,8 @@ This amounts to say
 
 -
 
+# Adjoint and Hodge Star
+
+
+
 # Three structures and the corresponding operators
