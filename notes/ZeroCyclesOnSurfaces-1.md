@@ -86,3 +86,23 @@ This gives a representation $\mathbb{Z}[\mathbb{Z}/5\mathbb{Z}^{\oplus 3}]\right
 $$
 \pi^*\pi_*=1+\bar{e}_1\bar{e}_2^2\bar{e}_3^3+(\bar{e}_1\bar{e}_2^2\bar{e}_3^3)^2+\cdots+(\bar{e}_1\bar{e}_2^2\bar{e}_3 ^3)^4.
 $$
+
+**Observation** The quotient of the surface $Y$ under any of the following groups
+
+- $<1,e_i,\cdots,e_i^4>$
+- $<1,e_ie_i,\cdots,e_i^4e_i^4>$
+- $<1,e_1e_2e_3,\cdots,e_1^4e_2^4e_3^4>$
+
+is rational (birational to $\mathbb{P}^2$). To prove it...
+
+As a result, $A_0(Y/G)$ must be trivial when $Y/G$ is rational, which could be seen easily using moving lemma (just to push the zero cycle away from the exceptional loci). As a result, every zero cycle of zero degree is rational. Denote by $\pi_G$ the projection from $Y$ to $Y/G$, for each zero cycle $z\in Y/G$ we have
+$$
+\int_{g\in G} g^*z=\pi_{G*}\pi^*z
+$$
+so
+$$
+\sum_{n=1}^4\bar{e}_i^n=\sum_{n=1}^4\bar{e}_i^n\bar{e}_j^n=\sum_{n=1}^4\bar{e}_1^n\bar{e}_2^n\bar{e}_3^n=0
+$$
+in $R\subset\mathrm{End}(A_0(Y))$.
+
+Now go back to the proof of the claim.
