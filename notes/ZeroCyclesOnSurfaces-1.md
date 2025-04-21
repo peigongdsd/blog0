@@ -106,3 +106,38 @@ $$
 in $R\subset\mathrm{End}(A_0(Y))$.
 
 Now go back to the proof of the claim.
+
+
+# Family of Lines
+
+## Case 1
+
+## Case 2
+$X\subset\mathbb{P}^4$ a smooth hypersurface of degree $4$. The family of lines on $X$ is known to form a connected curve $F\subset\mathrm{Gr}(2,5)$.
+
+
+# Intermediate Jacobian
+Main example: smooth hypersurface $X\subset\mathbb{P}^4$ of degree $4$, which witnesses which $A^2$ concides with $J^2$. Here $J^2$ is the intermediate jacobian.
+
+TBS: the $r$-th Intermediate jacobian on $X$ is defined as $$
+  J^r(X)=(F^{n-r+1}\mathrm{H}^{2n-2r+1}(X,\mathbb{C}))^*/\mathrm{H}_{2n-2r+1}(X,\mathbb{Z})
+$$
+where $F^\bullet$ is the Hodge filtration. According to the Hodge decomposition $$
+  \mathrm{H}^k(X,\mathbb{C})=\mathrm{H}^{k,0}\oplus\cdots\oplus\mathrm{H}^{0,k}
+$$
+the $r$-th filtration $F^r\mathrm{H}^k(X,\mathbb{C})$ is $$
+  F^r\mathrm{H}^k(X,\mathbb{C})=\mathrm{H}^{k-r,r}\oplus\cdots\oplus\mathrm{H}^{k,0}.
+$$
+
+In the case of $r=n$ the intermediate jacobian $J^n(X)$ is just $$
+(F^1\mathrm{H}^1(X,\mathbb{C}))^*/\mathrm{H}_{1}(X,\mathbb{Z})=\mathrm{H}^0(X,\Omega_{X}^1)^*/\mathrm{H}_{1}(X,\mathbb{Z})=\mathrm{Alb}(X)
+$$
+which coincides with the ordinary Jacobian.
+
+---
+
+An alternative definition of the intermediate jacobian is $$
+  J^r(X)=\mathrm{H}^{2r-1}(X,\mathbb{C})/(F^r)
+$$
+
+To see such a construction is indeed a complex torus, one first translate using Poincaré duality, where
