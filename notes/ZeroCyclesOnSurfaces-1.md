@@ -1,6 +1,8 @@
 # Preparation
 
-## Adaquate Equivalence Relations
+## Higher Gysin Homomorphism
+
+## Adequate Equivalence Relations
 
 On a smooth curve,
 
@@ -131,7 +133,7 @@ $X\subset\mathbb{P}^4$ a smooth hypersurface of degree $4$. The family of lines 
 ## Geometry of the Fano Surface
 
 ## (Example 1.7) On the Fano Surface, Incidence Divisor
-On a Fano surface $S$, intersection of divisors gives bilinear maps
+On a Fano surface $S$ (of a cubic threefold $X$), intersection of divisors gives bilinear maps
 $$
   \mathrm{Pic}(S)\otimes_{\mathbb{Z}}\mathrm{Pic}^0(S)\rightarrow A_0(S).\quad\tag*{(A)}
 $$
@@ -147,7 +149,36 @@ $$
 $$
 are surjective.
 
-**proof**
+**proof** (fact? for zero cycles, degree zero implies algebraic to zero) Let $r,s\in S$ be general points (moving lemma), then it will suffice (divisibility) to show that $$
+2(r)-2(s)\in\mathrm{Image}(\mathrm{Pic}(S)\otimes_{\mathbb{Z}}\mathrm{Pic}^0(S)\rightarrow A_0(S)).
+$$
+The line on $X$ corresponding to $s\in S$ will be denoted $\ell_s$, and denote by $D_s$ the divisor $$
+  \overline{\{t\in S| \ell_t\cap\ell_s\not=\emptyset,t\not=s\}}
+$$
+(the incidence divisor, see C-G p.284 p.290).
+
+In general, (needs further illustration)
+
+- $s\not\in D_s$,
+- $D_s\cdot D_t$ has degree $5$.
+
+Then suppose $r$ and $s$ are essentially general, there should be a general $t$ (explain?) s.t. $\ell_r\cap\ell_t\not=\emptyset$ and $\ell_s\cap\ell_t\not=\emptyset$.
+
+Since $2((r)-(s))=2((r)-(t))+2((t)-(s))$, we may assume $\ell_r\cap\ell_s\not=\emptyset$ (that means the case is reduced to $2(r)-2(t)$).
+
+Now let $L\subset\mathbb{P}^4$ be the plane spanned by $\ell_r$ and $\ell_s$. Let $\ell_u$ be the third line in $L\cap X=\ell_r\cup\ell_s\cup\ell_u$ (degree $1$, codim $2$ meets degree $3$, dim $3$ in general position).
+
+Through a general point of $X$ there pass $6$ lines (interesting), and we denote by $\theta:\mathrm{CH}_0(X)\rightarrow\mathrm{CH}_0(S)$ the correspondence thus defined, or to say $$
+  \theta(p)=([\ell_1])+\cdots+([\ell_6]).
+$$
+
+```rawlatex
+\includegraphics{ZeroCycleIncidence.png}
+```
+
+In our case, we thus have
+
+
 
 
 ## Intermediate Jacobian
@@ -170,7 +201,7 @@ which coincides with the ordinary Jacobian.
 
 ---
 
-## Why is Intermediate Jacobian a Complex Torus
+## Intermediate Jacobian is a Complex Torus
 
 An alternative definition of the intermediate jacobian is $$
   J^r(X)=\mathrm{H}^{2r-1}(X,\mathbb{C})/(F^r)
