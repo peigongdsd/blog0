@@ -130,6 +130,16 @@ The Fano surface $S$ of a smooth cubic threefold $F$ into $\mathbb{P}^4$ carries
 ### Case 2
 $X\subset\mathbb{P}^4$ a smooth hypersurface of degree $4$. The family of lines on $X$ is known to form a connected (in general, smooth) curve $F\subset\mathrm{Gr}(2,5)$. (S. Bloch and J. P. Murre, On the Chow groups of certain types of Fano threefolds, Compositio Math., 39 (1979), 47–105.)
 
+**Theorem (2.2 on Lecture)** Further assume the curve of lines $F$ is smooth. Then $$
+  \Theta:A^2(X)\rightarrow J^2(X)
+$$
+is an isomorphism. (Construct the cycle map later on)
+
+**Remark** If $s\in F$ corredponds to the line $\ell_s\subset X$, one can define an incidence correspondence $\Sigma$ on $F$ essentially by taking the closure of the set $$
+  \{(s,t)\in F\times F-\Delta|\ell_s\cap\ell_t\not=\varnothing\}
+$$
+
+
 ## Geometry of the Fano Surface
 
 ## (Example 1.7) On the Fano Surface, Incidence Divisor
@@ -171,12 +181,20 @@ Now let $L\subset\mathbb{P}^4$ be the plane spanned by $\ell_r$ and $\ell_s$. Le
 Through a general point of $X$ there pass $6$ lines (interesting), and we denote by $\theta:\mathrm{CH}_0(X)\rightarrow\mathrm{CH}_0(S)$ the correspondence thus defined, or to say $$
   \theta(p)=([\ell_1])+\cdots+([\ell_6]).
 $$
+(Can this homomorphism be realized as a correspondence?)
 
 ```rawlatex
 \includegraphics{ZeroCycleIncidence.png}
 ```
 
-In our case, we thus have
+In our case, we thus have (We may complete other parts first)
+
+$$
+\begin{aligned}
+  \theta(a)&=(r)+(t)+(s_1)+\cdots+(s_4)\\
+  &\sim
+\end{aligned}
+$$
 
 
 
@@ -208,3 +226,5 @@ An alternative definition of the intermediate jacobian is $$
 $$
 
 To see such a construction is indeed a complex torus, one first translate using Poincaré duality, where
+
+## Appendix 1A sketch
