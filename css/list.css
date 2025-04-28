@@ -1,0 +1,57 @@
+
+/* post tile */
+/* 1) More spacing between tiles */
+.posts-grid {
+    display: grid;
+    /* increase the gap from 20px → 40px */
+    grid-gap: 20px;
+    padding: 20px
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    margin: 1em 0;
+}
+
+/* 2) Flat tile style */
+
+.post-tile-wrapper {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0.4em;
+}
+
+.post-tile {
+
+    display: block;
+    background: #fff;             /* or transparent if you like */
+    padding: 0.9em;
+    /* remove old box‑shadow */
+    box-shadow: none;
+    /* add a crisp black border */
+    border: 1px solid #000;
+    /* round the corners a bit */
+    border-radius: 8px;
+    color: inherit;
+    text-decoration: none;
+
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease, box-shadow 0.3s ease;
+}
+
+.post-tile div {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-size: 0.9em;
+}
+
+/* no lift on hover, just maybe a subtle border‑color change */
+.post-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* fade‑in end state */
+.post-tile.visible {
+    transform: translateY(0);
+    opacity: 1;
+}

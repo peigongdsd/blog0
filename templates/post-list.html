@@ -1,7 +1,18 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const tiles = document.querySelectorAll(".post-tile");
+        tiles.forEach((tile, i) => {
+            setTimeout(() => {
+                tile.classList.add("visible");
+            }, i * 100); // each tile appears 100ms after the previous
+        });
+    });
+</script>
+
 <ul>
     $for(posts)$
-        <li>
-            <a href="$url$">$title$</a> - $date$
-        </li>
+    <div class="post-tile-wrapper">
+        <a class="post-tile" href="$url$"><div>$title$</div></a>
+    </div>
     $endfor$
 </ul>
