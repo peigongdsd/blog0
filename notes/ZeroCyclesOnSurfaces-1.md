@@ -135,10 +135,31 @@ $X\subset\mathbb{P}^4$ a smooth hypersurface of degree $4$. The family of lines 
 $$
 is an isomorphism. (Construct the cycle map later on)
 
-**Remark** If $s\in F$ corredponds to the line $\ell_s\subset X$, one can define an incidence correspondence $\Sigma$ on $F$ essentially by taking the closure of the set $$
-  \{(s,t)\in F\times F-\Delta|\ell_s\cap\ell_t\not=\varnothing\}
+**Remark (something really strange)** If $s\in F$ corredponds to the line $\ell_s\subset X$, one can define an incidence correspondence $\Sigma$ on $F$ essentially by taking the closure of the set $$
+  \{(s,t)\in F\times F-\Delta|\ell_s\cap\ell_t\not=\varnothing\}.
 $$
+$J^2(X)$ can therefore be identified (Tyurin, add ref later) with *generalized Pyrm*
+$$
+P_\Sigma(F)=\mathrm{Image}(\Sigma_*-1:J(F)\rightarrow J(F))
+$$
+where $J(F)$ is the Jacobian of $F$ amd $\Sigma_*$ satisties a certain quadratic relation $$
+  \Sigma_*^2+(q-2)\Sigma_*-(q-1)=0.
+$$
+On $q-1$ this is the *standard Prym*. For quadratic threefold, $q=24$.
 
+Now we come to build theorem 2.2.
+
+**Proposition 2.4** Let $X$ be a smooth quartic threefold. Then $\Theta:A^2(X)\rightarrow J^2(X)$ is an isogeny.
+
+To build 2.4 we need several lemmas further.
+
+**Lemma 2.5** Let $X$ be a smooth quartic threefold, and $\pi:Y\rightarrow X$ obtained by blowing up $X$ at a non-singular closed subvariety $V\subset X$. Then $\Theta_X:A^2(X)\rightarrow J^2(X)$ is an isogeny iff $\Theta_Y$ is.
+
+**proof**
+
+- Statement 1 If $V$ is a point, $A^2(X)=A^2(Y)$ and $J^2(X)=J^2(Y)$.
+
+**Lemma 2.6** Let $X$ be a smooth quartic threefold. Then $\Theta:A^2(X)\rightarrow J^2(X)$ is an isogeny.
 
 ## Geometry of the Fano Surface
 
