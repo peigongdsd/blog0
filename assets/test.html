@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 16px;
+            }
+            .tile {
+                border: 1px solid #000;
+                border-radius: 8px;
+                padding: 16px;
+                box-sizing: border-box;
+                transition: transform 0.2s ease;
+                background: #fafafa;
+            }
+            .tile:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            }
+        </style>
+        <title>Responsive Tile View</title>
+    </head>
+    <body>
+        <div class="grid"></div>
+        <script>
+            const grid = document.querySelector(".grid");
+            const data = [
+                "Tile A",
+                "Tile B",
+                "Tile C",
+                "Tile D",
+                "Tile E",
+                "Tile F",
+            ];
+            data.forEach((text) => {
+                const tile = document.createElement("div");
+                tile.className = "tile";
+                tile.textContent = text;
+                grid.appendChild(tile);
+            });
+        </script>
+    </body>
+</html>

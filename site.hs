@@ -163,6 +163,9 @@ main = hakyll $ do
         >>= loadAndApplyTemplate "templates/default.html" indexCtx
         >>= relativizeUrls
 
+  match "test.html" $ do
+    route idRoute
+
   match "templates/*" $ compile templateBodyCompiler
 
 postCtx :: Context String
