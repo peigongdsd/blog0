@@ -157,7 +157,49 @@ To build 2.4 we need several lemmas further.
 
 **proof**
 
-- Statement 1 If $V$ is a point, $A^2(X)=A^2(Y)$ and $J^2(X)=J^2(Y)$.
+- Case 1: If $V$ is a point, $A^2(X)=A^2(Y)$ and $J^2(X)=J^2(Y)$. The former statement is due to the definition of blowup: Replacing a point with $\mathbb{P}^2$ does not really change $A^2$. The latter one (maybe cohomological purity theorem)
+- Case 2: If $V$ is a curve, (investigate later)
+
+**Lemma 2.6** Let $X$ and $Y$ be smooth projective threefolds, and $\pi:Y\dashrightarrow$ X be a rational map of degree $d>0$ (the field extension on generic point is deg $d$ algebraic). The $\Theta_Y$ being an isogeny implies $\Theta_X$ being an isogeny.
+
+**proof** One may resolve the indeterminacy (blowup from *nonsingular* centers) to make the map into a genuine morphism.
+
+```rawlatex
+\begin{tikzcd}
+	{Y'} \\
+	Y & X
+	\arrow[from=1-1, to=2-1]
+	\arrow["{\pi'}", from=1-1, to=2-2]
+	\arrow["\pi", dashed, from=2-1, to=2-2]
+\end{tikzcd}
+```
+
+Using the lemma above the case is reduced to the map being everywhere defined. Now consider the diagram
+
+```rawlatex
+\begin{tikzcd}
+	{A^2(Y)} & {J^2(Y)} \\
+	{A^2(X)} & {J^2(X)}
+	\arrow["{\Theta_Y}", from=1-1, to=1-2]
+	\arrow["{\pi_*}"', shift right, from=1-1, to=2-1]
+	\arrow["{\pi_*}"', shift right, from=1-2, to=2-2]
+	\arrow["{\pi^*}"', shift right, from=2-1, to=1-1]
+	\arrow["{\Theta_X}", from=2-1, to=2-2]
+	\arrow["{\pi^*}"', shift right, from=2-2, to=1-2]
+\end{tikzcd}
+```
+
+- Now $\pi':Y\rightarrow X$ is generically finite locally free of degree $d$.
+- On the left side $\pi_*\pi^*$ induces multiplcation by $d$. This is seen by pushing any cycle away (moving lemma) from the locus where $\pi'$ failes to be finite locally free.
+- On the right side, $J^2(T)$ is just $$
+  \mathrm{H}^{3,0}(T)\oplus\mathrm{H}^{2,1}(T)/\mathrm{H}_3(T).
+$$
+We shall then analyse separatly on Hodge cohomologies and the lattice formed by homology groups. Take $\textbf{1}\in\mathrm{H}^0(Y,\mathbb{C})$ then use the projection formula we know that $$
+  \pi_*(\pi^*(\alpha)\cup\textbf{1})=\alpha\cup\pi_*(\textbf{1})=\alpha\cup (d\cdot\textbf{1}).
+$$
+On the other hand, using the Poincaré duality of $\mathrm{H}_3$ to $\mathrm{H}^3(\mathbb{Z})$ and the functoriality of $\pi_*$ and $\pi^*$, $\pi_*\pi^*$ also induces a multiplcation by $d$.
+- Note that $A^2(X)$ and $J^2(X)$ are divisible and
+
 
 **Lemma 2.6** Let $X$ be a smooth quartic threefold. Then $\Theta:A^2(X)\rightarrow J^2(X)$ is an isogeny.
 
