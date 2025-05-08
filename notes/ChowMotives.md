@@ -17,7 +17,27 @@ we have $$
 $$
 is an isomorphism.
 
-We now give a decomposition of the motive of $\mathbb{P}^1$.
+We now give a decomposition of the motive of $\mathbb{P}^1$. Note that $$
+  \mathrm{Corr}^0(\mathbb{P}^1,\mathbb{P}^1)=\mathrm{CH}^1(\mathbb{P}^1\times\mathbb{P}^1)\otimes\mathbb{Q}
+$$
+has two special elements, namely $$
+\begin{aligned}
+  c_0=[0\times\mathbb{P}^1]\\
+  c_1=[\mathbb{P}^1\times 0].
+\end{aligned}
+$$
+By simple calculation we have $$
+\begin{aligned}
+  c_0\circ c_0&=c_0\\
+  c_2\circ c_2&=c_2\\
+  c_0\circ c_2&=0\\
+  c_2\circ c_0&=0\\
+\end{aligned}
+$$
+furthermore $$
+  id_{\mathbb{P}^1}=[\Delta]=c_0+c_2
+$$
+so $$
 
 # Pure Motives
 
