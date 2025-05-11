@@ -21,4 +21,17 @@ Let $\mathcal{C}$ be an $\infty$-category. We say that an object $Y\in\mathcal{C
 - $x$ is final,
 - $X$ is contractible.
 
+## Definition of limits and colimits
+
+### 7.1.1.1
+(Definition) Let $\mathcal{C}$ be an $\infinity$-category contaning an object $Y$, $K$ be a simplicial set, and $u:K\rightarrow\mathcal{C}$ be a diagram. We say that a natural transformation $\alpha:\underline{Y}\rightarrow u$ *exhibits* $Y$ as a limit of $u$ if
+
+- For each object $X\in\mathcal{C}$, the composition
+
+$$ Hom_\mathcal{C}(X,Y)\rightarrow Hom_{Fun(K,\mathcal{C}})}(\underline{X},\underline{Y})\xrightarrow{[\alpha]\circ}Hom_{Fun(K,\mathcal{C})}(\underline{X},u) $$
+
+is an isomorphism **in the homotopy category** $hKan$.
+
+The opposite construction is called colimit.
+
 
