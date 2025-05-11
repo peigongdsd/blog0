@@ -1,0 +1,17 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.tile {
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding: 16px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+}
