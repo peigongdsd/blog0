@@ -165,5 +165,51 @@ Furthermore,
 
 ## Higher Case of the Decomposition
 
-### Picard, Albanese, and Duality
+Remaining Problem: Identifying $\mathrm{Hom}(J,J')$ for a Curve.
+What is this group viewed as a subgroup of cycles?
+
+Associated to a variety $X/k$ there are two abelian varieties: the Albanese variety $\mathrm{J}_{X/k}$ and the Picard variety $\mathrm{Pic}_{X/k}$, when the former one serves as the initial object of the category of the morphisms from $X$ to abelian varieties over $k$, given a distinguished point $x_0\in X$, and the later functor being the $fppf$-sheafication of 
+
+$$ S/k\mapsto\{\mathcal{L}\in\mathrm{Pic}(X\times_k S)/p^*\mathrm{Pic}(S)\} $$
+
+Moreover, when $X(S)$ is nonempty, $\mathrm{Pic}_{X/k}(S)$ remains still after sheafication. Such functor is representable as an abelian variety (condition?).
+
+What we care most is the degree $0$ part of the picard variety, namely $P_{X/k}$.
+
+### Theorem
+Let $X$ (connnected) and $Y$ be of dimensions $d$ and $e$ respectively. 
+
+- (i) $$\mathrm{Hom}(J_X,P_Y)\otimes\mathbb{Q}=\frac{A^1(X\times Y)}{p_1^*A^1(X)+p_2^*A^1(Y)};$$
+- (ii) Let $\zeta\in A_0(X)$, $\eta\in A_0(Y)$ be zero cycles of **positive** degree. Then there is an isomophism
+$$ \Omega:\mathrm{Hom}(J_X,P_Y)\otimes\mathbb{Q}\rightarrow \{c\in A^1(X\times Y)\;|\;c\circ\zeta_*=0\;and\;\eta^*\circ c=0\}.$$
+
+What is (ii) talking about? In fact, $c$ could be viewed as 
+$$c\in A^1(X\times Y)=\mathrm{Corr}_{e-1}(X,Y)$$ (in the case of curve this is correspondence of degree $0$), while $\xi\in A_0(X)=\mathrm{Corr}_0(1,h(X))$ and $\eta\in A_0(Y)=A^e(Y)=\mathrm{Corr}_0(h(Y),\nathbb{L}^e)$.
+
+((ii) is derived from (i), we pretend to know it right now.)
+
+For (i),  suppose $X(k)$ and $Y(k)$ are both nonempty. Pick an $x_0\in X$ and 
+
+$$ \mathrm{Hom}(J_X,P_Y)=\{\phi:X\rightarrow P_Y\;|\;\phi(x_0)=0\}\\
+=\frac{\{\mathcal{L}\in\mathrm{Pic}(X\times Y)\;|\;\mathcal{L}_{x_0\times Y}\cong\mathcal{O}_Y\}}{p^*\mathrm{Pic}(X)}\\
+=(seesaw\ theorem)\frac{\mathrm{Pic}(X\times Y)}{p_1^*\mathrm{Pic}(X)+p_2^*\mathrm{Pic}(Y)} $$
+
+Then take the tensor product with $\mathbb{Q}$.
+
+The point: since we require a morphism from $J_X$ to $P_Y$ instead of $X$ to $P_Y$, the induced morphism $X\rightarrow P_Y$ must cover the origin of the picard variety, so the image *should* lie in the degree-$0$ part naturally. Typically, the Albanese variety is connected (citation needed?).
+
+```rawlatex
+\begin{tikzcd}
+	X & {P_Y} \\
+	{x_0} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=2-1, to=1-1]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=1-2]
+\end{tikzcd}
+```
+
+
+
+
 
