@@ -165,3 +165,5 @@ Furthermore,
 
 ## Higher Case of the Decomposition
 
+### Picard, Albanese, and Duality
+
