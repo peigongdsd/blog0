@@ -44,6 +44,87 @@ in fact, the divisor $\Delta-[\mathbb{P}^1\times \{x\}] - [\{x\}\times \mathbb{P
 
 In general, we could define $h^1(C)=h(C)-h^0(C)-h^2(C)$ (or strictly, the part cut off by $\mathrm{id}_C-p_0-p_2$).
 
+## Preliminaries on Line Bindles
+
+Degree problem, degree $0$ criterion
+
+### CHATGPT START
+
+Great question! On an abelian variety $A/k$ there are several equivalent ways to say a line bundle is “degree 0.” The condition you wrote
+
+$$
+m^{*}L\;\simeq\;p^{*}L\otimes q^{*}L\qquad\text{on }A\times A
+$$
+
+is one of the standard characterisations of **algebraically trivial / translation–invariant** line bundles, i.e. of $\Pic^0(A)$. Here’s the clean picture and why this really matches the “degree 0” intuition.
+
+# 1) Why $m^{*}L\simeq p^{*}L\otimes q^{*}L$ singles out $\Pic^0(A)$
+
+For any line bundle $L$ on $A$, define the **translation-difference map**
+
+$$
+\phi_L:A\longrightarrow \Pic^0(A)=A^\vee,\qquad
+a\longmapsto T_a^{*}L\otimes L^{-1}.
+$$
+
+By Weil’s theorem of the square/cube, $\phi_L$ is a **group homomorphism** and the line bundle
+
+$$
+\Lambda(L):=m^{*}L\otimes p^{*}L^{-1}\otimes q^{*}L^{-1}
+$$
+
+is exactly the pullback $(1\times\phi_L)^{*}\mathcal P$ of the Poincaré bundle $\mathcal P$ on $A\times A^\vee$. Hence
+
+$$
+\Lambda(L)\text{ is trivial }\Longleftrightarrow \phi_L=0
+\Longleftrightarrow m^{*}L\simeq p^{*}L\otimes q^{*}L.
+$$
+
+But $\phi_L=0$ holds precisely when $L$ is **algebraically equivalent to $\mathcal O_A$**, i.e. $L\in\Pic^0(A)$. So your condition is equivalent to “$L$ lies in $\Pic^0(A)$.” (A slick proof uses that $\Lambda(L)=(1\times\phi_L)^*\mathcal P$; if $\phi_L=0$ then $\Lambda(L)$ is trivial, giving the displayed identity, and conversely.) ([Virtual Math][1], [Southwest Center for Arithmetic Geometry][2])
+
+A quick sanity check: restrict the identity along $i_a:A\to A\times A,\ x\mapsto(a,x)$. Then
+
+$$
+i_a^*(m^*L)\simeq T_a^*L,\quad i_a^*(p^*L)\simeq\mathcal O_A,\quad i_a^*(q^*L)\simeq L,
+$$
+
+so you get $T_a^*L\simeq L$ for all $a$, i.e. **translation invariance**, which is another common description of $\Pic^0(A)$. ([Yifeng Huang's Homepage][3], [Climbing Mount Bourbaki][4])
+
+# 2) So… why call these “degree 0”?
+
+On a **curve** $C$, $\Pic^0(C)$ literally means “line bundles of degree $0$.” In higher dimension there isn’t a single integer degree, but the right replacement is **numerical triviality** (all intersection numbers with curves vanish), or equivalently $c_1(L)=0$ in the Néron–Severi group:
+
+$$
+\Pic^0(A)=\ker\big(\Pic(A)\twoheadrightarrow \mathrm{NS}(A)\big),\qquad \mathrm{NS}(A)=\Pic(A)/\Pic^0(A).
+$$
+
+For abelian varieties, **algebraic and numerical equivalence coincide for divisors**, and $\mathrm{NS}(A)$ is torsion-free. Thus $L\in\Pic^0(A)$ iff $c_1(L)$ is numerically $0$; with any polarization $H$ one has
+$\deg_H(L):=c_1(L)\cdot H^{g-1}=0$.
+That’s why these bundles are universally called “degree 0.” ([Wikipedia][5], [arXiv][6], [jmilne.org][7])
+
+There’s a third, very useful “degree” viewpoint: the homomorphism $\phi_L:A\to A^\vee$ above.
+
+* If $L\in\Pic^0(A)$, then $\phi_L=0$ (so in this sense its “degree” is $0$).
+* If $L$ is ample, then $\phi_L$ is an **isogeny**; its (finite) degree is the usual “degree” of a polarization, and equals a top intersection number of $c_1(L)$. ([Yifeng Huang's Homepage][3])
+
+# 3) Summary of equivalent characterizations
+
+For a line bundle $L$ on an abelian variety $A$, the following are equivalent:
+
+* $L\in\Pic^0(A)$ (connected component of the identity in the Picard scheme / algebraically trivial). ([MIT Mathematics][8])
+* $m^{*}L\simeq p^{*}L\otimes q^{*}L$ on $A\times A$ (biextension condition). ([Virtual Math][1])
+* $T_a^{*}L\simeq L$ for all $a\in A$ (translation invariance). ([Yifeng Huang's Homepage][3])
+* $\phi_L=0:A\to A^\vee$ (the translation–difference map is zero). ([Virtual Math][1])
+* $c_1(L)=0$ in $\mathrm{NS}(A)$, i.e. $L$ is **numerically trivial** (hence “degree 0”
+
+Jacobian of a general curve (not necessarily having a complex structure): having points corresponding to 
+
+### CHATGPT END
+
+Poinc\'are bundle on $X\times\mathrm{Pic}_X$: 
+
+Abel-Jacobi map $X\rightarrow J_X$ for a curve: 
+
 ## Weil's Formula on Jacobians and Picard Groups
 
 A classical theorem (Weil) says that divisor classes on a product of curves (we may assume the curves both admit a rational point, but maybe this condition could be relaxed) split as
@@ -57,5 +138,30 @@ Intuitively:
 * the first two summands are the pullbacks from the two factors, and
 * the **cross-term** corresponds to line bundles on $X\times X'$ that restrict trivially to each fibre; by the seesaw theorem these are exactly the line bundles coming from homomorphisms $J\to P_{X'}$ (and for curves $P_{X'}\cong J'$).
 
+An observation: each fibre $X\times x'$ where $x'\in X'$ 
+
 ### [Statement]
+
+(Better state it clearly here)
+
+### Proposition a
+If $X$, $X'$ are curves with Jacobian varieties $J$, $J'$, then 
+
+$$\mathrm{Hom}(h^1(X),h^1(X'))=\mathrm{Hom}(J,J')\otimes\mathbb{Q}.$$
+
+To see it, note that $\mathrm{Hom}(h^1(X),h^1(X'))$ is just 
+
+$$ (\Delta_{X'}-p_{0,X'}-p_{2,X'})\circ\mathrm{Corr}_0(X,X')\circ(\Delta_X-p_{0,X}-p_{2,X}) $$
+
+The central term $\mathrm{Corr}_0(X,X')=\mathrm{A}_1(X\times X')$ calculates to three partitions
+
+- $\mathrm{Pic}(X)$ pulling back to $X\times X'$. This is a divisor concentrating on the first projection, or a *cylinder* $c$ of type $(cycle\times X')/\sim$. In this case $\Delta_{X'}\circ c=c=p_{0,X'}\circ c$ and $p_{2,X'}\circ c=0$, so such term vanishes in composition.
+- Symmetrically another, also vanishes.
+- $\mathrm{Hom}(J,J')\otimes\mathbb{Q}$. For a class $c$ in such part, *there must be* $p_{0,X'}\circ c=p_{2,X'}\circ c=c\circ p_{0, X}=c\circ p_{2,X}$. In fact, (fact what?)
+
+### Proposition a'
+Furthermore, 
+
+
+## Higher Case of the Decomposition
 
