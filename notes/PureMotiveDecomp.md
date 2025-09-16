@@ -184,7 +184,18 @@ Let $X$ (connnected) and $Y$ be of dimensions $d$ and $e$ respectively.
 $$ \Omega:\mathrm{Hom}(J_X,P_Y)\otimes\mathbb{Q}\rightarrow \{c\in A^1(X\times Y)\;|\;c\circ\zeta_*=0\;and\;\eta^*\circ c=0\}.$$
 
 What is (ii) talking about? In fact, $c$ could be viewed as 
-$$c\in A^1(X\times Y)=\mathrm{Corr}_{e-1}(X,Y)$$ (in the case of curve this is correspondence of degree $0$), while $\xi\in A_0(X)=\mathrm{Corr}_0(1,h(X))$ and $\eta\in A_0(Y)=A^e(Y)=\mathrm{Corr}_0(h(Y),\nathbb{L}^e)$.
+$$c\in A^1(X\times Y)=\mathrm{Corr}_{e-1}(X,Y)$$ (in the case of curve this is correspondence of degree $0$), while $\xi\in A_0(X)=\mathrm{Corr}_0(1,h(X))$ and $\eta\in A_0(Y)=A^e(Y)=\mathrm{Corr}_0(h(Y),\mathbb{L}^e)$.
+
+```rawlatex
+\begin{tikzcd}
+	1 & {h(X)} && {h(Y)} & 1
+	\arrow["{\zeta(0)}", maps to, from=1-1, to=1-2]
+	\arrow["{c(1-\mathrm{dim}Y)}", maps to, from=1-2, to=1-4]
+	\arrow["{\eta(\mathrm{dim}Y)}", maps to, from=1-4, to=1-5]
+\end{tikzcd}
+```
+
+Here an maps to arrow with degree $e$ means it sends a degree $0$ motive to a degree $0+e$ motive.
 
 ((ii) is derived from (i), we pretend to know it right now.)
 
