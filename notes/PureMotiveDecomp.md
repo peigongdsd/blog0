@@ -238,11 +238,17 @@ Then we have
 
 #### [Proposition] The increasing filtration tower stablizes at $\mathbf{t}^p\mathrm{CH}^p(X_L)$.
 
-In fact, $\mathbf{t}^p\mathrm{CH}^p(X_L)=\mathrm{CH}^p(X_L)$. To see (TBD)
+In fact, $\mathbf{t}^p\mathrm{CH}^p(X_L)=\mathrm{CH}^p(X_L)$. First we do *spread-out*: For a cycle $\mathfrak{p}\in X_L$, take $V_{\mathfrak{p}}$ to be it's closure in $X_L$ and $$ 
 
-We then have graded components $\mathbf{Gr}_t^m\mathrm{CH}^p(X_L)=\mathbf{t}^m\mathrm{CH}^p(X_L)/\mathbf{t}^{m-1}\mathrm{CH}^p(X_L)$.
+We then have graded components $\mathrm{Gr}_t^m\mathrm{CH}^p(X_L)=\mathbf{t}^m\mathrm{CH}^p(X_L)/\mathbf{t}^{m-1}\mathrm{CH}^p(X_L)$.
 
 #### [Property] The action of correspondences preserves the transcendental filtration on Chow groups and induces the action on the corresponding graded pieces.
 
+To be precise this is $\mathrm{Corr}^i(X_L, Y_L)$ pulling back from truncated $\mathrm{CH}^*(X_L)$ to $\mathrm{CH}^*(Y_L)$ given a fixed $L/k$. 
+
 ## Abel-Jacobi Kernel
+
+### Intermediate Jacobian in a Nutshell
+
+
 
