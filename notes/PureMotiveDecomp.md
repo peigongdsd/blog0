@@ -222,5 +222,27 @@ The point: since we require a morphism from $J_X$ to $P_Y$ instead of $X$ to $P_
 
 PY
 
+# Another Topic
 
+## Chow Group Filtration
+
+For $X/k$ equidimensional, write $\mathbf{t}^m\mathrm{CH}^p(X_L)$ for the image of the pullbacks
+
+$$ \mathrm{CH}^p(X_K)\rightarrow\mathrm{CH}^p(X_L) $$
+
+where $K\hookrightarrow L$ over $k$ ranges over all intermediate fields $k\subset K\subset L$ where $\mathrm{tr.deg.}(K/k)\leq m$. Such trancation gives a filtration
+
+$$ \varnothing=\mathbf{t}^{-1}\mathrm{CH}^p(X_L)\subset\mathbf{t}^0\mathrm{CH}^p(X_L)\subset\cdots $$
+
+Then we have
+
+#### [Proposition] The increasing filtration tower stablizes at $\mathbf{t}^p\mathrm{CH}^p(X_L)$.
+
+In fact, $\mathbf{t}^p\mathrm{CH}^p(X_L)=\mathrm{CH}^p(X_L)$. To see (TBD)
+
+We then have graded components $\mathbf{Gr}_t^m\mathrm{CH}^p(X_L)=\mathbf{t}^m\mathrm{CH}^p(X_L)/\mathbf{t}^{m-1}\mathrm{CH}^p(X_L)$.
+
+#### [Property] The action of correspondences preserves the transcendental filtration on Chow groups and induces the action on the corresponding graded pieces.
+
+## Abel-Jacobi Kernel
 
