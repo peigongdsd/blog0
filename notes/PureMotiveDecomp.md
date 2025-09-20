@@ -244,7 +244,7 @@ We then have graded components $\mathrm{Gr}_t^m\mathrm{CH}^p(X_L)=\mathbf{t}^m\m
 
 #### [Property] The action of correspondences preserves the transcendental filtration on Chow groups and induces the action on the corresponding graded pieces.
 
-To be precise this is $\mathrm{Corr}^i(X_L, Y_L)$ pulling back from truncated $\mathrm{CH}^*(X_L)$ to $\mathrm{CH}^*(Y_L)$ given a fixed $L/k$. 
+To be precise this is $\mathrm{Corr}^i(X_L, Y_L)$ pulling back from truncated $\mathrm{CH}^*(X_L)$ to $\mathrm{CH}^*(Y_L)$ given a fixed $L/k$.  (I have to be pretty sure?)
 
 ## Abel-Jacobi Kernel
 
