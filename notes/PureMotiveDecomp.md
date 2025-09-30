@@ -289,8 +289,24 @@ $$ \varnothing=\mathbf{t}^{-1}\mathrm{CH}^*(X_L)\subset \mathbf{t}^0\mathrm{CH}^
 
 
 
-### Intermediate Jacobian in a Nutshell
 
 
 
+Let $C$ be a smooth dim $1$ cycle of $X$
+$$ P_X\rightarrow P_C $$
 
+pulling back: Sending a divisor/~ (or a line bundle) to a point/~ of $C$
+
+$$ P_C\rightarrow J_C $$
+
+Identifying Picard & Abanese varietties of a curve, there is nothing to mention
+
+$$ J_C\rightarrow J_X $$
+
+Pushing out a point/~ to a point/~.
+
+In other words this is just a duality between $CH^1$ and $CH_1$. However, the question is, why is this morphsim an isogeny (morphism between $CH^1\otimes\mathbb{Q}$ and $CH_1\otimes\mathbb{Q}$)? (Andre Weil) Also, do we have other dualities?
+
+We could say that such a morphism sends a hyperplane class to its intersection with the given (smooth) curve. Q2: Why is this morphism independent with the choice of the curve? 
+
+* The section $C$ is chosen to be a **linear** section! But in order to talk about what is *linear*, we need an ample bundle on $X$, or an immersion from $X$ to the projective space. **The isogeny should depend on the choice of the ample bundle**.
