@@ -246,9 +246,51 @@ We then have graded components $\mathrm{Gr}_t^m\mathrm{CH}^p(X_L)=\mathbf{t}^m\m
 
 To be precise this is $\mathrm{Corr}^i(X_L, Y_L)$ pulling back from truncated $\mathrm{CH}^*(X_L)$ to $\mathrm{CH}^*(Y_L)$ given a fixed $L/k$.  (I have to be pretty sure?)
 
-## Abel-Jacobi Kernel
+## Transcendental Filtration on Cycles
+
+Assume we have a universal field $\Omega$ chosen.
+
+```rawlatex
+\begin{tikzcd}
+	0 & {T(X)} & {A_0(X)} & {Alb(X)} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+\end{tikzcd}
+```
+
+
+
+```rawlatex
+\begin{tikzcd}
+	0 & {\mathbf{t}^{d-1}T(X)} & {\mathbf{t}^{d-1}A_0(X)} & {\mathbf{t}^{d-1}Alb(X)} & 0 \\
+	0 & {\mathbf{t}^dT(X)} & {\mathbf{t}^dA_0(X)} & {\mathbf{t}^dAlb(X)} & 0 \\
+	0 & {t_0(X)} & {a_0(X)}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=1-4, to=1-5]
+	\arrow[from=1-4, to=2-4]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-2, to=3-2]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-3, to=3-3]
+	\arrow[from=2-4, to=2-5]
+	\arrow[from=3-1, to=3-2]
+	\arrow[from=3-2, to=3-3]
+\end{tikzcd}
+```
+
+$$ \varnothing=\mathbf{t}^{-1}\mathrm{CH}^*(X_L)\subset \mathbf{t}^0\mathrm{CH}^*(X_L)\subset\cdots $$
+
+
 
 ### Intermediate Jacobian in a Nutshell
+
 
 
 
