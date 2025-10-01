@@ -310,3 +310,20 @@ In other words this is just a duality between $CH^1$ and $CH_1$. However, the qu
 We could say that such a morphism sends a hyperplane class to its intersection with the given (smooth) curve. Q2: Why is this morphism independent with the choice of the curve? 
 
 * The section $C$ is chosen to be a **linear** section! But in order to talk about what is *linear*, we need an ample bundle on $X$, or an immersion from $X$ to the projective space. **The isogeny should depend on the choice of the ample bundle**.
+
+
+
+## Degenerate (Balanced) Correspondences
+
+Consider the ring $\mathrm{CH}^d(X\times X)$ for $\mathrm{dim}X=d$. We want to see if the degenerate (balanced) correspondences (resp. $\mathbb{Q}$-correspondences) form a ideal.
+
+For $c\in \mathrm{CH}^d(X\times X)$ balanced on the left (supported on some $\mathrm{CH}^d(V\times X)$), the composition holds
+
+$$ \mathrm{CH}^d(X\times X)\circ \mathrm{CH}^d(V\times X)\in \mathrm{CH}^d(V\times X) $$
+
+since the intersection product is supported on $V\times X\times X$. Composition on the other side supports on 
+
+$ X\times V\times X $
+
+
+
