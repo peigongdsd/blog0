@@ -325,5 +325,12 @@ since the intersection product is supported on $V\times X\times X$. Composition 
 
 $ X\times V\times X $
 
+(skip)
+
+Hey let's come back to Dr.Guletskii's "factorization" criterion!
+
+#### Lemma 2
+Let $X$, $Y$ and $Z$ be three smooth projective varieties over $k$, where $X$ is equidimensional, and $f:Y\rightarrow Z$ be a morphism. let $\alpha\in\mathrm{CH}^m(Y,X)$ be a corresponence, and $\gamma=(f\times id_X)_*\alpha$
+
 
 
