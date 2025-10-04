@@ -58,7 +58,23 @@ which is closedly related the techniques we are using here. Here $T(S)$ is the a
 
 Let's construct the Chow-Kunneth decomposition of an algebraic surface $S$, and further break down the essential motive $h^2(S)$ to "algebraic" and "transcendental" part.
 
-### Construction of $h^0$, $h^1$, $h^3$ and $h^4$
+### Construction of $h^0$, $h^1$, $h^{2n-1}$ and $h^{2n}$
+
+For an algebraic variety $X/k$ of dimension $n$ with a rational point $x_0$, $h^0$ and $h^{2n}$ are just defined by $[x_0\times X]$ and $[X\times x_0]$. 
+
+Fix a projective embedding of $X$, therefore we could talk about what cycles are "linear". Choose a smooth linear cycle $C of dimension $1$ in $X$ (up to base change since we can always descend, dive into the actual descending later), and a hyperplane (linear also) section $H$ of $X$. Say $H$ and $C$ meets at $Z$, which admits a class in $\mathrm{CH}_0(X)$. Denote by $i$ the embedding $C\rightarrow X$, by "gysin and push" we have 
+
+```rawlatex
+\begin{tikzcd}
+	{h(X)} & {h(C)} & {h(X)(d-1)}
+	\arrow["{i^*(0)}", from=1-1, to=1-2]
+	\arrow["{i_*(d-1)}", from=1-2, to=1-3]
+\end{tikzcd}
+```
+since (let's review the basics!)
+
+- 
+
 
 ### Intermediate: $h^2=h_{ns}^2\oplus h_{tr}^2$
 
