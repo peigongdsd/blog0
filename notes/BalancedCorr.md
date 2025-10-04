@@ -73,7 +73,12 @@ Fix a projective embedding of $X$, therefore we could talk about what cycles are
 ```
 since (let's review the basics!)
 
-- 
+- $i^*=h(i)\in\mathrm{CH}(X\times k)$
+
+***
+
+
+
 
 
 ### Intermediate: $h^2=h_{ns}^2\oplus h_{tr}^2$
