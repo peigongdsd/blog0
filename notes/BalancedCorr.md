@@ -44,6 +44,22 @@ $$ M(X)=h^0\oplus h^1\oplus h^+\oplus h^{2d-1}\oplus h^{2d} $$
 
 where $d=\dim X$. (Add later arguments for $h^i$ all being balanced)
 
-- Property: the essential decomposability of $c_0(X)$ (that is, $\mathrm{CH}_0(X)$), is a birational invariant of $X$ (e.g. we can do resolution of singularities). In fact, since $c_0(X)$ is equal to $\mathrm{CH}_n(X\times X)$ modulo $\mathrm{BCH}_n(X\times X)$, 
+- Property: the essential decomposability of $c_0(X)$ (that is, $\mathrm{CH}_0(X)$), is a birational invariant of $X$ (e.g. we can do resolution of singularities). In fact, since $c_0(X)$ is equal to $\mathrm{CH}_n(X\times X)$ modulo $\mathrm{BCH}_n(X\times X)$, we care only about the cycles lying over $K(X)\times K(X)$. This also suggests that any "balanced" terms in the ring involves some lower dimension subvarieties, hence we are having the "essential" motive under birational equivalance.
 
-- 
+- For example, for the category of algebraic curves, (add later, Jacobian not decomposable)
+
+## Transcendental components of motives of surfaces
+
+Now we are looking at the paper by B. Kahn, J.P. Murre and C. Pedrini. We outline the main results of that paper here, namely
+
+$$\mathrm{End}_{\mathbb{Q}}(h_{tr}^2(S))=\frac{A_2(S\times S)}{BA_2(S\times S)}=\frac{T(S_{k(S)})}{\mathbf{t}^{1}T(S_{k(S)})}$$
+
+which is closedly related the techniques we are using here. Here $T(S)$ is the albanese kernel.
+
+Let's construct the Chow-Kunneth decomposition of an algebraic surface $S$, and further break down the essential motive $h^2(S)$ to "algebraic" and "transcendental" part.
+
+### Construction of $h^0$, $h^1$, $h^3$ and $h^4$
+
+### Intermediate: $h^2=h_{ns}^2\oplus h_{tr}^2$
+
+
