@@ -18,7 +18,32 @@ Note that $c_0(X)$ admits a ring structure. To see, identify $X_{K(X)}$ as takin
 
 $$ \frac{\mathrm{CH}_n(Y\times X)}{\mathrm{BCH}_n(Y\times X)}\rightarrow\frac{\mathrm{CH}_0(X_{K(Y)})}{\mathbf{t}^{n-1}\mathrm{CH}_0(X_{K(Y)})} $$
 
-where $n=\dim Y$. By restricting to the generic fibre of $Y$ we have the morphism between the numerators; if a cycle is balanced on the left, then no wonder it would vanish under the morphism; otherwise should the cycle be balanced on the right, the image lies therefore in $\mathbf{t}^{n-1}\mathrm{CH}_0(X_{K(Y)})$ (why?) so 
+where $n=\dim Y$. By restricting to the generic fibre of $Y$ we have the morphism between the numerators; if a cycle is balanced on the left, then no wonder it would vanish under the morphism; otherwise should the cycle be balanced on the right, the image lies therefore in $\mathbf{t}^{n-1}\mathrm{CH}_0(X_{K(Y)})$ 
 
-- $\mathrm{CH}_0(X)$ is said to be *integrally essentially decomposable* if 
+```rawlatex
+\begin{tikzcd}
+	{\mathrm{CH}_0(X_{K(Y)})} & {\mathrm{CH}_*(X)} \\
+	{\mathrm{CH}_n(Y\times X)}
+	\arrow["prj", from=1-1, to=1-2]
+	\arrow["fiber", from=2-1, to=1-1]
+\end{tikzcd}
+```
 
+Looking at these groups, if a cycle on $\mathrm{CH}_n(Y
+\times X)$ is balanced on the right (but not left, or would vanish after fiber base change), after projection it would go to a non-generic point of $X$, therefore get mod out by $\mathbf{t}^{n-1}\mathrm{CH}_0(X_{K(Y)})$. 
+
+- As a result, there is a properly defined ring structure on $c_0(X)$. The multiplcative unit $\mathbb{1}\in c_0(X)$ is the diagonal in $\mathrm{CH}_n(X\times X)$ modulo balanced cycles.
+
+- $\mathrm{CH}_0(X)$ is said to be *integrally essentially decomposable* if $\mathbb{1}$ is a sum of two orthogonal non-torsion idempotents in $c_0(X)$. The point is **non-torsion** though I do not know why at this time.
+
+- Implication: $M(X)$ is integrally essentially decomposable => $\mathrm{CH}_0(X)$ is integrally essentially decomposable. In fact, in $M(X)$, $\Delta$ therefore equals to $\Lambda+\Xi$, and since these components are essential (not balanced), the equiation modulos to $\mathbb{1}=\lambda+\xi$ in $c_0(X)$. However, the inverse does not hold: idempotents can be not liftable from $c_0(X)$ to $\mathrm{CH}_n(X\times X)$, since balanced correspondences are not necessarily nilpotent.
+
+- Chow-Kunneth decomposition: under rational coefficients, it is already known that motives of varieties of dimension at least $2$ admits a decomposition, nemaly
+
+$$ M(X)=h^0\oplus h^1\oplus h^+\oplus h^{2d-1}\oplus h^{2d} $$
+
+where $d=\dim X$. (Add later arguments for $h^i$ all being balanced)
+
+- Property: the essential decomposability of $c_0(X)$ (that is, $\mathrm{CH}_0(X)$), is a birational invariant of $X$ (e.g. we can do resolution of singularities). In fact, since $c_0(X)$ is equal to $\mathrm{CH}_n(X\times X)$ modulo $\mathrm{BCH}_n(X\times X)$, 
+
+- 
