@@ -95,3 +95,6 @@ Therefore, $\beta$ corresponds to a cycle $\tilde{\beta}\in A^1(X\times X)=\math
 ### Intermediate: $h^2=h_{ns}^2\oplus h_{tr}^2$
 
 
+
+
+## The Refined Chow-Kunneth Decomposition
