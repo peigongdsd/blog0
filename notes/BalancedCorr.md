@@ -62,20 +62,31 @@ Let's construct the Chow-Kunneth decomposition of an algebraic surface $S$, and 
 
 For an algebraic variety $X/k$ of dimension $n$ with a rational point $x_0$, $h^0$ and $h^{2n}$ are just defined by $[x_0\times X]$ and $[X\times x_0]$. 
 
-Fix a projective embedding of $X$, therefore we could talk about what cycles are "linear". Choose a smooth linear cycle $C of dimension $1$ in $X$ (up to base change since we can always descend, dive into the actual descending later), and a hyperplane (linear also) section $H$ of $X$. Say $H$ and $C$ meets at $Z$, which admits a class in $\mathrm{CH}_0(X)$. Denote by $i$ the embedding $C\rightarrow X$, by "gysin and push" we have 
+Fix a projective embedding of $X$, therefore we could talk about what cycles are "linear". Choose a smooth linear cycle $C$ of dimension $1$ in $X$ (up to base change since we can always descend, dive into the actual descending later), and a hyperplane (linear also) section $H$ of $X$. Say $H$ and $C$ meets at $Z$, which admits a class in $\mathrm{CH}_0(X)$. Denote by $i$ the embedding $C\rightarrow X$, by "gysin and push" we have 
 
 ```rawlatex
 \begin{tikzcd}
-	{h(X)} & {h(C)} & {h(X)(d-1)}
+	{h(X)} & {h(C)} & {h(X)(n-1)}
 	\arrow["{i^*(0)}", from=1-1, to=1-2]
-	\arrow["{i_*(d-1)}", from=1-2, to=1-3]
+	\arrow["{i_*(n-1)}", from=1-2, to=1-3]
 \end{tikzcd}
 ```
 since (let's review the basics!)
 
-- $i^*=h(i)\in\mathrm{CH}(X\times k)$
+- gysin: $i^*=h(i)\in\mathrm{CH}_1(X\times C)=\mathrm{CH}^0(X, C)$
+- push: $i_*=h(i)^t\in\mathrm{CH}_1(C\times X)=\mathrm{CH}^{n-1}(C, X)$
+
+
+The functoriality of the Picard and Albanese varieties defines a composite homomorphism
+
+$$P_X\rightarrow P_C\xrightarrow{\sim} J_C\rightarrow J_X$$
+
+intepretion: for a line bundle in $P_X$, taking the intersection with $C$ sends which to a zero cycle, as a point on the Albanese of $X$. The real magic thing is such a morphism is an isogeny (Weil, dig later). Choose an inverse $\beta:J_X\rightarrow P_X$ such that $\alpha\circ\beta=[\cdot n]$.
+
+Therefore, $\beta$ corresponds to a cycle $\tilde{\beta}\in A^1(X\times X)=\mathrm{CH}_{\mathbb{Q}}^{n-1}(X,X)=\mathrm{Hom}()$
 
 ***
+
 
 
 
