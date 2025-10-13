@@ -1,7 +1,4 @@
 ## Enriques Surface
-Here are the two outputs revised with LaTeX style: inline formulas in `$…$` and display formulas in `$$…$$`.
-
----
 
 **Earlier Answer (on existence of torsion in Néron–Severi groups):**
 
@@ -50,7 +47,8 @@ so $K_S$ pulls back to the trivial bundle — hence $K_S$ is $2$-torsion. It is 
 One hands-on construction is: start with a K3 surface in $\mathbb P^5$ and divide by a free involution.
 
 * **K3 with a free involution.** Let
-  $$X := \big{P_1(u,v,w) + Q_1(x,y,z) = 0,\ P_2(u,v,w) + Q_2(x,y,z) = 0,\ P_3(u,v,w)+Q_3(x,y,z)=0\big}\subset \mathbb P^5,$$
+  $$
+  X := (P_1(u,v,w) + Q_1(x,y,z) = 0,\\ P_2(u,v,w) + Q_2(x,y,z) = 0,\\ P_3(u,v,w)+Q_3(x,y,z)=0)\subset \mathbb P^5,$$
   where $P_i, Q_i$ are general quadrics in the indicated variables. Define the involution
   $$
   \iota : (u:v:w:x:y:z) \mapsto (-x:-y:-z : u:v:w).
