@@ -97,4 +97,24 @@ Therefore, $\beta$ corresponds to a cycle $\tilde{\beta}\in A^1(X\times X)=\math
 
 
 
-## The Refined Chow-Kunneth Decomposition
+## Dimension, dimension, dimension
+
+- Dimension of a Chow motive: we can consider the dimension of a motive $M$ as the trace of the identity morphism $M\rightarrow M$.
+
+
+- How to do the trace? Top Chern class, to be illustrated later
+
+- 
+
+- The Hodge diamond of an Abelian surface is always
+$$
+	1\\
+  2\ \ \ 2\\
+1\ \ \ 4\ \ \ 1\\
+  2\ \ \ 2\\
+    1\\
+$$
+Insert reference later
+
+- As a component, the Lefschetz motive $\mathbb{L}=\mathbb{1}(-1)$ realizes to a pure Hodge structure of type $(1,1)$; i.e. it contributes a divisor class.
+
