@@ -104,7 +104,7 @@ Therefore, $\beta$ corresponds to a cycle $\tilde{\beta}\in A^1(X\times X)=\math
 
 - How to do the trace? Top Chern class, to be illustrated later
 
-- 
+- The first Chern class $c_1:\mathrm{Pic}(S)\rightarrow\mathrm{H}^2(\mathbb{Z})$ sends a line bundle to the Hodge $(1,1)$-class. To be precise, the image of $c_1$ lies in $\mathrm{H}^2(\mathbb{Z})\cap\mathrm{H}^{1,1}(S)$. 
 
 - The Hodge diamond of an Abelian surface is always
 $$
